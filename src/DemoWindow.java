@@ -91,6 +91,16 @@ public class DemoWindow {
 	public static Text textFrame;
 	public static Text textHands;
 	public static Text textFingers;
+	private Label lblHandOne;
+	private Label lblHandTwo;
+	private Label lblHandType;
+	private Text textLeftHandtype;
+	private Text textRightHandtype;
+	private Label lblHandType_1;
+	private Text textLeftPalm;
+	private Label lblPalmPosition;
+	private Text textRightPalm;
+	private Label lblPalmPosition_1;
 	
 	/**
 	 * Launch the application.
@@ -143,7 +153,7 @@ public class DemoWindow {
 	 */
 	public void createContents() {
 		shell = new Shell();
-		shell.setSize(450, 300);
+		shell.setSize(568, 464);
 		shell.setText("Hand Gesture Demonstration");
 		
 		textTimeStamp = new Text(shell, SWT.BORDER);
@@ -173,6 +183,42 @@ public class DemoWindow {
 		Label lblFingers = new Label(shell, SWT.NONE);
 		lblFingers.setBounds(256, 10, 55, 15);
 		lblFingers.setText("# fingers");
+		
+		lblHandOne = new Label(shell, SWT.NONE);
+		lblHandOne.setBounds(20, 52, 61, 15);
+		lblHandOne.setText("Hand one");
+		
+		lblHandTwo = new Label(shell, SWT.NONE);
+		lblHandTwo.setBounds(454, 52, 55, 15);
+		lblHandTwo.setText("Hand two");
+		
+		lblHandType = new Label(shell, SWT.NONE);
+		lblHandType.setBounds(31, 73, 55, 15);
+		lblHandType.setText("Hand type");
+		
+		textLeftHandtype = new Text(shell, SWT.BORDER);
+		textLeftHandtype.setBounds(31, 89, 76, 21);
+		
+		textRightHandtype = new Text(shell, SWT.BORDER);
+		textRightHandtype.setBounds(431, 89, 76, 21);
+		
+		lblHandType_1 = new Label(shell, SWT.NONE);
+		lblHandType_1.setBounds(431, 73, 55, 15);
+		lblHandType_1.setText("Hand type");
+		
+		textLeftPalm = new Text(shell, SWT.BORDER);
+		textLeftPalm.setBounds(31, 187, 76, 21);
+		
+		lblPalmPosition = new Label(shell, SWT.NONE);
+		lblPalmPosition.setBounds(31, 170, 76, 15);
+		lblPalmPosition.setText("Palm position");
+		
+		textRightPalm = new Text(shell, SWT.BORDER);
+		textRightPalm.setBounds(433, 187, 76, 21);
+		
+		lblPalmPosition_1 = new Label(shell, SWT.NONE);
+		lblPalmPosition_1.setBounds(431, 170, 78, 15);
+		lblPalmPosition_1.setText("Palm position");
 
 	}
 }
