@@ -3,12 +3,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.SWTException;
+import org.eclipse.swt.widgets.Widget;
 import java.io.IOException;
 import java.lang.Math;
 import com.leapmotion.leap.*;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.ModifyEvent;
+
 
 class LMCListener extends Listener {
     public void onInit(Controller controller) {
@@ -88,30 +91,20 @@ public class DemoWindow {
 	public static Text textFrame;
 	public static Text textHands;
 	public static Text textFingers;
-
+	
 	/**
 	 * Launch the application.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Create a sample controller
-		Controller controller = new Controller();
-        Frame frame = controller.frame();
-        
+		        
 		try {
 			DemoWindow window = new DemoWindow();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-     
-		while(frame.id() < 2000){
-			textFrame.setText(String.valueOf(frame.id()));
-	        textTimeStamp.setText(String.valueOf(frame.timestamp()));
-	        textHands.setText(String.valueOf(frame.hands().count()));
-	        textFingers.setText(String.valueOf(frame.fingers().count()));
-		}
-			
+		
         // Keep this process running until Enter is pressed
         System.out.println("Press Enter to quit...");
         try {
@@ -132,6 +125,14 @@ public class DemoWindow {
 		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch()) {
+				
+				Controller controller = new Controller();
+		        Frame frame = controller.frame();
+				textFrame.setText(String.valueOf(frame.id()));
+                textTimeStamp.setText(String.valueOf(frame.timestamp()));
+                textHands.setText(String.valueOf(frame.hands().count()));
+                textFingers.setText(String.valueOf(frame.fingers().count()));
+				
 				display.sleep();
 			}
 		}
