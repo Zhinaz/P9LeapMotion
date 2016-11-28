@@ -7,6 +7,8 @@ import org.eclipse.swt.SWTException;
 import org.eclipse.swt.widgets.Widget;
 import java.io.IOException;
 import java.lang.Math;
+import java.text.DecimalFormat;
+
 import com.leapmotion.leap.*;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.events.ModifyListener;
@@ -19,16 +21,11 @@ public class DemoWindow {
 	public static Text textFrame;
 	public static Text textHands;
 	public static Text textFingers;
-	private Label lblHandOne;
-	private Label lblHandTwo;
 	private Label lblHandType;
 	private Text textLeftHandtype;
-	private Text textRightHandtype;
-	private Label lblHandType_1;
 	private Text textLeftPalm;
 	private Label lblPalmPosition;
 	private Text textLeftHandID;
-	private Text textRightHandID;
 	private Text textLeftVector;
 	private Text textLeftDirection;
 	private Text textLeftPitch;
@@ -146,9 +143,11 @@ public class DemoWindow {
 		createContents();
 		shell.open();
 		shell.layout();
+		DecimalFormat df = new DecimalFormat("#.##");
 		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch()) {
+				
 				
 				Controller controller = new Controller();
 		        Frame frame = controller.frame();
@@ -162,15 +161,34 @@ public class DemoWindow {
                 
                 textLeftHandtype.setText(hand0.isLeft() ? "Left hand" : "Right hand");
                 textLeftHandID.setText(String.valueOf(hand0.id()));
-                textLeftPalm.setText(String.valueOf(hand0.palmPosition()));
-            	textLeftVector.setText(String.valueOf(hand0.palmNormal()));
-            	textLeftDirection.setText(String.valueOf(hand0.direction()));
-            	textLeftPitch.setText(String.valueOf(hand0.direction().pitch()));
-            	textLeftRoll.setText(String.valueOf(hand0.palmNormal().roll()));
-            	textLeftYaw.setText(String.valueOf(hand0.direction().yaw()));
-            	textLeftWrist.setText(String.valueOf(hand0.arm().wristPosition()));
-            	textLeftArm.setText(String.valueOf(hand0.arm().direction()));
-            	textLeftElbow.setText(String.valueOf(hand0.arm().elbowPosition()));
+                
+                textLeftPalm.setText("(" + String.valueOf(df.format(hand0.palmPosition().getX())) + ", " +
+                		String.valueOf(df.format(hand0.palmPosition().getY())) + ", " +
+                		String.valueOf(df.format(hand0.palmPosition().getZ())) + ")");
+                
+            	textLeftVector.setText("(" + String.valueOf(df.format(hand0.palmNormal().getX()))+ ", " +
+            			String.valueOf(df.format(hand0.palmNormal().getY())) + ", " +
+            			String.valueOf(df.format(hand0.palmNormal().getY())) + ")");
+            	
+            	textLeftDirection.setText("(" + String.valueOf(df.format(hand0.direction().getX()))+ ", " +
+            			String.valueOf(df.format(hand0.direction().getY())) + ", " +
+            			String.valueOf(df.format(hand0.direction().getY())) + ")");
+            	
+            	textLeftPitch.setText(String.valueOf(df.format(hand0.direction().pitch())));
+            	textLeftRoll.setText(String.valueOf(df.format(hand0.palmNormal().roll())));
+            	textLeftYaw.setText(String.valueOf(df.format(hand0.direction().yaw())));
+            	
+            	textLeftWrist.setText("(" + String.valueOf(df.format(hand0.arm().wristPosition().getX()))+ ", " +
+            			String.valueOf(df.format(hand0.arm().wristPosition().getY())) + ", " +
+            			String.valueOf(df.format(hand0.arm().wristPosition().getY())) + ")");
+            	
+            	textLeftArm.setText("(" + String.valueOf(df.format(hand0.arm().direction().getX()))+ ", " +
+            			String.valueOf(df.format(hand0.arm().direction().getY())) + ", " +
+            			String.valueOf(df.format(hand0.arm().direction().getY())) + ")");
+            	
+            	textLeftElbow.setText("(" + String.valueOf(df.format(hand0.arm().elbowPosition().getX()))+ ", " +
+            			String.valueOf(df.format(hand0.arm().elbowPosition().getY())) + ", " +
+            			String.valueOf(df.format(hand0.arm().elbowPosition().getY())) + ")");
             	
             	// Fingers
             	Finger finger00 = hand0.fingers().get(0);
@@ -204,18 +222,159 @@ public class DemoWindow {
         		textLeftFinger4Extended.setText(String.valueOf(finger04.isExtended()));
 
                 // Bones
-        		//Bone.Type bone00 = hand0.fingers().get(0).isExtended());
+        		textLeftFinger0JE0.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getZ())));
+        		textLeftFinger0JD0.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).direction().getZ())));
+        		textLeftFinger0JS0.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getZ())));
+        		
+        		textLeftFinger1JE0.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getZ())));
+        		textLeftFinger1JD0.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).direction().getZ())));
+        		textLeftFinger1JS0.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getZ())));
+        		
+        		textLeftFinger2JE0.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getZ())));
+        		textLeftFinger2JD0.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).direction().getZ())));
+        		textLeftFinger2JS0.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getZ())));
+        		
+        		textLeftFinger3JE0.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getZ())));
+        		textLeftFinger3JD0.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).direction().getZ())));
+        		textLeftFinger3JS0.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getZ())));
+        		
+        		textLeftFinger4JE0.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).nextJoint().getZ())));
+        		textLeftFinger4JD0.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).direction().getZ())));
+        		textLeftFinger4JS0.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_PROXIMAL).prevJoint().getZ())));
         		
         		
+        		textLeftFinger0JE1.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getZ())));
+        		textLeftFinger0JD1.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getZ())));
+        		textLeftFinger0JS1.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getZ())));
         		
-        		for(Bone.Type boneType : Bone.Type.values()) {
-                    Bone bone = finger00.bone(boneType);
-                    System.out.println("      " + bone.type()
-                                     + " bone, start: " + bone.prevJoint()
-                                     + ", end: " + bone.nextJoint()
-                                     + ", direction: " + bone.direction());
-                }
+        		textLeftFinger1JE1.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getZ())));
+        		textLeftFinger1JD1.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getZ())));
+        		textLeftFinger1JS1.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getZ())));
         		
+        		textLeftFinger2JE1.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getZ())));
+        		textLeftFinger2JD1.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getZ())));
+        		textLeftFinger2JS1.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getZ())));
+        		
+        		textLeftFinger3JE1.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getZ())));
+        		textLeftFinger3JD1.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getZ())));
+        		textLeftFinger3JS1.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getZ())));
+        		
+        		textLeftFinger4JE1.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).nextJoint().getZ())));
+        		textLeftFinger4JD1.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).direction().getZ())));
+        		textLeftFinger4JS1.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_INTERMEDIATE).prevJoint().getZ())));
+        		
+        		
+        		textLeftFinger0JE2.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).nextJoint().getZ())));
+        		textLeftFinger0JD2.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).direction().getZ())));
+        		textLeftFinger0JS2.setText(String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(0).bone(Bone.Type.TYPE_DISTAL).prevJoint().getZ())));
+        		
+        		textLeftFinger1JE2.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).nextJoint().getZ())));
+        		textLeftFinger1JD2.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).direction().getZ())));
+        		textLeftFinger1JS2.setText(String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(1).bone(Bone.Type.TYPE_DISTAL).prevJoint().getZ())));
+        		
+        		textLeftFinger2JE2.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).nextJoint().getZ())));
+        		textLeftFinger2JD2.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).direction().getZ())));
+        		textLeftFinger2JS2.setText(String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(2).bone(Bone.Type.TYPE_DISTAL).prevJoint().getZ())));
+        		
+        		textLeftFinger3JE2.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).nextJoint().getZ())));
+        		textLeftFinger3JD2.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).direction().getZ())));
+        		textLeftFinger3JS2.setText(String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(3).bone(Bone.Type.TYPE_DISTAL).prevJoint().getZ())));
+        		
+        		textLeftFinger4JE2.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).nextJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).nextJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).nextJoint().getZ())));
+        		textLeftFinger4JD2.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).direction().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).direction().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).direction().getZ())));
+        		textLeftFinger4JS2.setText(String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).prevJoint().getX())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).prevJoint().getY())) + ", " +
+        				String.valueOf(df.format(hand0.fingers().get(4).bone(Bone.Type.TYPE_DISTAL).prevJoint().getZ())));
+        		
+
         		
 				display.sleep();
 			}
@@ -227,7 +386,7 @@ public class DemoWindow {
 	 */
 	public void createContents() {
 		shell = new Shell();
-		shell.setSize(972, 700);
+		shell.setSize(821, 700);
 		shell.setText("Hand Gesture Demonstration");
 		
 		textTimeStamp = new Text(shell, SWT.BORDER);
@@ -258,27 +417,12 @@ public class DemoWindow {
 		lblFingers.setBounds(256, 10, 55, 15);
 		lblFingers.setText("# fingers");
 		
-		lblHandOne = new Label(shell, SWT.NONE);
-		lblHandOne.setBounds(20, 52, 61, 15);
-		lblHandOne.setText("Hand one");
-		
-		lblHandTwo = new Label(shell, SWT.NONE);
-		lblHandTwo.setBounds(702, 52, 55, 15);
-		lblHandTwo.setText("Hand two");
-		
 		lblHandType = new Label(shell, SWT.NONE);
 		lblHandType.setBounds(31, 73, 55, 15);
 		lblHandType.setText("Hand type");
 		
 		textLeftHandtype = new Text(shell, SWT.BORDER);
 		textLeftHandtype.setBounds(31, 89, 76, 21);
-		
-		textRightHandtype = new Text(shell, SWT.BORDER);
-		textRightHandtype.setBounds(679, 89, 76, 21);
-		
-		lblHandType_1 = new Label(shell, SWT.NONE);
-		lblHandType_1.setBounds(679, 73, 55, 15);
-		lblHandType_1.setText("Hand type");
 		
 		textLeftPalm = new Text(shell, SWT.BORDER);
 		textLeftPalm.setBounds(92, 495, 199, 21);
@@ -293,13 +437,6 @@ public class DemoWindow {
 		Label lblHandId = new Label(shell, SWT.NONE);
 		lblHandId.setBounds(116, 73, 55, 15);
 		lblHandId.setText("Hand ID");
-		
-		textRightHandID = new Text(shell, SWT.BORDER);
-		textRightHandID.setBounds(597, 89, 76, 21);
-		
-		Label lblHandId_1 = new Label(shell, SWT.NONE);
-		lblHandId_1.setBounds(597, 73, 55, 15);
-		lblHandId_1.setText("Hand ID");
 		
 		textLeftVector = new Text(shell, SWT.BORDER);
 		textLeftVector.setBounds(92, 468, 199, 21);
@@ -351,29 +488,29 @@ public class DemoWindow {
 		lblWrist.setText("Wrist");
 		
 		Label label = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label.setBounds(10, 557, 461, 5);
+		label.setBounds(10, 560, 770, 2);
 		
 		Label label_1 = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label_1.setBounds(10, 454, 461, 5);
+		label_1.setBounds(10, 454, 770, 8);
 		
 		Label label_2 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_2.setBounds(478, 609, 2, 42);
+		label_2.setBounds(778, 609, 2, 42);
 		
 		Label lblArm = new Label(shell, SWT.NONE);
 		lblArm.setAlignment(SWT.CENTER);
-		lblArm.setBounds(450, 595, 55, 15);
+		lblArm.setBounds(750, 595, 55, 15);
 		lblArm.setText("Arm");
 		
 		Label label_3 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_3.setBounds(478, 519, 2, 78);
+		label_3.setBounds(778, 519, 2, 78);
 		
 		Label lblHand = new Label(shell, SWT.NONE);
 		lblHand.setAlignment(SWT.CENTER);
-		lblHand.setBounds(450, 506, 55, 15);
+		lblHand.setBounds(750, 506, 55, 15);
 		lblHand.setText("Hand");
 		
 		Label label_4 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_4.setBounds(478, 347, 2, 160);
+		label_4.setBounds(778, 347, 2, 160);
 		
 		textLeftFinger0Type = new Text(shell, SWT.BORDER);
 		textLeftFinger0Type.setBounds(67, 427, 76, 21);
@@ -453,146 +590,146 @@ public class DemoWindow {
 		
 		Label lblFingers_1 = new Label(shell, SWT.NONE);
 		lblFingers_1.setAlignment(SWT.CENTER);
-		lblFingers_1.setBounds(450, 326, 55, 15);
+		lblFingers_1.setBounds(750, 326, 55, 15);
 		lblFingers_1.setText("Fingers");
 		
 		Label label_5 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_5.setBounds(478, 59, 2, 267);
+		label_5.setBounds(778, 59, 2, 267);
 		
 		textLeftFinger0JS0 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JS0.setBounds(67, 305, 76, 21);
+		textLeftFinger0JS0.setBounds(67, 305, 115, 21);
 		
 		textLeftFinger0JD0 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JD0.setBounds(67, 284, 76, 21);
+		textLeftFinger0JD0.setBounds(67, 284, 115, 21);
 		
 		textLeftFinger0JE0 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JE0.setBounds(67, 263, 76, 21);
+		textLeftFinger0JE0.setBounds(67, 263, 115, 21);
 		
 		textLeftFinger0JE1 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JE1.setBounds(67, 194, 76, 21);
+		textLeftFinger0JE1.setBounds(67, 194, 115, 21);
 		
 		textLeftFinger0JD1 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JD1.setBounds(67, 215, 76, 21);
+		textLeftFinger0JD1.setBounds(67, 215, 115, 21);
 		
 		textLeftFinger0JS1 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JS1.setBounds(67, 236, 76, 21);
+		textLeftFinger0JS1.setBounds(67, 236, 115, 21);
 		
 		textLeftFinger0JE2 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JE2.setBounds(67, 125, 76, 21);
+		textLeftFinger0JE2.setBounds(67, 125, 115, 21);
 		
 		textLeftFinger0JD2 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JD2.setBounds(67, 146, 76, 21);
+		textLeftFinger0JD2.setBounds(67, 146, 115, 21);
 		
 		textLeftFinger0JS2 = new Text(shell, SWT.BORDER);
-		textLeftFinger0JS2.setBounds(67, 167, 76, 21);
+		textLeftFinger0JS2.setBounds(67, 167, 115, 21);
 		
 		textLeftFinger1JE2 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JE2.setBounds(149, 125, 76, 21);
+		textLeftFinger1JE2.setBounds(185, 125, 114, 21);
 		
 		textLeftFinger1JD2 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JD2.setBounds(149, 146, 76, 21);
+		textLeftFinger1JD2.setBounds(185, 146, 114, 21);
 		
 		textLeftFinger1JS2 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JS2.setBounds(149, 167, 76, 21);
+		textLeftFinger1JS2.setBounds(185, 167, 114, 21);
 		
 		textLeftFinger1JE1 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JE1.setBounds(149, 194, 76, 21);
+		textLeftFinger1JE1.setBounds(185, 194, 114, 21);
 		
 		textLeftFinger1JD1 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JD1.setBounds(149, 215, 76, 21);
+		textLeftFinger1JD1.setBounds(185, 215, 114, 21);
 		
 		textLeftFinger1JS1 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JS1.setBounds(149, 236, 76, 21);
+		textLeftFinger1JS1.setBounds(185, 236, 114, 21);
 		
 		textLeftFinger1JE0 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JE0.setBounds(149, 263, 76, 21);
+		textLeftFinger1JE0.setBounds(185, 263, 114, 21);
 		
 		textLeftFinger1JD0 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JD0.setBounds(149, 284, 76, 21);
+		textLeftFinger1JD0.setBounds(185, 284, 114, 21);
 		
 		textLeftFinger1JS0 = new Text(shell, SWT.BORDER);
-		textLeftFinger1JS0.setBounds(149, 305, 76, 21);
+		textLeftFinger1JS0.setBounds(185, 305, 114, 21);
 		
 		textLeftFinger2JE2 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JE2.setBounds(231, 125, 76, 21);
+		textLeftFinger2JE2.setBounds(305, 125, 118, 21);
 		
 		textLeftFinger2JD2 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JD2.setBounds(231, 146, 76, 21);
+		textLeftFinger2JD2.setBounds(305, 146, 118, 21);
 		
 		textLeftFinger2JS2 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JS2.setBounds(231, 167, 76, 21);
+		textLeftFinger2JS2.setBounds(305, 167, 118, 21);
 		
 		textLeftFinger2JE1 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JE1.setBounds(231, 194, 76, 21);
+		textLeftFinger2JE1.setBounds(305, 194, 118, 21);
 		
 		textLeftFinger2JD1 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JD1.setBounds(231, 215, 76, 21);
+		textLeftFinger2JD1.setBounds(305, 215, 118, 21);
 		
 		textLeftFinger2JS1 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JS1.setBounds(231, 236, 76, 21);
+		textLeftFinger2JS1.setBounds(305, 236, 118, 21);
 		
 		textLeftFinger2JE0 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JE0.setBounds(231, 263, 76, 21);
+		textLeftFinger2JE0.setBounds(305, 263, 118, 21);
 		
 		textLeftFinger2JD0 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JD0.setBounds(231, 284, 76, 21);
+		textLeftFinger2JD0.setBounds(305, 284, 118, 21);
 		
 		textLeftFinger2JS0 = new Text(shell, SWT.BORDER);
-		textLeftFinger2JS0.setBounds(231, 305, 76, 21);
+		textLeftFinger2JS0.setBounds(305, 305, 118, 21);
 		
 		textLeftFinger3JE2 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JE2.setBounds(313, 125, 76, 21);
+		textLeftFinger3JE2.setBounds(429, 125, 116, 21);
 		
 		textLeftFinger3JD2 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JD2.setBounds(313, 146, 76, 21);
+		textLeftFinger3JD2.setBounds(429, 146, 116, 21);
 		
 		textLeftFinger3JS2 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JS2.setBounds(313, 167, 76, 21);
+		textLeftFinger3JS2.setBounds(429, 167, 116, 21);
 		
 		textLeftFinger3JE1 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JE1.setBounds(313, 194, 76, 21);
+		textLeftFinger3JE1.setBounds(429, 194, 116, 21);
 		
 		textLeftFinger3JD1 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JD1.setBounds(313, 215, 76, 21);
+		textLeftFinger3JD1.setBounds(429, 215, 116, 21);
 		
 		textLeftFinger3JS1 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JS1.setBounds(313, 236, 76, 21);
+		textLeftFinger3JS1.setBounds(429, 236, 116, 21);
 		
 		textLeftFinger3JE0 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JE0.setBounds(313, 263, 76, 21);
+		textLeftFinger3JE0.setBounds(429, 263, 116, 21);
 		
 		textLeftFinger3JD0 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JD0.setBounds(313, 284, 76, 21);
+		textLeftFinger3JD0.setBounds(429, 284, 116, 21);
 		
 		textLeftFinger3JS0 = new Text(shell, SWT.BORDER);
-		textLeftFinger3JS0.setBounds(313, 305, 76, 21);
+		textLeftFinger3JS0.setBounds(429, 305, 116, 21);
 		
 		textLeftFinger4JE2 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JE2.setBounds(395, 125, 76, 21);
+		textLeftFinger4JE2.setBounds(551, 125, 118, 21);
 		
 		textLeftFinger4JD2 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JD2.setBounds(395, 146, 76, 21);
+		textLeftFinger4JD2.setBounds(551, 146, 118, 21);
 		
 		textLeftFinger4JS2 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JS2.setBounds(395, 167, 76, 21);
+		textLeftFinger4JS2.setBounds(551, 167, 118, 21);
 		
 		textLeftFinger4JE1 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JE1.setBounds(395, 194, 76, 21);
+		textLeftFinger4JE1.setBounds(551, 194, 118, 21);
 		
 		textLeftFinger4JD1 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JD1.setBounds(395, 215, 76, 21);
+		textLeftFinger4JD1.setBounds(551, 215, 118, 21);
 		
 		textLeftFinger4JS1 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JS1.setBounds(395, 236, 76, 21);
+		textLeftFinger4JS1.setBounds(551, 236, 118, 21);
 		
 		textLeftFinger4JE0 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JE0.setBounds(395, 263, 76, 21);
+		textLeftFinger4JE0.setBounds(551, 263, 118, 21);
 		
 		textLeftFinger4JD0 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JD0.setBounds(395, 284, 76, 21);
+		textLeftFinger4JD0.setBounds(551, 284, 118, 21);
 		
 		textLeftFinger4JS0 = new Text(shell, SWT.BORDER);
-		textLeftFinger4JS0.setBounds(395, 305, 76, 21);
+		textLeftFinger4JS0.setBounds(551, 305, 118, 21);
 		
 		lblJointStart = new Label(shell, SWT.NONE);
 		lblJointStart.setBounds(10, 308, 55, 15);
