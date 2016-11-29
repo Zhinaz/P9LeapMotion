@@ -386,7 +386,7 @@ public class DemoWindow {
 	 */
 	public void createContents() {
 		shell = new Shell();
-		shell.setSize(821, 700);
+		shell.setSize(712, 700);
 		shell.setText("Hand Gesture Demonstration");
 		
 		textTimeStamp = new Text(shell, SWT.BORDER);
@@ -418,11 +418,11 @@ public class DemoWindow {
 		lblFingers.setText("# fingers");
 		
 		lblHandType = new Label(shell, SWT.NONE);
-		lblHandType.setBounds(31, 73, 55, 15);
+		lblHandType.setBounds(262, 67, 55, 15);
 		lblHandType.setText("Hand type");
 		
 		textLeftHandtype = new Text(shell, SWT.BORDER);
-		textLeftHandtype.setBounds(31, 89, 76, 21);
+		textLeftHandtype.setBounds(262, 83, 76, 21);
 		
 		textLeftPalm = new Text(shell, SWT.BORDER);
 		textLeftPalm.setBounds(92, 495, 199, 21);
@@ -432,10 +432,10 @@ public class DemoWindow {
 		lblPalmPosition.setText("Palm position");
 		
 		textLeftHandID = new Text(shell, SWT.BORDER);
-		textLeftHandID.setBounds(116, 89, 76, 21);
+		textLeftHandID.setBounds(347, 83, 76, 21);
 		
 		Label lblHandId = new Label(shell, SWT.NONE);
-		lblHandId.setBounds(116, 73, 55, 15);
+		lblHandId.setBounds(347, 67, 55, 15);
 		lblHandId.setText("Hand ID");
 		
 		textLeftVector = new Text(shell, SWT.BORDER);
@@ -488,59 +488,59 @@ public class DemoWindow {
 		lblWrist.setText("Wrist");
 		
 		Label label = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label.setBounds(10, 560, 770, 2);
+		label.setBounds(10, 560, 670, 2);
 		
 		Label label_1 = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label_1.setBounds(10, 454, 770, 8);
+		label_1.setBounds(10, 454, 670, 2);
 		
 		Label label_2 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_2.setBounds(778, 609, 2, 42);
+		label_2.setBounds(678, 619, 2, 42);
 		
 		Label lblArm = new Label(shell, SWT.NONE);
 		lblArm.setAlignment(SWT.CENTER);
-		lblArm.setBounds(750, 595, 55, 15);
+		lblArm.setBounds(649, 601, 55, 15);
 		lblArm.setText("Arm");
 		
 		Label label_3 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_3.setBounds(778, 519, 2, 78);
+		label_3.setBounds(678, 525, 2, 78);
 		
 		Label lblHand = new Label(shell, SWT.NONE);
 		lblHand.setAlignment(SWT.CENTER);
-		lblHand.setBounds(750, 506, 55, 15);
+		lblHand.setBounds(649, 512, 55, 15);
 		lblHand.setText("Hand");
 		
 		Label label_4 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_4.setBounds(778, 347, 2, 160);
+		label_4.setBounds(678, 351, 2, 160);
 		
 		textLeftFinger0Type = new Text(shell, SWT.BORDER);
-		textLeftFinger0Type.setBounds(67, 427, 76, 21);
+		textLeftFinger0Type.setBounds(92, 427, 76, 21);
 		
 		textLeftFinger1Type = new Text(shell, SWT.BORDER);
-		textLeftFinger1Type.setBounds(149, 427, 76, 21);
+		textLeftFinger1Type.setBounds(204, 427, 76, 21);
 		
 		textLeftFinger2Type = new Text(shell, SWT.BORDER);
-		textLeftFinger2Type.setBounds(231, 427, 76, 21);
+		textLeftFinger2Type.setBounds(326, 427, 76, 21);
 		
 		textLeftFinger3Type = new Text(shell, SWT.BORDER);
-		textLeftFinger3Type.setBounds(313, 427, 76, 21);
+		textLeftFinger3Type.setBounds(443, 427, 76, 21);
 		
 		textLeftFinger4Type = new Text(shell, SWT.BORDER);
-		textLeftFinger4Type.setBounds(395, 427, 76, 21);
+		textLeftFinger4Type.setBounds(568, 427, 76, 21);
 		
 		textLeftFinger0ID = new Text(shell, SWT.BORDER);
-		textLeftFinger0ID.setBounds(67, 402, 76, 21);
+		textLeftFinger0ID.setBounds(92, 402, 76, 21);
 		
 		textLeftFinger1ID = new Text(shell, SWT.BORDER);
-		textLeftFinger1ID.setBounds(149, 402, 76, 21);
+		textLeftFinger1ID.setBounds(204, 402, 76, 21);
 		
 		textLeftFinger2ID = new Text(shell, SWT.BORDER);
-		textLeftFinger2ID.setBounds(231, 402, 76, 21);
+		textLeftFinger2ID.setBounds(326, 402, 76, 21);
 		
 		textLeftFinger3ID = new Text(shell, SWT.BORDER);
-		textLeftFinger3ID.setBounds(313, 402, 76, 21);
+		textLeftFinger3ID.setBounds(443, 402, 76, 21);
 		
 		textLeftFinger4ID = new Text(shell, SWT.BORDER);
-		textLeftFinger4ID.setBounds(395, 402, 76, 21);
+		textLeftFinger4ID.setBounds(568, 402, 76, 21);
 		
 		lblType = new Label(shell, SWT.NONE);
 		lblType.setBounds(10, 430, 55, 15);
@@ -551,38 +551,38 @@ public class DemoWindow {
 		lblId.setText("ID");
 		
 		textLeftFinger0Length = new Text(shell, SWT.BORDER);
-		textLeftFinger0Length.setBounds(67, 375, 76, 21);
+		textLeftFinger0Length.setBounds(92, 375, 76, 21);
 		
 		textLeftFinger1Length = new Text(shell, SWT.BORDER);
-		textLeftFinger1Length.setBounds(149, 375, 76, 21);
+		textLeftFinger1Length.setBounds(204, 375, 76, 21);
 		
 		textLeftFinger2Length = new Text(shell, SWT.BORDER);
-		textLeftFinger2Length.setBounds(231, 375, 76, 21);
+		textLeftFinger2Length.setBounds(326, 375, 76, 21);
 		
 		textLeftFinger3Length = new Text(shell, SWT.BORDER);
-		textLeftFinger3Length.setBounds(313, 375, 76, 21);
+		textLeftFinger3Length.setBounds(443, 375, 76, 21);
 		
 		textLeftFinger4Length = new Text(shell, SWT.BORDER);
-		textLeftFinger4Length.setBounds(395, 375, 76, 21);
+		textLeftFinger4Length.setBounds(568, 375, 76, 21);
 		
 		lblLength = new Label(shell, SWT.NONE);
 		lblLength.setBounds(10, 378, 55, 15);
 		lblLength.setText("Length");
 		
 		textLeftFinger0Extended = new Text(shell, SWT.BORDER);
-		textLeftFinger0Extended.setBounds(67, 348, 76, 21);
+		textLeftFinger0Extended.setBounds(92, 348, 76, 21);
 		
 		textLeftFinger1Extended = new Text(shell, SWT.BORDER);
-		textLeftFinger1Extended.setBounds(149, 348, 76, 21);
+		textLeftFinger1Extended.setBounds(204, 348, 76, 21);
 		
 		textLeftFinger2Extended = new Text(shell, SWT.BORDER);
-		textLeftFinger2Extended.setBounds(231, 348, 76, 21);
+		textLeftFinger2Extended.setBounds(326, 348, 76, 21);
 		
 		textLeftFinger3Extended = new Text(shell, SWT.BORDER);
-		textLeftFinger3Extended.setBounds(313, 348, 76, 21);
+		textLeftFinger3Extended.setBounds(443, 348, 76, 21);
 		
 		textLeftFinger4Extended = new Text(shell, SWT.BORDER);
-		textLeftFinger4Extended.setBounds(395, 348, 76, 21);
+		textLeftFinger4Extended.setBounds(568, 348, 76, 21);
 		
 		lblWidth = new Label(shell, SWT.NONE);
 		lblWidth.setBounds(10, 351, 55, 15);
@@ -590,11 +590,11 @@ public class DemoWindow {
 		
 		Label lblFingers_1 = new Label(shell, SWT.NONE);
 		lblFingers_1.setAlignment(SWT.CENTER);
-		lblFingers_1.setBounds(750, 326, 55, 15);
+		lblFingers_1.setBounds(649, 332, 55, 15);
 		lblFingers_1.setText("Fingers");
 		
 		Label label_5 = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
-		label_5.setBounds(778, 59, 2, 267);
+		label_5.setBounds(678, 88, 2, 239);
 		
 		textLeftFinger0JS0 = new Text(shell, SWT.BORDER);
 		textLeftFinger0JS0.setBounds(67, 305, 115, 21);
