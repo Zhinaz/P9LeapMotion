@@ -110,7 +110,7 @@ public class DataCollection {
 			final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm.ss");
 			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			String filename = sdf.format(timestamp);
-			File testfile = new File("test" + filename + ".csv");
+			File testfile = new File("files/test" + filename + ".csv");
 			pw = new PrintWriter(testfile);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

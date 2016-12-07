@@ -126,7 +126,6 @@ class SampleListener extends Listener {
 
 
 class CSVReader {
-    double[][] tables;
     ArrayList<double[]> data = new ArrayList<double[]>();
 
     public CSVReader(String filename) { 
@@ -141,8 +140,7 @@ class CSVReader {
         
         //Read the int on the next line to allocate arrays
         String numLine = scan.nextLine();
-        String featureString = numLine;
-        int numberOfFeatures = featureString.split(",").length;
+        int numberOfFeatures = numLine.split(",").length;
         
         // First line
         String[] line = numLine.split(",");
@@ -153,8 +151,7 @@ class CSVReader {
         }
         data.add(temp);
         
-        //Now read until we run out of lines - put the first in country names and the rest in the table
-        int c = 0;
+        //Now read until we run out of lines
         while(scan.hasNext()){
             line = scan.nextLine().split(",");
             double[] temp2 = new double[numberOfFeatures];
@@ -163,9 +160,7 @@ class CSVReader {
             	temp2[i] = val;
             }
             data.add(temp2);
-            c++;
         }
-        
         scan.close();
     }
 
