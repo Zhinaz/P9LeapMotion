@@ -44,78 +44,8 @@ class SampleListener extends Listener {
 		// Get the most recent frame and report some basic information
 		Frame frame = controller.frame();
 
-		// System.out.println("Frame id: " + frame.id()
-		// + ", timestamp: " + frame.timestamp()
-		// + ", hands: " + frame.hands().count()
-		// + ", fingers: " + frame.fingers().count());
-
-		// Get hands
 		for (Hand hand : frame.hands()) {
-
-			System.out.println("Hand confidence: " + hand.confidence());
-			System.out.println("Grab angle: " + hand.grabAngle());
-			System.out.println("Grab strength: " + hand.grabStrength());
-
-			System.out.println("Palm normal: " + hand.palmNormal().toString());
-			System.out.println("Palm width: " + hand.palmWidth());
-
-			System.out.println("pinch distance: " + hand.pinchDistance());
-			System.out.println("pinch strength: " + hand.pinchStrength());
-
-			System.out.println("stabilised palm position: " + hand.stabilizedPalmPosition().toString());
-			System.out.println("wrist position: " + hand.wristPosition().toString());
-
-			System.out.println("index pointing direction" + hand.pointables().get(1).direction().toString());
-
-			// System.out.println("Grab strength: " + hand.grabStrength());
-			// System.out.println("Palm normal: " +
-			// hand.palmNormal().toString());
-			// System.out.println("pinch strength: " + hand.pinchStrength());
-
-			/*
-			 * if (played == false && hand.fingers().get(0).isExtended() ==
-			 * false && hand.fingers().get(2).isExtended() == false &&
-			 * hand.fingers().get(3).isExtended() == false &&
-			 * hand.fingers().get(4).isExtended() == true) {
-			 * 
-			 * System.out.println("Cue Spiderman!");
-			 * 
-			 * File spiderman = new
-			 * File("C:\\Users\\Jogge\\Downloads\\spider_man_web_shot.wav");
-			 * AudioInputStream audioIn = null; try { audioIn =
-			 * AudioSystem.getAudioInputStream(spiderman); } catch (Exception e)
-			 * { e.printStackTrace(); } Clip clip = null; try { clip =
-			 * AudioSystem.getClip(); } catch (LineUnavailableException e) {
-			 * e.printStackTrace(); } try { clip.open(audioIn); } catch
-			 * (Exception e) { e.printStackTrace(); } clip.start(); played =
-			 * true; }
-			 * 
-			 * if (played == true && hand.fingers().get(0).isExtended() == false
-			 * && hand.fingers().get(1).isExtended() == false &&
-			 * hand.fingers().get(2).isExtended() == false &&
-			 * hand.fingers().get(3).isExtended() == false &&
-			 * hand.fingers().get(4).isExtended() == false) { played = false; }
-			 */
-
-			// Get fingers
-			// for (Finger finger : hand.fingers()) {
-			//
-			// if (finger.type() == Type.TYPE_THUMB) {
-			// System.out.println(" length: " + finger.length()
-			// + "mm, width: " + finger.width()
-			// + "mm, is extended: " + finger.isExtended());
-			// }
-
-			// if (finger.type() == Type.TYPE_RING && finger.isExtended() ==
-			// false &&
-			// finger.type() == Type.TYPE_MIDDLE && finger.isExtended() == false
-			// &&
-			// finger.type() == Type.TYPE_THUMB && finger.isExtended() == false)
-			// {
-			// System.out.println("Cue Spiderman"
-			// + "!");
-			// }
-			// }
+		
 		}
 
 		if (!frame.hands().isEmpty()) {
