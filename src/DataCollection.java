@@ -1,31 +1,22 @@
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Decorations;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.SWTException;
-import org.eclipse.swt.widgets.Widget;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.Math;
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-import com.ibm.icu.text.NumberFormat;
 import com.leapmotion.leap.*;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.ModifyEvent;
-
 
 public class DataCollection {
 	public Shell shell;
@@ -134,6 +125,8 @@ public class DataCollection {
 			Frame frame = controller.frame();
 			
 			if (frame.hands().count() == 1) {
+				
+				
 				// label
 				sb.append(labelText.getText() + ",");
 				// grab strength
@@ -145,8 +138,13 @@ public class DataCollection {
 				// Palm normal z
 				sb.append(df.format(frame.hands().get(0).palmNormal().getZ()) + ",");
 				// pinch strength
-				sb.append(df.format(frame.hands().get(0).pinchStrength()));
-				
+				sb.append(df.format(frame.hands().get(0).pinchStrength()) + ",");
+				// Palm direction x
+				sb.append(df.format(frame.hands().get(0).direction().getX()) + ",");
+				// Palm direction y
+				sb.append(df.format(frame.hands().get(0).direction().getY()) + ",");
+				// Palm direction z
+				sb.append(df.format(frame.hands().get(0).direction().getZ()) + ",");
 				
 				// MERE DATA PLZ
 			} 
