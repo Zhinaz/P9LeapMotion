@@ -1,18 +1,12 @@
-import org.eclipse.swt.widgets.Decorations;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.SWTException;
-import org.eclipse.swt.widgets.Widget;
 import java.io.IOException;
-import java.lang.Math;
 import java.text.DecimalFormat;
 
 import com.leapmotion.leap.*;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.ModifyEvent;
 
 public class DemoWindow {
 

@@ -25,7 +25,7 @@ public class DataCollection {
 	private Button collect;
 	private Label samplesCollected;
 	
-	private int samples = 10; 
+	private int numberOfSamples = 100; 
 	private Boolean collectingBool = false;
 	
 	/**
@@ -59,11 +59,11 @@ public class DataCollection {
 		shell.open();
 		shell.layout();
 		
-		// Must be running, else windows fucks
+		// Must be running, else windows
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch()) {
-				Controller controller = new Controller();
-		        Frame frame = controller.frame();
+				//Controller controller = new Controller();
+		        //Frame frame = controller.frame();
 			}
 		}
 	}
@@ -95,14 +95,14 @@ public class DataCollection {
 		
 		samplesCollected = new Label(shell, SWT.NONE);
 		samplesCollected.setBounds(10, 150, 100, 21);
-		samplesCollected.setText("0 / " + samples);
+		samplesCollected.setText("0 / " + numberOfSamples);
 	}
 	
 	public void startCollecting() {
 		DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
 		otherSymbols.setDecimalSeparator('.');
 		otherSymbols.setGroupingSeparator(',');
-		DecimalFormat df = new DecimalFormat("#.###", otherSymbols);
+		DecimalFormat df = new DecimalFormat("#.#####", otherSymbols);
 		
 		
 		PrintWriter pw = null;
@@ -113,7 +113,6 @@ public class DataCollection {
 			File testfile = new File("files/test" + filename + ".csv");
 			pw = new PrintWriter(testfile);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		StringBuilder sb = new StringBuilder();
@@ -125,8 +124,6 @@ public class DataCollection {
 			Frame frame = controller.frame();
 			
 			if (frame.hands().count() == 1) {
-				
-				
 				// label
 				sb.append(labelText.getText() + ",");
 				// grab strength
@@ -144,14 +141,14 @@ public class DataCollection {
 				// Palm direction y
 				sb.append(df.format(frame.hands().get(0).direction().getY()) + ",");
 				// Palm direction z
-				sb.append(df.format(frame.hands().get(0).direction().getZ()) + ",");
+				sb.append(df.format(frame.hands().get(0).direction().getZ()));
 				
 				// MERE DATA PLZ
 			} 
 			
 			// Busy wait imellem data captures, for at undgå helt ens værdier
 			try {
-				Thread.sleep(250);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -159,13 +156,13 @@ public class DataCollection {
 			sb.append('\n');
 			i++;
 			
-			samplesCollected.setText(i + " / " + samples);
-			if(i >= samples) 
+			samplesCollected.setText(i + " / " + numberOfSamples);
+			if(i >= numberOfSamples) 
 				collectingBool = false;
 		}
 		
 		pw.write(sb.toString());
-		samplesCollected.setText(i + " / " + samples + " - Done!!");
+		samplesCollected.setText(i + " / " + numberOfSamples + " - Done!!");
 		pw.close();
 	}
 }
