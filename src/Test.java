@@ -89,6 +89,7 @@ class Test {
 				sb.append(lineTime + "\t");
 				// Prediction
 				sb.append(SVMTrainer.svmPredict(getSample(), model));
+				System.out.println(lineTime + "\t" + SVMTrainer.svmPredict(getSample(), model));
 			} 
 			
 			// Busy wait imellem data captures, for at undgå helt ens værdier
