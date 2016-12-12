@@ -141,7 +141,15 @@ public class DataCollection {
 				// Palm direction y
 				sb.append(df.format(frame.hands().get(0).direction().getY()) + ",");
 				// Palm direction z
-				sb.append(df.format(frame.hands().get(0).direction().getZ()));
+				sb.append(df.format(frame.hands().get(0).direction().getZ()) + ",");
+				// hand pitch
+				sb.append(df.format(frame.hands().get(0).direction().pitch()) + ",");
+				// hand roll
+				sb.append(df.format(frame.hands().get(0).direction().roll()) + ",");
+				// hand yaw
+				sb.append(df.format(frame.hands().get(0).direction().yaw()) + ",");
+				
+				
 				
 				// MERE DATA PLZ
 			} 
