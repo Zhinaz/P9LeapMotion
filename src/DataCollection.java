@@ -104,7 +104,6 @@ public class DataCollection {
 		otherSymbols.setGroupingSeparator(',');
 		DecimalFormat df = new DecimalFormat("#.#####", otherSymbols);
 		
-		
 		PrintWriter pw = null;
 		try {
 			final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm.ss");
