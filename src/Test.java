@@ -12,64 +12,6 @@ import com.leapmotion.leap.Listener;
 
 import libsvm.svm_model;
 
-
-class SampleListener extends Listener {
-	Boolean played = false;
-
-	public void onInit(Controller controller) {
-		System.out.println("Initialized");
-	}
-
-	public void onConnect(Controller controller) {
-		System.out.println("Connected");
-	}
-
-	public void onDisconnect(Controller controller) {
-		// Note: not dispatched when running in a debugger.
-		System.out.println("Disconnected");
-	}
-
-	public void onExit(Controller controller) {
-		System.out.println("Exited");
-	}
-
-	public void onFrame(Controller controller) {
-		// Get the most recent frame and report some basic information
-		Frame frame = controller.frame();
-
-		// System.out.println("Frame id: " + frame.id()
-		// + ", timestamp: " + frame.timestamp()
-		// + ", hands: " + frame.hands().count()
-		// + ", fingers: " + frame.fingers().count());
-
-		// Get hands
-		for (Hand hand : frame.hands()) {
-
-			System.out.println("Hand confidence: " + hand.confidence());
-			System.out.println("Grab angle: " + hand.grabAngle());
-			System.out.println("Grab strength: " + hand.grabStrength());
-
-			System.out.println("Palm normal: " + hand.palmNormal().toString());
-			System.out.println("Palm width: " + hand.palmWidth());
-
-			System.out.println("pinch distance: " + hand.pinchDistance());
-			System.out.println("pinch strength: " + hand.pinchStrength());
-
-			System.out.println("stabilised palm position: " + hand.stabilizedPalmPosition().toString());
-			System.out.println("wrist position: " + hand.wristPosition().toString());
-
-			System.out.println("index pointing direction" + hand.pointables().get(1).direction().toString());
-		}
-
-		if (!frame.hands().isEmpty()) {
-			System.out.println();
-		}
-	}
-	
-	
-}
-
-
 class Test {
 	public static double[] getSample() {
 		Controller controller = new Controller();
