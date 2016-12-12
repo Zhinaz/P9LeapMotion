@@ -12,7 +12,6 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
 
 import com.leapmotion.leap.Controller;
 import com.leapmotion.leap.Frame;
@@ -22,8 +21,6 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 public class Main {
 	protected Shell shell;
-	private Label label;
-	private Text labelText;
 	private Button btnStart;
 	private Label lblsamplesCollected;
 

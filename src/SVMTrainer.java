@@ -7,7 +7,7 @@ import libsvm.svm_problem;
 
 class SVMTrainer {
 	// classification classes
-	private static int numberOfClasses = 2;
+	private static int numberOfClasses = 3;
 	// Model
 	//public static svm_model model;
 
