@@ -31,17 +31,11 @@ public class Main {
 	private Button btnStop;
 	private Label lblsamplesCollected;
 
-	private int numberOfSamples = 4800; //4800 = 20minutes
 	public Boolean collectingBool = false;
 	private Label lblData;
 	private Label samplesCollected;
 	
 	Timer timer;
-	
-	DataReader reader = new DataReader("src/testdata.csv");
-	ArrayList<double[]> data = reader.getParsedData();
-	SVMTrainer trainer = new SVMTrainer();
-	svm_model model = trainer.svmTrain(data);
 	
 	public static double[] getSample() {
 		Controller controller = new Controller();
@@ -87,59 +81,6 @@ public class Main {
 		TimerActionListener timerAction = new TimerActionListener(model, lblData, getSample());
 		timer = new Timer(250, timerAction);
 		timer.start();
-	}
-	
-	public void dataCollection() {
-		DataReader reader = new DataReader("src/testdata.csv");
-		ArrayList<double[]> data = reader.getParsedData();
-		SVMTrainer trainer = new SVMTrainer();
-		svm_model model = trainer.svmTrain(data);
-		
-		final SimpleDateFormat formatForLines = new SimpleDateFormat("HH:mm ss.SSS");
-		
-		PrintWriter pw = null;
-		try {
-			final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm");
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			String filename = sdf.format(timestamp);
-			File testfile = new File("files/test" + filename + ".csv");
-			pw = new PrintWriter(testfile);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		StringBuilder sb = new StringBuilder();
-		
-		int j = 0;
-		while (j < numberOfSamples) {
-			// Append all data for each set
-			Controller controller = new Controller();
-			Frame frame = controller.frame();
-			
-			if (frame.hands().count() == 1) {
-				// Add time stamp
-				Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-				String lineTime = formatForLines.format(timestamp);
-				sb.append(lineTime + "\t");
-				// Prediction
-				sb.append(SVMTrainer.svmPredict(getSample(), model));
-				
-				System.out.println(lineTime + "\t" + SVMTrainer.svmPredict(getSample(), model));
-				lblData.setText(lineTime + "\t" + SVMTrainer.svmPredict(getSample(), model));
-			} 
-			
-			// Busy wait between data - avoids similar data sets
-			try {
-				Thread.sleep(250);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-        	j++;
-        	samplesCollected.setText(j + " / " + numberOfSamples);
-			sb.append('\n');
-		}
-		
-		pw.write(sb.toString());
-		pw.close();
 	}
 
 	protected void createContents() {

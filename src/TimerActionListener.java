@@ -2,13 +2,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-
 import com.leapmotion.leap.Controller;
 import com.leapmotion.leap.Frame;
-
 import libsvm.svm_model;
 
 class TimerActionListener implements ActionListener {
