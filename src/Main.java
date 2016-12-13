@@ -1,9 +1,15 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import javax.swing.SwingUtilities;
+import javax.swing.Timer;
+import java.util.TimerTask;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
@@ -22,12 +28,20 @@ import org.eclipse.wb.swt.SWTResourceManager;
 public class Main {
 	protected Shell shell;
 	private Button btnStart;
+	private Button btnStop;
 	private Label lblsamplesCollected;
 
 	private int numberOfSamples = 4800; //4800 = 20minutes
 	public Boolean collectingBool = false;
 	private Label lblData;
 	private Label samplesCollected;
+	
+	Timer timer;
+	
+	DataReader reader = new DataReader("src/testdata.csv");
+	ArrayList<double[]> data = reader.getParsedData();
+	SVMTrainer trainer = new SVMTrainer();
+	svm_model model = trainer.svmTrain(data);
 	
 	public static double[] getSample() {
 		Controller controller = new Controller();
@@ -43,7 +57,7 @@ public class Main {
 		return temp;
 	}
 	
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		try {
 			Main window = new Main();
 			window.open();
@@ -63,58 +77,17 @@ public class Main {
 			}
 		}
 	}
-	
-	/*private Thread thread = new Thread(new Runnable() {
-		public void run() {
-			DataReader reader = new DataReader("src/testdata.csv");
-			ArrayList<double[]> data = reader.getParsedData();
-			SVMTrainer trainer = new SVMTrainer();
-			svm_model model = trainer.svmTrain(data);
-			
-			final SimpleDateFormat formatForLines = new SimpleDateFormat("HH:mm ss.SSS");
-			
-			PrintWriter pw = null;
-			try {
-				final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm");
-				Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-				String filename = sdf.format(timestamp);
-				File testfile = new File("files/test" + filename + ".csv");
-				pw = new PrintWriter(testfile);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-			StringBuilder sb = new StringBuilder();
-			
-			int j = 0;
-			while (j < numberOfSamples) {
-				// Append all data for each set
-				Controller controller = new Controller();
-				Frame frame = controller.frame();
-				
-				if (frame.hands().count() == 1) {
-					// Add time stamp
-					Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-					String lineTime = formatForLines.format(timestamp);
-					sb.append(lineTime + "\t");
-					// Prediction
-					sb.append(SVMTrainer.svmPredict(getSample(), model));
-					
-					System.out.println(lineTime + "\t" + SVMTrainer.svmPredict(getSample(), model));
-				} 
-				
-				// Busy wait between data - avoids similar data sets
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-	        	j++;
-				sb.append('\n');
-			}
-			
-			pw.write(sb.toString());
-			pw.close();
-		}});*/
+
+	public void initiateTimer() {
+		DataReader reader = new DataReader("src/testdata.csv");
+		ArrayList<double[]> data = reader.getParsedData();
+		SVMTrainer trainer = new SVMTrainer();
+		svm_model model = trainer.svmTrain(data);
+		
+		TimerActionListener timerAction = new TimerActionListener(model, lblData, getSample());
+		timer = new Timer(250, timerAction);
+		timer.start();
+	}
 	
 	public void dataCollection() {
 		DataReader reader = new DataReader("src/testdata.csv");
@@ -176,14 +149,25 @@ public class Main {
 		
 		btnStart = new Button(shell, SWT.BUTTON1);
 		btnStart.setText("Start collecting");
-		btnStart.setBounds(274, 117, 100, 34);
+		btnStart.setBounds(274, 79, 100, 34);
 		btnStart.addListener(SWT.Selection, new Listener() {
 			public void handleEvent(Event arg0) {
 				if (!collectingBool) {
 					System.out.println("Start collecting");
 					collectingBool = true;
-					dataCollection();
+					initiateTimer();
 				}
+			}
+		});
+		
+		btnStop = new Button(shell, SWT.BUTTON1);
+		btnStop.setText("Stop collecting");
+		btnStop.setBounds(274, 117, 100, 34);
+		btnStop.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				System.out.println("Collection stopped");
+				collectingBool = false;
+				timer.stop();
 			}
 		});
 		

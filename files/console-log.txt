@@ -1411,3 +1411,4458 @@ Total nSV = 82
 15:09 51.284	1.0
 15:09 51.536	2.0
 15:09 51.787	3.0
+*
+optimization finished, #iter = 47
+nu = 0.022707367927530767
+obj = -1.796452695996587, rho = 0.10444985457654903
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 59
+nu = 0.024582003378772914
+obj = -2.056503049334817, rho = 0.11720781027644196
+nSV = 7, nBSV = 2
+Total nSV = 7
+..*
+optimization finished, #iter = 399
+nu = 0.022070812920275316
+obj = -1.8872710833066804, rho = -0.009461346164112051
+nSV = 9, nBSV = 2
+Total nSV = 9
+*
+optimization finished, #iter = 104
+nu = 0.02424433106741345
+obj = -1.9502625560181708, rho = 0.12660645962856726
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 121
+nu = 0.024665106111747288
+obj = -2.0577245684351038, rho = 0.1292156780939548
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 228
+nu = 0.04613690019544628
+obj = -4.733682939193432, rho = 1.1716817845112624
+nSV = 13, nBSV = 5
+Total nSV = 13
+*
+optimization finished, #iter = 91
+nu = 0.04824849715328977
+obj = -4.221684950075911, rho = 1.5466560087686412
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 118
+nu = 0.05314320443964742
+obj = -4.947316428316649, rho = 1.3675186529073224
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 80
+nu = 0.047956467101797164
+obj = -4.444211728183705, rho = 1.3778213501917282
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 125
+nu = 0.04643058873201772
+obj = -4.464885838175478, rho = 1.2637815130601895
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+....*
+optimization finished, #iter = 672
+nu = 0.35907945540708025
+obj = -44.524915613109584, rho = 0.7781434517457578
+nSV = 58, nBSV = 52
+Total nSV = 58
+..*
+optimization finished, #iter = 384
+nu = 0.33891269804230595
+obj = -42.03784015551468, rho = 0.9881565426601558
+nSV = 55, nBSV = 47
+Total nSV = 55
+.*
+optimization finished, #iter = 292
+nu = 0.362518855149854
+obj = -45.776014813708876, rho = 0.9876452812939414
+nSV = 61, nBSV = 53
+Total nSV = 61
+..*
+optimization finished, #iter = 354
+nu = 0.357742196743333
+obj = -44.24985337571231, rho = 0.8755333931102145
+nSV = 58, nBSV = 51
+Total nSV = 58
+.*
+optimization finished, #iter = 197
+nu = 0.3736190405502814
+obj = -46.85409035375243, rho = 0.7096580069873765
+nSV = 61, nBSV = 55
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+Start time:Tue Dec 13 09:07:15 CET 2016
+Collection stopped
+End time:Tue Dec 13 09:07:25 CET 2016
+*
+optimization finished, #iter = 94
+nu = 0.023400964791666305
+obj = -1.9837843566397142, rho = 0.06087636161864225
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 80
+nu = 0.024121109815848432
+obj = -2.0233445087125226, rho = 0.07945399578055053
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 88
+nu = 0.02280819610078313
+obj = -1.7994131237590363, rho = 0.10215380292686808
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 48
+nu = 0.02440133444947971
+obj = -1.950987871814368, rho = 0.1276884267167071
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 80
+nu = 0.024664091711282
+obj = -2.057724210566359, rho = 0.12908579034664652
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 136
+nu = 0.04895433493774255
+obj = -4.506362617333027, rho = 1.3865590610206782
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 76
+nu = 0.04591469127375783
+obj = -4.722505800355805, rho = 1.183574945343204
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 127
+nu = 0.053340286846741615
+obj = -4.966003150169473, rho = 1.4402003924256113
+nSV = 14, nBSV = 7
+Total nSV = 14
+*
+optimization finished, #iter = 132
+nu = 0.04146693661665266
+obj = -3.793991018634313, rho = 1.3280666449984726
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 78
+nu = 0.04912817648565175
+obj = -4.7123843524070566, rho = 1.2662115582446074
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 272
+nu = 0.38244571947188505
+obj = -48.925268557451155, rho = 0.6934772934770784
+nSV = 63, nBSV = 56
+Total nSV = 63
+..*
+optimization finished, #iter = 314
+nu = 0.37864090707262427
+obj = -46.258449388012764, rho = 0.8135894936246764
+nSV = 64, nBSV = 56
+Total nSV = 64
+.*
+optimization finished, #iter = 295
+nu = 0.3478957254932261
+obj = -44.22034950472337, rho = 0.8402564732746776
+nSV = 56, nBSV = 49
+Total nSV = 56
+.*
+optimization finished, #iter = 191
+nu = 0.32997536316837867
+obj = -40.71153690069308, rho = 1.0176166166317429
+nSV = 56, nBSV = 47
+Total nSV = 56
+..*
+optimization finished, #iter = 413
+nu = 0.3600824200828494
+obj = -43.449353073749805, rho = 0.7520319103326593
+nSV = 61, nBSV = 51
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 128
+nu = 0.023424496789720233
+obj = -1.9893388949051845, rho = 0.0700122698169444
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 94
+nu = 0.024294669321250476
+obj = -2.031660936454648, rho = 0.08047652383630957
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 142
+nu = 0.022496313190849392
+obj = -1.7618718643935305, rho = 0.09732111816829708
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 100
+nu = 0.02398827529630214
+obj = -1.9267771928537116, rho = 0.15286587264080104
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 101
+nu = 0.02412372642279597
+obj = -2.0233444660126785, rho = 0.07897157051304067
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 160
+nu = 0.046674452526360516
+obj = -4.44357553765179, rho = 1.2953136384847548
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 78
+nu = 0.052912922676704
+obj = -4.965940387107645, rho = 1.439035519731177
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 100
+nu = 0.053343989515315895
+obj = -4.965880710520184, rho = 1.4402560890561382
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 38
+nu = 0.046200736027134134
+obj = -4.662030561126739, rho = 1.2200739444815174
+nSV = 10, nBSV = 6
+Total nSV = 10
+*
+optimization finished, #iter = 96
+nu = 0.04474030432329941
+obj = -3.889539075286473, rho = 1.4737974076932
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 482
+nu = 0.39832568499733684
+obj = -50.12134433000305, rho = 0.869171412838474
+nSV = 65, nBSV = 57
+Total nSV = 65
+.*
+optimization finished, #iter = 295
+nu = 0.34359094448052124
+obj = -42.58841890192587, rho = 0.9151722149318728
+nSV = 57, nBSV = 49
+Total nSV = 57
+.*
+optimization finished, #iter = 183
+nu = 0.3372136446410675
+obj = -41.829919140195834, rho = 0.8008301162772847
+nSV = 55, nBSV = 50
+Total nSV = 55
+.....*
+optimization finished, #iter = 857
+nu = 0.3369110966280254
+obj = -41.6342950862028, rho = 0.7781700720082315
+nSV = 58, nBSV = 50
+Total nSV = 58
+..*
+optimization finished, #iter = 318
+nu = 0.37662337662337664
+obj = -47.282639848997285, rho = 0.843605221243334
+nSV = 62, nBSV = 55
+Total nSV = 62
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:26 47.709	3.0
+Exception in thread "Timer-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.run(CollectionTimer.java:38)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Collection stopped
+*
+optimization finished, #iter = 75
+nu = 0.024283141354225102
+obj = -1.9513810929767819, rho = 0.13358346425978393
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 87
+nu = 0.024663471270798848
+obj = -2.0577240011710796, rho = 0.1289656524904499
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 118
+nu = 0.024663597272474174
+obj = -2.0577244640294277, rho = 0.1291407739172105
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 204
+nu = 0.020325781916698264
+obj = -1.6526348776325037, rho = -0.046901037719814506
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 81
+nu = 0.02456340553862498
+obj = -2.052500425878568, rho = 0.1398539286769162
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 79
+nu = 0.04872077691161712
+obj = -4.250874109361948, rho = 1.5289377671348674
+nSV = 10, nBSV = 5
+Total nSV = 10
+.*
+optimization finished, #iter = 238
+nu = 0.05213820657804697
+obj = -4.835265688526788, rho = 1.4419008171503431
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 51
+nu = 0.04067607761251138
+obj = -3.9087935353798287, rho = 1.091001722143186
+nSV = 10, nBSV = 5
+Total nSV = 10
+.*
+optimization finished, #iter = 206
+nu = 0.04807516244184016
+obj = -4.813912254988308, rho = 1.243128373860125
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 69
+nu = 0.05065381167496975
+obj = -4.8567203609938785, rho = 1.3431112954561601
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 507
+nu = 0.34867853681259603
+obj = -44.020888751521746, rho = 0.9264863342206274
+nSV = 57, nBSV = 50
+Total nSV = 57
+..*
+optimization finished, #iter = 396
+nu = 0.3376910305929961
+obj = -41.08729219703923, rho = 0.840468652315499
+nSV = 56, nBSV = 49
+Total nSV = 56
+..*
+optimization finished, #iter = 311
+nu = 0.4009748961970979
+obj = -50.7887840425392, rho = 0.9485524429584612
+nSV = 66, nBSV = 59
+Total nSV = 66
+....*
+optimization finished, #iter = 667
+nu = 0.31910086524382825
+obj = -38.701685115287646, rho = 0.7184250827177119
+nSV = 54, nBSV = 46
+Total nSV = 54
+..*
+optimization finished, #iter = 342
+nu = 0.4028336728301966
+obj = -48.58339526314207, rho = 0.9257654861081835
+nSV = 64, nBSV = 56
+Total nSV = 64
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 114
+nu = 0.023770454599241726
+obj = -1.9894939431757823, rho = 0.09476608885625352
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 38
+nu = 0.024404303394755918
+obj = -1.9509875040742335, rho = 0.12774528822957282
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 270
+nu = 0.022555306478747917
+obj = -1.8966883649581983, rho = 0.006018645301151259
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 71
+nu = 0.022800686616722986
+obj = -1.799412366694286, rho = 0.10257315689960056
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 89
+nu = 0.024668358300761285
+obj = -2.0577247208183524, rho = 0.12941635096116105
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 189
+nu = 0.05213665989303467
+obj = -4.835266088544923, rho = 1.4418593145921785
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 46
+nu = 0.04845048236385373
+obj = -4.560641712556522, rho = 1.3492910494227064
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 124
+nu = 0.051527422639664075
+obj = -4.823334221653784, rho = 1.4017556284711523
+nSV = 11, nBSV = 6
+Total nSV = 11
+.*
+optimization finished, #iter = 184
+nu = 0.03527187406496775
+obj = -3.1777828103242762, rho = 1.1128501575130856
+nSV = 10, nBSV = 2
+Total nSV = 10
+*
+optimization finished, #iter = 52
+nu = 0.05285937814224614
+obj = -4.963753887755253, rho = 1.4321441696836665
+nSV = 12, nBSV = 7
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 533
+nu = 0.35453658299165697
+obj = -44.392823032523076, rho = 0.8545113564852286
+nSV = 60, nBSV = 51
+Total nSV = 60
+.*
+optimization finished, #iter = 282
+nu = 0.36003761361918574
+obj = -45.663831686258256, rho = 0.8579076362244322
+nSV = 60, nBSV = 52
+Total nSV = 60
+..*
+optimization finished, #iter = 354
+nu = 0.35201233476992544
+obj = -43.42383614674091, rho = 0.9878355858736148
+nSV = 59, nBSV = 51
+Total nSV = 59
+..*
+optimization finished, #iter = 388
+nu = 0.36955531457392515
+obj = -46.62594270807871, rho = 0.9169700596687933
+nSV = 60, nBSV = 52
+Total nSV = 60
+.*
+optimization finished, #iter = 246
+nu = 0.36675391797857076
+obj = -43.690034909785865, rho = 0.7423340363107815
+nSV = 60, nBSV = 53
+Total nSV = 60
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:27 49.885	3.0
+09:27 50.131	3.0
+09:27 50.381	3.0
+09:27 50.632	3.0
+09:27 50.881	3.0
+09:27 51.131	3.0
+09:27 51.382	3.0
+09:27 51.631	3.0
+09:27 51.881	3.0
+09:27 52.132	3.0
+09:27 52.381	3.0
+09:27 52.631	3.0
+09:27 52.881	3.0
+09:27 53.131	3.0
+09:27 53.381	3.0
+09:27 53.632	3.0
+09:27 53.881	3.0
+09:27 54.131	3.0
+09:27 54.382	3.0
+09:27 54.631	3.0
+09:27 54.881	3.0
+09:27 55.131	3.0
+09:27 55.381	3.0
+09:27 55.631	3.0
+09:27 55.881	3.0
+09:27 56.131	3.0
+09:27 56.381	3.0
+09:27 56.632	3.0
+09:27 56.881	3.0
+09:27 57.132	3.0
+09:27 58.631	3.0
+09:27 58.882	3.0
+09:27 59.131	3.0
+09:27 59.381	3.0
+09:27 59.632	3.0
+09:27 59.881	3.0
+09:28 00.131	3.0
+09:28 00.381	3.0
+09:28 00.631	3.0
+09:28 00.881	3.0
+09:28 01.132	3.0
+09:28 01.381	3.0
+09:28 01.631	3.0
+Collection stopped
+Start collecting
+*
+optimization finished, #iter = 115
+nu = 0.021180521569001243
+obj = -1.726301899390442, rho = 0.009910791727608042
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 76
+nu = 0.024439905730768905
+obj = -1.9513823339789254, rho = 0.1335518709203004
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 42
+nu = 0.02405033258328895
+obj = -2.000306483162101, rho = 0.1233499489861518
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 90
+nu = 0.024090567863618968
+obj = -2.0136817537664493, rho = 0.044327261116189974
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 87
+nu = 0.024668585560910526
+obj = -2.057724778941868, rho = 0.12946578820234095
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 119
+nu = 0.04612437954652849
+obj = -3.9651021478713364, rho = 1.5457630563246345
+nSV = 10, nBSV = 4
+Total nSV = 10
+*
+optimization finished, #iter = 141
+nu = 0.04682009101791323
+obj = -4.526381881976922, rho = 1.2799433189610052
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 115
+nu = 0.05314247846924438
+obj = -4.947316976689291, rho = 1.3675594751347269
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 84
+nu = 0.04726939599321362
+obj = -4.787487224730507, rho = 1.1960523868938988
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 67
+nu = 0.04871158715039227
+obj = -4.5711680586432735, rho = 1.3718894823410221
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 194
+nu = 0.3611406844797261
+obj = -45.688740866290175, rho = 0.996138997850273
+nSV = 60, nBSV = 52
+Total nSV = 60
+.*
+optimization finished, #iter = 198
+nu = 0.3698310905415351
+obj = -47.54727039446214, rho = 0.8199762277214699
+nSV = 60, nBSV = 52
+Total nSV = 60
+.*
+optimization finished, #iter = 202
+nu = 0.3606269927871893
+obj = -43.75894410435869, rho = 0.959165216592285
+nSV = 60, nBSV = 52
+Total nSV = 60
+.*
+optimization finished, #iter = 207
+nu = 0.3609381959267805
+obj = -45.0854107668179, rho = 0.8491403470769551
+nSV = 59, nBSV = 53
+Total nSV = 59
+...*
+optimization finished, #iter = 564
+nu = 0.3354016500543739
+obj = -41.62146163228426, rho = 0.7704630538059796
+nSV = 55, nBSV = 47
+Total nSV = 55
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Unknown Source)
+	at java.util.Timer.scheduleAtFixedRate(Unknown Source)
+	at Main.initiateTimer(Main.java:137)
+	at Main$1.handleEvent(Main.java:206)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4228)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3816)
+	at Main.open(Main.java:72)
+	at Main.main(Main.java:60)
+*
+optimization finished, #iter = 72
+nu = 0.024136527378314735
+obj = -2.031660959295107, rho = 0.08032630969947213
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 121
+nu = 0.02466510611174729
+obj = -2.0577245684351038, rho = 0.12921567809395482
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 74
+nu = 0.021419872579172907
+obj = -1.7193943312026239, rho = 0.10587407545414393
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 126
+nu = 0.022706904277160954
+obj = -1.8728811991718881, rho = 0.10651545811867327
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 104
+nu = 0.02466910854666697
+obj = -2.0577247077635343, rho = 0.12945050681868495
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 113
+nu = 0.052718514494292934
+obj = -4.94160195465182, rho = 1.4098661763965454
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 99
+nu = 0.05300758020437034
+obj = -4.965880790972409, rho = 1.4402960275054395
+nSV = 13, nBSV = 7
+Total nSV = 13
+.*
+optimization finished, #iter = 185
+nu = 0.042761941867309194
+obj = -4.365072387129535, rho = 1.0515240988979464
+nSV = 10, nBSV = 4
+Total nSV = 10
+*
+optimization finished, #iter = 135
+nu = 0.0373828497307529
+obj = -3.4063927785889754, rho = 1.258371063152599
+nSV = 9, nBSV = 3
+Total nSV = 9
+*
+optimization finished, #iter = 139
+nu = 0.053269275554449005
+obj = -4.965772881334895, rho = 1.4401766366367899
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 446
+nu = 0.33540222280912385
+obj = -41.848041719766435, rho = 0.7189575724741197
+nSV = 57, nBSV = 49
+Total nSV = 57
+.*
+optimization finished, #iter = 198
+nu = 0.35195169262359605
+obj = -43.00895295215097, rho = 0.571113054207951
+nSV = 57, nBSV = 51
+Total nSV = 57
+*
+optimization finished, #iter = 127
+nu = 0.40292540959044615
+obj = -51.40591460433088, rho = 1.0505125422405486
+nSV = 67, nBSV = 60
+Total nSV = 67
+..*
+optimization finished, #iter = 331
+nu = 0.35670335161067246
+obj = -44.462955015924805, rho = 0.8423829058232537
+nSV = 58, nBSV = 50
+Total nSV = 58
+..*
+optimization finished, #iter = 400
+nu = 0.34734138110308455
+obj = -43.41800152768449, rho = 0.9061719917829635
+nSV = 58, nBSV = 50
+Total nSV = 58
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 93
+nu = 0.02342556928906484
+obj = -1.9893208606431865, rho = 0.069524070894743
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 198
+nu = 0.021851500122045536
+obj = -1.7522722701126388, rho = 0.08003574782178645
+nSV = 7, nBSV = 1
+Total nSV = 7
+.*
+optimization finished, #iter = 162
+nu = 0.024218148712356107
+obj = -1.939443890891105, rho = 0.1433255335295128
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 107
+nu = 0.024668997070213045
+obj = -2.057724724117191, rho = 0.1294522824513145
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 83
+nu = 0.024668368500571712
+obj = -2.0577248184959056, rho = 0.12946940153395878
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 236
+nu = 0.049156736015694556
+obj = -4.486632680671802, rho = 1.449452577946069
+nSV = 13, nBSV = 5
+Total nSV = 13
+*
+optimization finished, #iter = 110
+nu = 0.04577469352529528
+obj = -4.483776173006851, rho = 1.2188890639291283
+nSV = 10, nBSV = 6
+Total nSV = 10
+.*
+optimization finished, #iter = 180
+nu = 0.04812517156491711
+obj = -4.734417671393851, rho = 1.2758172726239767
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 62
+nu = 0.05229820965431205
+obj = -4.928138188500636, rho = 1.329611489921092
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 96
+nu = 0.04951527357211818
+obj = -4.252375994970862, rho = 1.5654734535196018
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 348
+nu = 0.3674788433100946
+obj = -45.66420489456935, rho = 0.7385095768222957
+nSV = 61, nBSV = 52
+Total nSV = 61
+.*
+optimization finished, #iter = 230
+nu = 0.36645270640899025
+obj = -45.25365471857876, rho = 0.9170725862594498
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 275
+nu = 0.3440435660693928
+obj = -41.63519712707817, rho = 0.7321530821137172
+nSV = 56, nBSV = 49
+Total nSV = 56
+.*
+optimization finished, #iter = 228
+nu = 0.37521250470668954
+obj = -47.323770391628535, rho = 0.803127125685648
+nSV = 61, nBSV = 55
+Total nSV = 61
+.*
+optimization finished, #iter = 275
+nu = 0.3477973595006452
+obj = -42.863000934849566, rho = 0.946999512855058
+nSV = 58, nBSV = 51
+Total nSV = 58
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:28 53.186	3.0
+09:28 53.433	3.0
+09:28 53.684	3.0
+09:28 53.933	3.0
+09:28 54.183	3.0
+09:28 54.434	3.0
+Collection stopped
+Start collecting
+*
+optimization finished, #iter = 91
+nu = 0.02450598605098013
+obj = -2.0577133278750077, rho = 0.1278972548321299
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 76
+nu = 0.024440179896020896
+obj = -1.951385121062492, rho = 0.13356832572199015
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 105
+nu = 0.0228080770288246
+obj = -1.799413144520333, rho = 0.10220422581959106
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 96
+nu = 0.023936962118394845
+obj = -2.019420139057991, rho = 0.0879771366857175
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 116
+nu = 0.02295329329735667
+obj = -1.9616171318601585, rho = 0.03195951641967244
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 130
+nu = 0.05293208652810031
+obj = -4.965772747064578, rho = 1.4400519711236017
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 90
+nu = 0.04079338502266485
+obj = -3.9255354603602477, rho = 1.1663366060830707
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 114
+nu = 0.05214419008517431
+obj = -4.854538878776548, rho = 1.377468767768412
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 134
+nu = 0.04840027187103639
+obj = -4.216796891180624, rho = 1.539213051618233
+nSV = 11, nBSV = 4
+Total nSV = 11
+.*
+optimization finished, #iter = 228
+nu = 0.04711164627762706
+obj = -4.694180527501114, rho = 1.2191089515000737
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 366
+nu = 0.37386855054194956
+obj = -47.9859492969384, rho = 1.022757988174512
+nSV = 61, nBSV = 53
+Total nSV = 61
+..*
+optimization finished, #iter = 348
+nu = 0.35362814314607793
+obj = -44.77024511944832, rho = 0.8306702511981501
+nSV = 60, nBSV = 53
+Total nSV = 60
+.*
+optimization finished, #iter = 269
+nu = 0.3475081137322903
+obj = -41.427550842510485, rho = 0.6899189900531506
+nSV = 58, nBSV = 50
+Total nSV = 58
+.*
+optimization finished, #iter = 232
+nu = 0.3551763499078117
+obj = -43.73736775029752, rho = 1.0084195053379943
+nSV = 59, nBSV = 52
+Total nSV = 59
+.*
+optimization finished, #iter = 188
+nu = 0.3606702783652635
+obj = -44.62381262611944, rho = 0.6336752203805845
+nSV = 59, nBSV = 52
+Total nSV = 59
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:28 55.753	3.0
+09:28 56.002	3.0
+09:28 56.252	3.0
+09:28 56.502	3.0
+09:28 56.753	3.0
+09:28 57.002	3.0
+09:28 57.252	3.0
+09:28 57.503	3.0
+09:28 57.752	3.0
+09:28 58.002	3.0
+09:28 58.253	3.0
+09:28 58.502	3.0
+09:28 58.752	3.0
+09:28 59.003	3.0
+Collection stopped
+*
+optimization finished, #iter = 123
+nu = 0.02223874984980977
+obj = -1.7535327822909368, rho = 0.03185778548512186
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 105
+nu = 0.022568469980635924
+obj = -1.8651617923039514, rho = 0.07816763822759366
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 126
+nu = 0.02466729284950654
+obj = -2.057724750685972, rho = 0.12932308643642126
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 116
+nu = 0.02393506526718934
+obj = -2.0194202453080887, rho = 0.08808009176259338
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 108
+nu = 0.02466447072000251
+obj = -2.057724643232823, rho = 0.12922983656314
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 127
+nu = 0.04757660474678634
+obj = -4.761104159018787, rho = 1.2336845991542356
+nSV = 11, nBSV = 5
+Total nSV = 11
+.*
+optimization finished, #iter = 225
+nu = 0.04491769923237929
+obj = -4.392133015482846, rho = 1.1669118703129462
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 140
+nu = 0.05326418249588995
+obj = -4.965772616239291, rho = 1.439868769701971
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 93
+nu = 0.048470063696598426
+obj = -4.223596133818825, rho = 1.5529765441047034
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 101
+nu = 0.04903923748470242
+obj = -4.538151952565079, rho = 1.3652325444084836
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 185
+nu = 0.35903618243915497
+obj = -42.43670100623135, rho = 0.5873754985874203
+nSV = 59, nBSV = 51
+Total nSV = 59
+...*
+optimization finished, #iter = 565
+nu = 0.3313632455803142
+obj = -39.75727958883681, rho = 0.8167067697987809
+nSV = 57, nBSV = 48
+Total nSV = 57
+.....*
+optimization finished, #iter = 924
+nu = 0.3533786768543741
+obj = -44.30047408884979, rho = 0.9785188637222478
+nSV = 59, nBSV = 50
+Total nSV = 59
+.*
+optimization finished, #iter = 261
+nu = 0.3929857895617528
+obj = -49.921928700827905, rho = 1.0138977735197017
+nSV = 64, nBSV = 58
+Total nSV = 64
+..*
+optimization finished, #iter = 423
+nu = 0.37148861361526464
+obj = -47.18842879958125, rho = 0.8548626751795894
+nSV = 61, nBSV = 53
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+.*
+optimization finished, #iter = 249
+nu = 0.022326708187483266
+obj = -1.75388547768421, rho = 0.032187689313130756
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 245
+nu = 0.02145238788739679
+obj = -1.7619001233266942, rho = 0.07192573239251
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 82
+nu = 0.02468541943442842
+obj = -2.057405249019111, rho = 0.13886819250957816
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 106
+nu = 0.024665434968337972
+obj = -2.0577218615021717, rho = 0.12869890200547324
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 113
+nu = 0.024124283134869938
+obj = -2.0233442876873533, rho = 0.07892449872256671
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 115
+nu = 0.052806727231822885
+obj = -4.947316685530693, rho = 1.3675493650949122
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 116
+nu = 0.03992555879784345
+obj = -3.731905291039887, rho = 1.2845235514618605
+nSV = 9, nBSV = 4
+Total nSV = 9
+.*
+optimization finished, #iter = 189
+nu = 0.04838044772614735
+obj = -4.813911964545065, rho = 1.243114796895943
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 48
+nu = 0.04848151438003424
+obj = -4.617903929478677, rho = 1.3224724746945624
+nSV = 10, nBSV = 6
+Total nSV = 10
+.*
+optimization finished, #iter = 157
+nu = 0.04950522458940211
+obj = -4.578270489954266, rho = 1.3913016733615338
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 217
+nu = 0.31300923030927336
+obj = -38.49646143316646, rho = 0.6125506927343646
+nSV = 52, nBSV = 45
+Total nSV = 52
+..*
+optimization finished, #iter = 407
+nu = 0.37479225455451737
+obj = -47.49895765996283, rho = 0.9483672049696307
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 255
+nu = 0.3804155674364268
+obj = -47.683484100624945, rho = 1.0184829230421393
+nSV = 62, nBSV = 54
+Total nSV = 62
+*
+optimization finished, #iter = 137
+nu = 0.34889167930814236
+obj = -42.781085977516774, rho = 0.6823955438478463
+nSV = 57, nBSV = 50
+Total nSV = 57
+..*
+optimization finished, #iter = 373
+nu = 0.3834486872971666
+obj = -47.3083694106312, rho = 0.9437604108441849
+nSV = 64, nBSV = 54
+Total nSV = 64
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:33 30.882	3.0
+Exception in thread "Timer-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.updateGUI(CollectionTimer.java:40)
+	at CollectionTimer.run(CollectionTimer.java:35)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Collection stopped
+*
+optimization finished, #iter = 85
+nu = 0.023425777700939406
+obj = -1.9893209507298404, rho = 0.06954327036655533
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 127
+nu = 0.021573548510580486
+obj = -1.6894938752169684, rho = 0.1550310406147855
+nSV = 8, nBSV = 1
+Total nSV = 8
+*
+optimization finished, #iter = 58
+nu = 0.024050658800348124
+obj = -2.0003064754116298, rho = 0.1233701646077707
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 96
+nu = 0.024295769507996137
+obj = -2.0316597167355726, rho = 0.08002902049386405
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 82
+nu = 0.024586683592829763
+obj = -2.0565049656015044, rho = 0.11704919409342922
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 258
+nu = 0.04654660623877974
+obj = -4.701376864196256, rho = 1.1879222636631939
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 152
+nu = 0.05260629788035507
+obj = -4.894458032487248, rho = 1.4282631856760546
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 96
+nu = 0.04473482867160879
+obj = -3.8787176325240154, rho = 1.304356418808269
+nSV = 11, nBSV = 5
+Total nSV = 11
+.*
+optimization finished, #iter = 172
+nu = 0.04897624235418294
+obj = -4.428974510838833, rho = 1.4476544178891446
+nSV = 11, nBSV = 5
+Total nSV = 11
+.*
+optimization finished, #iter = 227
+nu = 0.044380789798108805
+obj = -4.4496076303018794, rho = 1.1455529778356623
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 498
+nu = 0.3677755889765061
+obj = -45.74439781927717, rho = 0.5339023729619228
+nSV = 60, nBSV = 53
+Total nSV = 60
+.*
+optimization finished, #iter = 226
+nu = 0.36561486756470224
+obj = -46.040210493010456, rho = 1.0624273657264447
+nSV = 60, nBSV = 54
+Total nSV = 60
+..*
+optimization finished, #iter = 344
+nu = 0.33766663155151966
+obj = -41.551334971839786, rho = 1.061155514321096
+nSV = 56, nBSV = 49
+Total nSV = 56
+.*
+optimization finished, #iter = 183
+nu = 0.3618957316248165
+obj = -43.77590597204183, rho = 0.6822762665628436
+nSV = 59, nBSV = 52
+Total nSV = 59
+..*
+optimization finished, #iter = 436
+nu = 0.3715964643067757
+obj = -46.45176006531237, rho = 0.993891347860288
+nSV = 61, nBSV = 53
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 108
+nu = 0.02396678056236038
+obj = -2.0233444491095405, rho = 0.0789089629044224
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 78
+nu = 0.024683800960871777
+obj = -2.0574052705686774, rho = 0.1388410384225662
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 68
+nu = 0.02466888787325315
+obj = -2.057724921785195, rho = 0.12959739757093813
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 57
+nu = 0.02206125928580702
+obj = -1.7214341368903616, rho = 0.1589678858488615
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 113
+nu = 0.023552137938431514
+obj = -1.9837843571847502, rho = 0.060850911332306336
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 157
+nu = 0.04156399391664129
+obj = -3.9975121076456013, rho = 1.1283881647663352
+nSV = 11, nBSV = 4
+Total nSV = 11
+*
+optimization finished, #iter = 152
+nu = 0.049234224250983144
+obj = -4.828515247486732, rho = 1.1830817974617973
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 126
+nu = 0.049075571216596656
+obj = -4.53817935445709, rho = 1.3659588452006748
+nSV = 12, nBSV = 6
+Total nSV = 12
+.*
+optimization finished, #iter = 186
+nu = 0.04749420854448828
+obj = -4.103222715111162, rho = 1.562348789571324
+nSV = 11, nBSV = 4
+Total nSV = 11
+*
+optimization finished, #iter = 156
+nu = 0.05294061000074554
+obj = -4.894459092110452, rho = 1.4282425894852702
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 405
+nu = 0.37359846687249
+obj = -47.294835411132844, rho = 1.0696413672295142
+nSV = 63, nBSV = 55
+Total nSV = 63
+.*
+optimization finished, #iter = 276
+nu = 0.35346893360837506
+obj = -44.79537321699362, rho = 0.7823376532106975
+nSV = 57, nBSV = 50
+Total nSV = 57
+.*
+optimization finished, #iter = 159
+nu = 0.3655772382083384
+obj = -44.42933509734323, rho = 0.8667768531477424
+nSV = 60, nBSV = 53
+Total nSV = 60
+...*
+optimization finished, #iter = 598
+nu = 0.33591953699039917
+obj = -41.962379495889834, rho = 0.8131102811170823
+nSV = 57, nBSV = 48
+Total nSV = 57
+.*
+optimization finished, #iter = 225
+nu = 0.3611900989289955
+obj = -44.388534738825136, rho = 0.8508331457566425
+nSV = 59, nBSV = 51
+Total nSV = 59
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:35 54.017	3.0
+Exception in thread "Timer-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:49)
+	at CollectionTimer.updateGUI(CollectionTimer.java:44)
+	at CollectionTimer.run(CollectionTimer.java:39)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Collection stopped
+Collection stopped
+Collection stopped
+Start collecting
+*
+optimization finished, #iter = 92
+nu = 0.02451170476288412
+obj = -2.0577245978664207, rho = 0.1294546262694582
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 107
+nu = 0.02429462922490764
+obj = -2.031660228250524, rho = 0.08010384663390784
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 112
+nu = 0.024495968477131418
+obj = -1.944534081417647, rho = 0.14799323613821597
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 85
+nu = 0.02357730760805378
+obj = -1.9893208752236857, rho = 0.06947053507639535
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 197
+nu = 0.021852329837705936
+obj = -1.7522723459644145, rho = 0.08012178239972755
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 128
+nu = 0.05271948040890405
+obj = -4.941601824807819, rho = 1.409905842321917
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 85
+nu = 0.04797298052789754
+obj = -4.813788582096672, rho = 1.2429442555904
+nSV = 12, nBSV = 6
+Total nSV = 12
+.*
+optimization finished, #iter = 279
+nu = 0.04954354660231527
+obj = -4.627908525937444, rho = 1.366021822372821
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 85
+nu = 0.04641733025909381
+obj = -4.503849945008277, rho = 1.1983645716383635
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 97
+nu = 0.0447441999246285
+obj = -3.8895388560186848, rho = 1.4738100745415745
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 163
+nu = 0.3380973876400745
+obj = -39.011032349731586, rho = 0.8510253152802106
+nSV = 55, nBSV = 49
+Total nSV = 55
+..*
+optimization finished, #iter = 328
+nu = 0.36851746622464093
+obj = -45.82123581024363, rho = 0.7822818902839906
+nSV = 60, nBSV = 53
+Total nSV = 60
+.*
+optimization finished, #iter = 266
+nu = 0.3539177211998212
+obj = -44.282538385066196, rho = 1.0765836850601278
+nSV = 59, nBSV = 51
+Total nSV = 59
+...*
+optimization finished, #iter = 486
+nu = 0.3806826148425781
+obj = -46.027852229586856, rho = 0.7128707693073917
+nSV = 62, nBSV = 55
+Total nSV = 62
+.*
+optimization finished, #iter = 302
+nu = 0.3670925837947719
+obj = -47.15852095143437, rho = 0.9138545888365379
+nSV = 60, nBSV = 54
+Total nSV = 60
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Exception in thread "Timer-1" 09:36 02.518	3.0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:49)
+	at CollectionTimer.updateGUI(CollectionTimer.java:44)
+	at CollectionTimer.run(CollectionTimer.java:39)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+Collection stopped
+*
+optimization finished, #iter = 123
+nu = 0.024526461823268012
+obj = -2.0574052531109874, rho = 0.13884865513444147
+nSV = 6, nBSV = 2
+Total nSV = 6
+.*
+optimization finished, #iter = 165
+nu = 0.02313110469250678
+obj = -1.9270479722023677, rho = -0.02617925106394611
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 95
+nu = 0.02466675473594042
+obj = -2.0577242816646772, rho = 0.12918181098780585
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 116
+nu = 0.024586502395680963
+obj = -2.0565050964069234, rho = 0.11702488388150897
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 250
+nu = 0.02049448621290174
+obj = -1.5882502870965605, rho = 0.03404633342346348
+nSV = 6, nBSV = 0
+Total nSV = 6
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 139
+nu = 0.041203678824532304
+obj = -3.932378933606331, rho = 1.1780534971983208
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 75
+nu = 0.04893266684707487
+obj = -4.578125993820607, rho = 1.3566611194905798
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 125
+nu = 0.053141905051524795
+obj = -4.947317404232692, rho = 1.3675978377777465
+nSV = 11, nBSV = 5
+Total nSV = 11
+.*
+optimization finished, #iter = 167
+nu = 0.04599100430541798
+obj = -4.710686647844369, rho = 1.1494074159740042
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 73
+nu = 0.048778324374925165
+obj = -4.223596118716072, rho = 1.5528120852452685
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 349
+nu = 0.38364999006091766
+obj = -47.95172709567509, rho = 0.8996631400081831
+nSV = 64, nBSV = 56
+Total nSV = 64
+......*
+optimization finished, #iter = 930
+nu = 0.3626753243188871
+obj = -44.337097574841344, rho = 0.6525952983684065
+nSV = 59, nBSV = 52
+Total nSV = 59
+..*
+optimization finished, #iter = 325
+nu = 0.3127992632216391
+obj = -38.93895521628514, rho = 0.8539102941738153
+nSV = 53, nBSV = 45
+Total nSV = 53
+..*
+optimization finished, #iter = 350
+nu = 0.3555776604826638
+obj = -43.7306153272676, rho = 0.7428944007938935
+nSV = 61, nBSV = 51
+Total nSV = 61
+...*
+optimization finished, #iter = 577
+nu = 0.3768614463659163
+obj = -48.36371273782791, rho = 1.004000433175069
+nSV = 62, nBSV = 54
+Total nSV = 62
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 46
+nu = 0.024509542630520686
+obj = -2.057724726152151, rho = 0.12941394102031734
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 74
+nu = 0.024117974481252465
+obj = -2.023344611827799, rho = 0.07937470392955326
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 68
+nu = 0.02357726448895705
+obj = -1.9893390169441667, rho = 0.07002717647761221
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 64
+nu = 0.024667665844411497
+obj = -2.057724950355253, rho = 0.129529589204249
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 48
+nu = 0.0217734837374008
+obj = -1.69969903931516, rho = 0.12204473731185195
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 175
+nu = 0.043086765486942825
+obj = -3.8286444738952436, rho = 1.4471614083508262
+nSV = 10, nBSV = 4
+Total nSV = 10
+.*
+optimization finished, #iter = 202
+nu = 0.04807655486382186
+obj = -4.813911801746249, rho = 1.2432212968027054
+nSV = 13, nBSV = 6
+Total nSV = 13
+.*
+optimization finished, #iter = 233
+nu = 0.044499537736239714
+obj = -4.433208345598325, rho = 1.170250050453818
+nSV = 12, nBSV = 5
+Total nSV = 12
+.*
+optimization finished, #iter = 277
+nu = 0.05175400691808961
+obj = -4.827889334022385, rho = 1.4175965937745514
+nSV = 13, nBSV = 5
+Total nSV = 13
+*
+optimization finished, #iter = 101
+nu = 0.05118588851309274
+obj = -4.884868736119393, rho = 1.3671321006364405
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+....*
+optimization finished, #iter = 723
+nu = 0.34662244127720987
+obj = -43.479694747071854, rho = 0.9919702675342703
+nSV = 57, nBSV = 49
+Total nSV = 57
+..*
+optimization finished, #iter = 393
+nu = 0.3496821151612019
+obj = -43.411127695825385, rho = 0.8424305953221144
+nSV = 58, nBSV = 49
+Total nSV = 58
+.*
+optimization finished, #iter = 241
+nu = 0.35438988097595703
+obj = -45.72003817279648, rho = 0.8060986463055336
+nSV = 60, nBSV = 52
+Total nSV = 60
+.*
+optimization finished, #iter = 189
+nu = 0.37218635844580583
+obj = -45.426458301801894, rho = 0.9205880557064055
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 209
+nu = 0.3783476508339182
+obj = -46.28674094738914, rho = 0.9286588959637126
+nSV = 63, nBSV = 55
+Total nSV = 63
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:39 38.199	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 38.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 38.696	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 38.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 39.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 39.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 39.695	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 39.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 40.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 40.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 40.695	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 40.946	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 41.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 41.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 41.696	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 41.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 42.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 42.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 42.696	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 42.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 43.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 43.446	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 43.695	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 43.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 44.196	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 44.445	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 44.695	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 44.945	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 45.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:39 47.195	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer.labelUpdate(CollectionTimer.java:53)
+	at CollectionTimer.access$0(CollectionTimer.java:52)
+	at CollectionTimer$1.run(CollectionTimer.java:47)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Collection stopped
+*
+optimization finished, #iter = 64
+nu = 0.024087679334690106
+obj = -1.9502594612339132, rho = 0.1267885105460089
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 99
+nu = 0.0246671094982188
+obj = -2.0577246755560177, rho = 0.1293492094969071
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 63
+nu = 0.024686108431098218
+obj = -2.0574051994041733, rho = 0.13887975600180436
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 93
+nu = 0.023577478119377635
+obj = -1.9893390302046488, rho = 0.07002675251752606
+nSV = 8, nBSV = 2
+Total nSV = 8
+.*
+optimization finished, #iter = 189
+nu = 0.021855767798631832
+obj = -1.7514108145080869, rho = 0.0772163404033595
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 160
+nu = 0.052604583734266214
+obj = -4.8944589005362165, rho = 1.428177598260412
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 97
+nu = 0.04656729298200523
+obj = -4.501556045472834, rho = 1.2993599775425329
+nSV = 11, nBSV = 5
+Total nSV = 11
+.*
+optimization finished, #iter = 261
+nu = 0.04310885503286652
+obj = -3.707293723075776, rho = 1.342833910718469
+nSV = 10, nBSV = 5
+Total nSV = 10
+.*
+optimization finished, #iter = 216
+nu = 0.042664442301913616
+obj = -4.193568070182534, rho = 1.1464547290460867
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 128
+nu = 0.05304877230559948
+obj = -4.9416014925199585, rho = 1.4096452010849312
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 377
+nu = 0.34998783015471
+obj = -43.53264016534476, rho = 1.0598949551888366
+nSV = 58, nBSV = 51
+Total nSV = 58
+.*
+optimization finished, #iter = 263
+nu = 0.3265124113967147
+obj = -39.82799324712288, rho = 0.7747281162500628
+nSV = 55, nBSV = 46
+Total nSV = 55
+.*
+optimization finished, #iter = 218
+nu = 0.3783858537952936
+obj = -47.264017618329525, rho = 0.7820470376672713
+nSV = 62, nBSV = 54
+Total nSV = 62
+.*
+optimization finished, #iter = 235
+nu = 0.3920843398749453
+obj = -49.06464920132477, rho = 0.75098175230838
+nSV = 65, nBSV = 58
+Total nSV = 65
+...*
+optimization finished, #iter = 555
+nu = 0.35451078673676395
+obj = -44.13513222815681, rho = 0.90434122186289
+nSV = 61, nBSV = 52
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+*
+optimization finished, #iter = 94
+nu = 0.024126556493143003
+obj = -2.0313244489197766, rho = 0.09136467491817768
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 102
+nu = 0.024667985099611236
+obj = -2.05772406900543, rho = 0.12925150565428717
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 118
+nu = 0.021315688757042723
+obj = -1.7263018967261814, rho = 0.009808630220689816
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 99
+nu = 0.02412209021827414
+obj = -2.0233444794059725, rho = 0.07905620768552207
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 83
+nu = 0.023797038915867808
+obj = -1.936524484096039, rho = 0.16423570226967446
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 158
+nu = 0.038328987583305434
+obj = -3.465213813836927, rho = 1.2596310005633031
+nSV = 9, nBSV = 3
+Total nSV = 9
+*
+optimization finished, #iter = 118
+nu = 0.05280567673168159
+obj = -4.947317472426249, rho = 1.3676256243429765
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 120
+nu = 0.05293144791991164
+obj = -4.918005713200493, rho = 1.4495717394343335
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 139
+nu = 0.04325523532340545
+obj = -4.375812387080576, rho = 1.1692327999982695
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 88
+nu = 0.05273048524210827
+obj = -4.894012912490688, rho = 1.4257522032495007
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 229
+nu = 0.3551143897764421
+obj = -44.04295363277075, rho = 0.9080620593283576
+nSV = 58, nBSV = 52
+Total nSV = 58
+*
+optimization finished, #iter = 152
+nu = 0.3577732461075165
+obj = -45.574976640635356, rho = 0.8373023387579225
+nSV = 59, nBSV = 52
+Total nSV = 59
+.*
+optimization finished, #iter = 157
+nu = 0.34680792161926377
+obj = -41.75636913806813, rho = 1.0367843875823888
+nSV = 55, nBSV = 50
+Total nSV = 55
+..*
+optimization finished, #iter = 374
+nu = 0.36705036861491197
+obj = -47.00508255214061, rho = 0.8338992126728364
+nSV = 61, nBSV = 54
+Total nSV = 61
+..*
+optimization finished, #iter = 351
+nu = 0.3672462317706161
+obj = -45.74942477997823, rho = 0.6960637652694165
+nSV = 60, nBSV = 53
+Total nSV = 60
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+.*
+optimization finished, #iter = 158
+nu = 0.023194413038923865
+obj = -1.9891813588685403, rho = 0.03110523741668836
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 101
+nu = 0.022802723382285
+obj = -1.7994122112220472, rho = 0.10262356039386317
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 142
+nu = 0.022305926333617214
+obj = -1.8915936188741358, rho = 0.032522001974953516
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 73
+nu = 0.024440771227941662
+obj = -1.9513783705918228, rho = 0.13368616128424307
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 62
+nu = 0.02468837044669787
+obj = -2.0574051195980565, rho = 0.13893749795711002
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 167
+nu = 0.049373110374812075
+obj = -4.260469132315338, rho = 1.5529950157600048
+nSV = 10, nBSV = 4
+Total nSV = 10
+*
+optimization finished, #iter = 54
+nu = 0.05054942269424936
+obj = -4.863520965054464, rho = 1.3493781520823798
+nSV = 10, nBSV = 6
+Total nSV = 10
+*
+optimization finished, #iter = 103
+nu = 0.05266551912394155
+obj = -4.928272659094764, rho = 1.3233590783517515
+nSV = 13, nBSV = 6
+Total nSV = 13
+.*
+optimization finished, #iter = 244
+nu = 0.05213718296895579
+obj = -4.8352668760985145, rho = 1.4418756438384968
+nSV = 12, nBSV = 5
+Total nSV = 12
+...*
+optimization finished, #iter = 471
+nu = 0.032170145698115084
+obj = -3.0359002601865672, rho = 1.0049240967355357
+nSV = 10, nBSV = 3
+Total nSV = 10
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 298
+nu = 0.3460002146465173
+obj = -43.12108181037463, rho = 1.1778901751419613
+nSV = 57, nBSV = 50
+Total nSV = 57
+.*
+optimization finished, #iter = 234
+nu = 0.3405858477377154
+obj = -41.51674612963375, rho = 0.7673600452833461
+nSV = 56, nBSV = 49
+Total nSV = 56
+...*
+optimization finished, #iter = 572
+nu = 0.39215562702643114
+obj = -49.58830253853437, rho = 0.9046973941693714
+nSV = 65, nBSV = 56
+Total nSV = 65
+..*
+optimization finished, #iter = 364
+nu = 0.37727579236614056
+obj = -46.0228555751676, rho = 0.791512295927033
+nSV = 61, nBSV = 54
+Total nSV = 61
+...*
+optimization finished, #iter = 586
+nu = 0.354066915606258
+obj = -43.587366485947996, rho = 0.7014727875620741
+nSV = 59, nBSV = 51
+Total nSV = 59
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 125
+nu = 0.02320169778342938
+obj = -1.989015745170097, rho = 0.02891222775769076
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 76
+nu = 0.024441195718720186
+obj = -1.9513777460966613, rho = 0.13369664831680808
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 83
+nu = 0.024669837855624936
+obj = -2.0577243936313616, rho = 0.12938264127981702
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 133
+nu = 0.023078717843509216
+obj = -1.9806985451163384, rho = 0.07633308220935892
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 79
+nu = 0.022807463764055978
+obj = -1.799413149291233, rho = 0.10216783653818977
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 167
+nu = 0.051913559403783685
+obj = -4.84704418802334, rho = 1.4199251146038048
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 98
+nu = 0.045660834011702636
+obj = -4.508159172636177, rho = 1.2320830787436614
+nSV = 11, nBSV = 6
+Total nSV = 11
+.*
+optimization finished, #iter = 208
+nu = 0.04597304695069654
+obj = -4.5046544837365525, rho = 1.2932611984184643
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 48
+nu = 0.042181831804134144
+obj = -4.0217085177785945, rho = 1.327742001456042
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 102
+nu = 0.05334670337874196
+obj = -4.96588102742235, rho = 1.4403023505480483
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 515
+nu = 0.35231463845380123
+obj = -42.216829673615024, rho = 0.7843407257522562
+nSV = 59, nBSV = 50
+Total nSV = 59
+.*
+optimization finished, #iter = 272
+nu = 0.3737257540624679
+obj = -47.61736300839479, rho = 0.8339381991831923
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 237
+nu = 0.34851784122834534
+obj = -43.37476985806425, rho = 0.9427224132175337
+nSV = 59, nBSV = 52
+Total nSV = 59
+...*
+optimization finished, #iter = 611
+nu = 0.35609006251345876
+obj = -43.22132894378425, rho = 0.7291147014976317
+nSV = 59, nBSV = 52
+Total nSV = 59
+..*
+optimization finished, #iter = 326
+nu = 0.3740041869657848
+obj = -47.38833201467493, rho = 1.0158201541104555
+nSV = 62, nBSV = 54
+Total nSV = 62
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:41 41.686	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 41.931	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 42.181	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 42.431	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 42.681	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 42.932	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 43.181	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 43.431	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 43.681	3.0Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+09:41 43.932	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 44.181	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 44.431	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+09:41 44.681	3.0Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at CollectionTimer$1.run(CollectionTimer.java:42)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+Collection stopped
+*
+optimization finished, #iter = 128
+nu = 0.02260386410034265
+obj = -1.9221934484096683, rho = -0.028296472921155152
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 107
+nu = 0.024686100559361882
+obj = -2.0574051786468837, rho = 0.13887714164934806
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 87
+nu = 0.023937114505747346
+obj = -2.01942010211903, rho = 0.08797995630079822
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 40
+nu = 0.02206274342479836
+obj = -1.7214341929077588, rho = 0.1588863571031385
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 126
+nu = 0.02410429341467861
+obj = -2.0136847173632595, rho = 0.044467791636494926
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 145
+nu = 0.04308946314493407
+obj = -3.730449386174416, rho = 1.2887347015373127
+nSV = 10, nBSV = 4
+Total nSV = 10
+*
+optimization finished, #iter = 103
+nu = 0.047909164539856636
+obj = -4.680393005545862, rho = 1.3096093942333178
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 99
+nu = 0.05201501034759629
+obj = -4.928030609725389, rho = 1.3660995347957707
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 123
+nu = 0.053005793914622644
+obj = -4.966002632128293, rho = 1.440228379939302
+nSV = 14, nBSV = 7
+Total nSV = 14
+*
+optimization finished, #iter = 114
+nu = 0.044577959582280814
+obj = -4.455771341036194, rho = 1.1951256095935094
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+...*
+optimization finished, #iter = 588
+nu = 0.3776611844635471
+obj = -48.028277094837804, rho = 0.8916121937194147
+nSV = 63, nBSV = 54
+Total nSV = 63
+.*
+optimization finished, #iter = 248
+nu = 0.377642419300714
+obj = -46.31366012824168, rho = 0.6857083980625961
+nSV = 61, nBSV = 55
+Total nSV = 61
+.*
+optimization finished, #iter = 189
+nu = 0.3262429005418005
+obj = -40.80367207743414, rho = 1.1777456637460633
+nSV = 54, nBSV = 48
+Total nSV = 54
+..*
+optimization finished, #iter = 310
+nu = 0.381529378453254
+obj = -48.15553063566166, rho = 0.7921913692927403
+nSV = 62, nBSV = 56
+Total nSV = 62
+*
+optimization finished, #iter = 124
+nu = 0.3148865686276279
+obj = -38.025342819996766, rho = 0.8317068222788926
+nSV = 53, nBSV = 46
+Total nSV = 53
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+..*
+optimization finished, #iter = 334
+nu = 0.02171094542458313
+obj = -1.7522719197433596, rho = 0.07994241188742764
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 100
+nu = 0.02466738501253639
+obj = -2.0577208375712015, rho = 0.12866307168658814
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 140
+nu = 0.0227928052240907
+obj = -1.9234791415725827, rho = -0.026347623212728818
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 77
+nu = 0.024439596746668065
+obj = -1.9513807359826492, rho = 0.13360445945231625
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 98
+nu = 0.024103946230091995
+obj = -2.0136849168019584, rho = 0.044537340656540504
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 285
+nu = 0.05103537436965529
+obj = -4.727730108297814, rho = 1.4423475883144026
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 57
+nu = 0.051460504548461565
+obj = -4.897785174654294, rho = 1.2788923465903093
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 147
+nu = 0.05178907302057465
+obj = -4.864517525900131, rho = 1.3721036609742843
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 97
+nu = 0.04681601254206822
+obj = -4.526383635112528, rho = 1.2800264124354728
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 147
+nu = 0.03857701572954171
+obj = -3.465213753027167, rho = 1.259686969322183
+nSV = 9, nBSV = 3
+Total nSV = 9
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 291
+nu = 0.31804692153061587
+obj = -39.04467485022365, rho = 0.8663150778872077
+nSV = 54, nBSV = 46
+Total nSV = 54
+.*
+optimization finished, #iter = 291
+nu = 0.3701508284163683
+obj = -46.34323420502957, rho = 1.059966946786886
+nSV = 62, nBSV = 55
+Total nSV = 62
+.*
+optimization finished, #iter = 289
+nu = 0.3850533890060723
+obj = -48.72167865184453, rho = 0.8581259798694381
+nSV = 64, nBSV = 55
+Total nSV = 64
+.*
+optimization finished, #iter = 293
+nu = 0.3631301631928887
+obj = -43.98471631716866, rho = 0.8096701284301683
+nSV = 59, nBSV = 52
+Total nSV = 59
+.....*
+optimization finished, #iter = 922
+nu = 0.35606522809766245
+obj = -45.19273631330712, rho = 0.8729610220469566
+nSV = 59, nBSV = 51
+Total nSV = 59
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:55 11.457	3.0
+Exception in thread "AWT-EventQueue-0" org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Label.setText(Label.java:402)
+	at Main$TimerActionListener.actionPerformed(Main.java:107)
+	at javax.swing.Timer.fireActionPerformed(Unknown Source)
+	at javax.swing.Timer$DoPostEvent.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Collection stopped
+*
+optimization finished, #iter = 102
+nu = 0.023967653424321722
+obj = -2.023343921054594, rho = 0.07878928472237612
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.024665408512366375
+obj = -2.0577247873527265, rho = 0.1293111342893392
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 139
+nu = 0.021317168429567837
+obj = -1.7263018715031038, rho = 0.009773112839016624
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 75
+nu = 0.024439593895203147
+obj = -1.9513828741888546, rho = 0.1337240068142284
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 113
+nu = 0.02401322063194886
+obj = -2.029483632703773, rho = 0.06672088543041693
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 134
+nu = 0.051951756562397935
+obj = -4.817065892427833, rho = 1.4426936067531562
+nSV = 13, nBSV = 6
+Total nSV = 13
+*
+optimization finished, #iter = 122
+nu = 0.03652516112581207
+obj = -3.201305053873288, rho = 1.2690910886055589
+nSV = 9, nBSV = 3
+Total nSV = 9
+*
+optimization finished, #iter = 69
+nu = 0.05124770179840635
+obj = -4.774739012268588, rho = 1.3537107171688296
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 77
+nu = 0.04334133110845291
+obj = -4.690597465295659, rho = 1.0544576451732008
+nSV = 10, nBSV = 5
+Total nSV = 10
+*
+optimization finished, #iter = 138
+nu = 0.05326813838903652
+obj = -4.965772787581135, rho = 1.439986997901771
+nSV = 13, nBSV = 7
+Total nSV = 13
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 305
+nu = 0.3676253853198518
+obj = -47.074236289280314, rho = 0.8001628661654939
+nSV = 62, nBSV = 53
+Total nSV = 62
+......*
+optimization finished, #iter = 960
+nu = 0.333194091412118
+obj = -41.954764552637776, rho = 0.8217030330165619
+nSV = 56, nBSV = 47
+Total nSV = 56
+..*
+optimization finished, #iter = 335
+nu = 0.3648549609314979
+obj = -45.24339391518838, rho = 0.8593635614661332
+nSV = 60, nBSV = 52
+Total nSV = 60
+*
+optimization finished, #iter = 147
+nu = 0.35771688198004503
+obj = -40.734717032156766, rho = 0.831233546074546
+nSV = 57, nBSV = 51
+Total nSV = 57
+.*
+optimization finished, #iter = 290
+nu = 0.3812235639131446
+obj = -48.55308839921397, rho = 1.013289930049996
+nSV = 63, nBSV = 56
+Total nSV = 63
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 127
+nu = 0.023782091344294248
+obj = -2.019420094889259, rho = 0.08793276773072786
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 177
+nu = 0.022400785353808628
+obj = -1.7445060864619264, rho = -0.006536331892129228
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 95
+nu = 0.02466789889617618
+obj = -2.057723950357996, rho = 0.1291574149674523
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 90
+nu = 0.02466817068796737
+obj = -2.0577249068968055, rho = 0.12952252301390726
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 108
+nu = 0.021609912358665658
+obj = -1.8453078505885778, rho = 0.14147695101570731
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 217
+nu = 0.0465953632893161
+obj = -4.393742435828837, rho = 1.365492509727659
+nSV = 12, nBSV = 5
+Total nSV = 12
+.*
+optimization finished, #iter = 263
+nu = 0.03646174460391567
+obj = -3.2818681463359423, rho = 1.135890076886852
+nSV = 10, nBSV = 3
+Total nSV = 10
+*
+optimization finished, #iter = 125
+nu = 0.05052808222568595
+obj = -4.826299750266964, rho = 1.3240553824162606
+nSV = 11, nBSV = 6
+Total nSV = 11
+*
+optimization finished, #iter = 57
+nu = 0.05296455687736672
+obj = -4.965347336804715, rho = 1.4384880634277915
+nSV = 12, nBSV = 7
+Total nSV = 12
+*
+optimization finished, #iter = 121
+nu = 0.053343214269477406
+obj = -4.966004232714345, rho = 1.4402437496790927
+nSV = 14, nBSV = 7
+Total nSV = 14
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+*
+optimization finished, #iter = 123
+nu = 0.33776100134125003
+obj = -41.68031067800834, rho = 1.0250201632758538
+nSV = 56, nBSV = 50
+Total nSV = 56
+.*
+optimization finished, #iter = 260
+nu = 0.36954381971386807
+obj = -45.83809815286587, rho = 0.9557583985588745
+nSV = 60, nBSV = 53
+Total nSV = 60
+..*
+optimization finished, #iter = 352
+nu = 0.3633996575559275
+obj = -45.104152020946536, rho = 0.8423435887581248
+nSV = 60, nBSV = 52
+Total nSV = 60
+..*
+optimization finished, #iter = 397
+nu = 0.37644674647315113
+obj = -48.20418390246772, rho = 1.095332112455786
+nSV = 63, nBSV = 55
+Total nSV = 63
+.*
+optimization finished, #iter = 220
+nu = 0.3368278638955998
+obj = -42.029959662800046, rho = 0.5356451868538331
+nSV = 55, nBSV = 49
+Total nSV = 55
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:58 48.128	3.0
+09:58 48.373	3.0
+09:58 48.624	3.0
+09:58 48.874	3.0
+09:58 49.124	3.0
+09:58 49.375	3.0
+09:58 49.625	2.0
+09:58 49.875	1.0
+09:58 50.126	2.0
+09:58 50.376	3.0
+09:58 50.626	3.0
+09:58 50.876	3.0
+09:58 51.127	3.0
+09:58 51.378	3.0
+09:58 51.629	2.0
+09:58 51.879	3.0
+09:58 52.129	3.0
+09:58 52.380	3.0
+09:58 52.630	3.0
+09:58 52.880	3.0
+09:58 53.131	3.0
+09:58 53.382	3.0
+09:58 53.632	2.0
+09:58 53.882	2.0
+09:58 54.132	3.0
+09:58 54.382	3.0
+09:58 54.633	3.0
+09:58 54.883	3.0
+09:58 55.134	3.0
+09:58 55.384	3.0
+09:58 55.634	3.0
+09:58 55.884	2.0
+09:58 56.135	2.0
+09:58 56.385	2.0
+09:58 56.635	2.0
+09:58 56.885	2.0
+09:58 57.135	2.0
+09:58 57.385	2.0
+09:58 57.636	2.0
+09:58 57.886	2.0
+09:58 58.136	2.0
+Collection stopped
+Start collecting
+*
+optimization finished, #iter = 84
+nu = 0.02450992274656228
+obj = -2.057722553669084, rho = 0.12890854959353443
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 156
+nu = 0.023649603808288896
+obj = -1.864091653186251, rho = 0.05768320880410774
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 115
+nu = 0.023574300517319676
+obj = -1.9893388631103868, rho = 0.06997938948583769
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 73
+nu = 0.02429280379439162
+obj = -2.0316609105069143, rho = 0.0803684772655467
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 85
+nu = 0.022810262852372143
+obj = -1.799413021516389, rho = 0.10207493035844013
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+*
+optimization finished, #iter = 59
+nu = 0.05239916346605006
+obj = -4.934392083542712, rho = 1.3969898863867969
+nSV = 12, nBSV = 7
+Total nSV = 12
+*
+optimization finished, #iter = 139
+nu = 0.046226223729372976
+obj = -4.412227453062341, rho = 1.2157905630572707
+nSV = 10, nBSV = 5
+Total nSV = 10
+.*
+optimization finished, #iter = 191
+nu = 0.04651817728521082
+obj = -4.730520786437135, rho = 1.1602335747780101
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 121
+nu = 0.053004643193367014
+obj = -4.96600335887422, rho = 1.4402014522986752
+nSV = 14, nBSV = 7
+Total nSV = 14
+*
+optimization finished, #iter = 52
+nu = 0.04086322558175514
+obj = -3.528514973591016, rho = 1.286294151969239
+nSV = 8, nBSV = 4
+Total nSV = 8
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 313
+nu = 0.37415153735770834
+obj = -44.42595591908855, rho = 0.8911426453603855
+nSV = 62, nBSV = 54
+Total nSV = 62
+..*
+optimization finished, #iter = 347
+nu = 0.3567362730753235
+obj = -45.342780014625006, rho = 0.6599008106510095
+nSV = 58, nBSV = 51
+Total nSV = 58
+.*
+optimization finished, #iter = 293
+nu = 0.3729022962822678
+obj = -48.05464452127299, rho = 0.8505969405348897
+nSV = 62, nBSV = 54
+Total nSV = 62
+..*
+optimization finished, #iter = 353
+nu = 0.3668416652190667
+obj = -46.621044345468846, rho = 0.9799078640648372
+nSV = 60, nBSV = 51
+Total nSV = 60
+.*
+optimization finished, #iter = 299
+nu = 0.3241508258750584
+obj = -38.327947129296, rho = 0.8341105584844705
+nSV = 54, nBSV = 47
+Total nSV = 54
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+09:59 00.934	3.0
+09:59 01.185	3.0
+09:59 01.436	3.0
+09:59 01.686	3.0
+09:59 01.936	2.0
+09:59 02.187	2.0
+09:59 02.438	2.0
+09:59 02.688	2.0
+09:59 02.938	3.0
+09:59 03.188	3.0
+09:59 03.438	3.0
+09:59 03.689	3.0
+09:59 03.939	3.0
+09:59 04.189	3.0
+09:59 04.439	2.0
+09:59 04.689	2.0
+09:59 04.940	2.0
+09:59 05.190	3.0
+09:59 05.440	3.0
+09:59 05.690	3.0
+09:59 05.941	3.0
+09:59 06.192	3.0
+09:59 06.442	2.0
+09:59 06.692	2.0
+09:59 06.943	2.0
+09:59 07.193	3.0
+09:59 07.444	3.0
+09:59 07.694	3.0
+09:59 07.944	3.0
+09:59 08.194	2.0
+09:59 08.444	2.0
+09:59 08.695	2.0
+09:59 08.945	3.0
+09:59 09.195	3.0
+09:59 09.446	3.0
+09:59 09.696	2.0
+09:59 09.946	2.0
+09:59 10.196	2.0
+09:59 10.447	2.0
+09:59 10.698	3.0
+09:59 10.948	3.0
+09:59 11.198	3.0
+09:59 11.448	3.0
+09:59 11.699	3.0
+09:59 11.950	3.0
+09:59 12.200	3.0
+09:59 12.451	2.0
+09:59 12.702	2.0
+09:59 12.952	2.0
+09:59 13.203	2.0
+09:59 13.453	2.0
+09:59 13.703	3.0
+09:59 13.953	3.0
+09:59 14.203	2.0
+09:59 14.453	3.0
+09:59 14.704	3.0
+09:59 14.954	3.0
+09:59 15.204	3.0
+09:59 15.454	3.0
+09:59 15.704	3.0
+09:59 15.954	3.0
+09:59 16.205	3.0
+09:59 16.455	3.0
+09:59 16.705	3.0
+09:59 16.955	3.0
+09:59 17.205	3.0
+09:59 17.456	3.0
+09:59 17.706	3.0
+09:59 17.956	3.0
+09:59 18.207	3.0
+09:59 18.457	3.0
+09:59 18.707	3.0
+09:59 18.957	3.0
+09:59 19.208	3.0
+09:59 19.458	3.0
+09:59 19.708	3.0
+09:59 19.959	3.0
+Collection stopped
+*
+optimization finished, #iter = 93
+nu = 0.02225812233510297
+obj = -1.759512410690871, rho = 0.11265962810241731
+nSV = 7, nBSV = 1
+Total nSV = 7
+*
+optimization finished, #iter = 97
+nu = 0.024670884427293926
+obj = -2.0577246298883516, rho = 0.12952918971423638
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 164
+nu = 0.02247788479288035
+obj = -1.885764470880524, rho = -0.057105894797766954
+nSV = 9, nBSV = 2
+Total nSV = 9
+*
+optimization finished, #iter = 137
+nu = 0.02249794555027405
+obj = -1.7618717644818847, rho = 0.09729032087605582
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 113
+nu = 0.024667961473486558
+obj = -2.057724798410085, rho = 0.12945248193827008
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 231
+nu = 0.03681059299415355
+obj = -3.2430434024964967, rho = 1.2130191578017306
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 156
+nu = 0.05260849413771121
+obj = -4.894456967691511, rho = 1.4283137513891568
+nSV = 13, nBSV = 6
+Total nSV = 13
+..*
+optimization finished, #iter = 321
+nu = 0.047273954319172196
+obj = -4.480009329913329, rho = 1.2642880364381384
+nSV = 13, nBSV = 5
+Total nSV = 13
+.*
+optimization finished, #iter = 188
+nu = 0.052141251675347326
+obj = -4.825179688439445, rho = 1.4425931533669443
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 95
+nu = 0.05305214438352328
+obj = -4.941601468324046, rho = 1.4097852320056459
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 242
+nu = 0.3733532049209463
+obj = -45.2923421093876, rho = 0.7856301165959851
+nSV = 60, nBSV = 52
+Total nSV = 60
+...*
+optimization finished, #iter = 482
+nu = 0.3707632386503908
+obj = -47.4428132985508, rho = 0.6699306971557284
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 217
+nu = 0.3453725725487957
+obj = -42.302304043805314, rho = 0.9809397532429407
+nSV = 56, nBSV = 50
+Total nSV = 56
+.*
+optimization finished, #iter = 244
+nu = 0.3285823282011485
+obj = -40.73839122539273, rho = 0.836671161360874
+nSV = 53, nBSV = 45
+Total nSV = 53
+.*
+optimization finished, #iter = 241
+nu = 0.374112939247764
+obj = -47.623368162045836, rho = 0.890412130891712
+nSV = 61, nBSV = 54
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 140
+nu = 0.02378326273513883
+obj = -2.0194202371216745, rho = 0.08800722786614686
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 163
+nu = 0.022222920814410397
+obj = -1.728401322246296, rho = 0.030119626776924015
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 64
+nu = 0.02468671506227922
+obj = -2.057405155449086, rho = 0.13889285129536838
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 82
+nu = 0.024441298844013398
+obj = -1.9513849787564954, rho = 0.13353336258603615
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 81
+nu = 0.02357638601506686
+obj = -1.9893209440247928, rho = 0.06952017327929227
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 306
+nu = 0.0473643213585784
+obj = -4.119084315878844, rho = 1.3612181861237633
+nSV = 11, nBSV = 4
+Total nSV = 11
+*
+optimization finished, #iter = 78
+nu = 0.052917281982213536
+obj = -4.965941059240749, rho = 1.439199251741676
+nSV = 13, nBSV = 7
+Total nSV = 13
+.*
+optimization finished, #iter = 164
+nu = 0.0459535813565062
+obj = -4.504508666436996, rho = 1.2916193816064492
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 47
+nu = 0.046807403616591796
+obj = -4.701238244476038, rho = 1.2233358588682144
+nSV = 11, nBSV = 6
+Total nSV = 11
+.*
+optimization finished, #iter = 239
+nu = 0.045667036868022516
+obj = -4.361404356808472, rho = 1.2754944310357643
+nSV = 11, nBSV = 5
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+.*
+optimization finished, #iter = 212
+nu = 0.4013063723609647
+obj = -51.35394580976898, rho = 0.9440474124109974
+nSV = 66, nBSV = 59
+Total nSV = 66
+..*
+optimization finished, #iter = 391
+nu = 0.3672359787485179
+obj = -45.79591727586004, rho = 0.8850412474051023
+nSV = 59, nBSV = 51
+Total nSV = 59
+..*
+optimization finished, #iter = 360
+nu = 0.3466084901992539
+obj = -42.79483363514258, rho = 0.8932146495157183
+nSV = 57, nBSV = 50
+Total nSV = 57
+.*
+optimization finished, #iter = 293
+nu = 0.34787344064592285
+obj = -42.51501136174954, rho = 0.8249379114461038
+nSV = 58, nBSV = 50
+Total nSV = 58
+*
+optimization finished, #iter = 146
+nu = 0.34093570767624454
+obj = -42.012401742001764, rho = 0.8671306033556164
+nSV = 55, nBSV = 49
+Total nSV = 55
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+10:02 19.502	3.0
+10:02 19.748	3.0
+10:02 19.999	3.0
+10:02 20.249	3.0
+10:02 20.500	3.0
+10:02 20.751	3.0
+10:02 21.002	3.0
+10:02 21.251	3.0
+10:02 21.502	3.0
+10:02 21.752	3.0
+10:02 22.002	3.0
+10:02 22.252	3.0
+10:02 22.502	3.0
+10:02 22.752	3.0
+Collection stopped
+*
+optimization finished, #iter = 102
+nu = 0.02265516499125678
+obj = -1.799412291810405, rho = 0.10258784270840368
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 103
+nu = 0.024292087130653176
+obj = -2.031661150819788, rho = 0.08048413522539283
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 130
+nu = 0.02373684100319571
+obj = -1.9201242205723938, rho = 0.2097483788770712
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 98
+nu = 0.023576360926648575
+obj = -1.9893388155787526, rho = 0.0699940882329786
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 117
+nu = 0.02412145470640893
+obj = -2.0233442103720645, rho = 0.07883127119542578
+nSV = 7, nBSV = 2
+Total nSV = 7
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+..*
+optimization finished, #iter = 335
+nu = 0.04884181563265234
+obj = -4.439470424465881, rho = 1.4437834274295223
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 139
+nu = 0.04682049198709266
+obj = -4.526382377693688, rho = 1.279985565381854
+nSV = 12, nBSV = 6
+Total nSV = 12
+*
+optimization finished, #iter = 84
+nu = 0.05335011985940797
+obj = -4.965880115279378, rho = 1.4403847053315877
+nSV = 13, nBSV = 7
+Total nSV = 13
+.*
+optimization finished, #iter = 177
+nu = 0.05185172821555685
+obj = -4.85772523572158, rho = 1.3559301563266497
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 80
+nu = 0.040072923179867354
+obj = -3.7496206135165058, rho = 1.1337591315602467
+nSV = 9, nBSV = 4
+Total nSV = 9
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+....*
+optimization finished, #iter = 620
+nu = 0.3705535709816195
+obj = -47.23019917197729, rho = 1.028916945765936
+nSV = 62, nBSV = 53
+Total nSV = 62
+.*
+optimization finished, #iter = 284
+nu = 0.3577755279651771
+obj = -43.9880087206081, rho = 0.9749564788287418
+nSV = 59, nBSV = 51
+Total nSV = 59
+.*
+optimization finished, #iter = 253
+nu = 0.38907441372372004
+obj = -49.01718216678189, rho = 0.9099736373268034
+nSV = 64, nBSV = 58
+Total nSV = 64
+.*
+optimization finished, #iter = 279
+nu = 0.3529301802458526
+obj = -44.09940438637355, rho = 0.7336374215155119
+nSV = 58, nBSV = 51
+Total nSV = 58
+..*
+optimization finished, #iter = 405
+nu = 0.31768086821768016
+obj = -38.92278529963841, rho = 0.6907413036227456
+nSV = 54, nBSV = 46
+Total nSV = 54
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+Start collecting
+*
+optimization finished, #iter = 34
+nu = 0.021919190517274326
+obj = -1.7214342128749904, rho = 0.1590237057726413
+nSV = 6, nBSV = 1
+Total nSV = 6
+*
+optimization finished, #iter = 99
+nu = 0.024680971654006147
+obj = -2.057405269757228, rho = 0.13877203166450047
+nSV = 6, nBSV = 2
+Total nSV = 6
+*
+optimization finished, #iter = 100
+nu = 0.024293867242200663
+obj = -2.0316592631756385, rho = 0.07983591838794275
+nSV = 8, nBSV = 2
+Total nSV = 8
+*
+optimization finished, #iter = 83
+nu = 0.02466740469606823
+obj = -2.057721879852747, rho = 0.12880092200280963
+nSV = 7, nBSV = 2
+Total nSV = 7
+.*
+optimization finished, #iter = 231
+nu = 0.022485667769941164
+obj = -1.9376652963000573, rho = -0.003537903151155649
+nSV = 9, nBSV = 2
+Total nSV = 9
+*
+optimization finished, #iter = 115
+nu = 0.01970689782725377
+obj = -2.0577230742035644, rho = 0.12887447991654377
+nSV = 7, nBSV = 2
+.*
+optimization finished, #iter = 187
+nu = 0.04847598141271575
+obj = -4.4577870631171965, rho = 1.3638650383533197
+nSV = 12, nBSV = 5
+Total nSV = 12
+*
+optimization finished, #iter = 81
+nu = 0.04373475222720488
+obj = -4.445974460494968, rho = 1.1538316476594823
+nSV = 10, nBSV = 5
+Total nSV = 10
+.*
+optimization finished, #iter = 296
+nu = 0.048363770869507446
+obj = -4.737636643444034, rho = 1.2888670087588914
+nSV = 13, nBSV = 5
+Total nSV = 13
+*
+optimization finished, #iter = 119
+nu = 0.053004811440024384
+obj = -4.966004680574999, rho = 1.4402800863734984
+nSV = 14, nBSV = 7
+Total nSV = 14
+.*
+optimization finished, #iter = 183
+nu = 0.046909720444653503
+obj = -4.0720094287359805, rho = 1.3666718922900383
+nSV = 11, nBSV = 4
+Total nSV = 11
+*
+optimization finished, #iter = 110
+nu = 0.04251081140819071
+obj = -4.966004183516768, rho = 1.4402049145347817
+nSV = 14, nBSV = 7
+..*
+optimization finished, #iter = 329
+nu = 0.36244141209608205
+obj = -42.77334820656034, rho = 0.7276439209718759
+nSV = 60, nBSV = 52
+Total nSV = 60
+......*
+optimization finished, #iter = 1038
+nu = 0.35495050544070017
+obj = -43.864262272921124, rho = 0.8894899073671197
+nSV = 58, nBSV = 48
+Total nSV = 58
+...*
+optimization finished, #iter = 602
+nu = 0.34213484038739395
+obj = -44.06393292428664, rho = 0.7887113091750706
+nSV = 58, nBSV = 49
+Total nSV = 58
+.*
+optimization finished, #iter = 181
+nu = 0.3805068476728069
+obj = -48.51166752407194, rho = 1.0326053012049852
+nSV = 62, nBSV = 55
+Total nSV = 62
+..*
+optimization finished, #iter = 398
+nu = 0.3629664843795383
+obj = -44.52535984971963, rho = 0.7908959921668027
+nSV = 61, nBSV = 53
+Total nSV = 61
+.*
+optimization finished, #iter = 282
+nu = 0.3415469144877963
+obj = -53.63781716626447, rho = 0.9468181376926177
+nSV = 69, nBSV = 62
+Total nSV = 82
+10:03 05.140	3.0
+10:03 05.387	3.0
+10:03 05.637	3.0
+10:03 05.887	3.0
+10:03 06.138	3.0
+10:03 06.389	3.0
+10:03 06.639	3.0
+10:03 06.890	3.0
+10:03 07.141	3.0
+10:03 07.392	3.0
+10:03 07.642	3.0
+10:03 07.892	3.0
+10:03 08.142	3.0
+10:03 08.393	3.0
+10:03 08.645	3.0
+10:03 08.895	3.0
+Collection stopped
