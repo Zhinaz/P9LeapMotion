@@ -7,8 +7,6 @@ import java.util.ArrayList;
 
 import com.leapmotion.leap.Controller;
 import com.leapmotion.leap.Frame;
-import com.leapmotion.leap.Hand;
-import com.leapmotion.leap.Listener;
 
 import libsvm.svm_model;
 

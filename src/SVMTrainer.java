@@ -1,4 +1,8 @@
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
+import java.util.Locale;
+
 import libsvm.svm;
 import libsvm.svm_model;
 import libsvm.svm_node;
@@ -7,10 +11,14 @@ import libsvm.svm_problem;
 
 class SVMTrainer {
 	// classification classes
-	private static int numberOfClasses = 3;
+	private static int numberOfClasses = 4;
+	private static double confidenceThreshold = 0.8;
 	// Model
 	//public static svm_model model;
 
+	static DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
+	static DecimalFormat df = new DecimalFormat("0.00000", otherSymbols);
+	
 	/**
 	 * The prediction algorithm
 	 * 
@@ -36,16 +44,21 @@ class SVMTrainer {
 
 		double[] prob_estimates = new double[numberOfClasses];
 		double v = svm.svm_predict_probability(model, nodes, prob_estimates);
-
+		double highest_prob = 0.0;
+		
+		
 		// Debug purposes
-		// for (int i = 0; i < numberOfClasses; i++) {
-		// System.out.print("(" + labels[i] + ":" + prob_estimates[i] +
-		// ")");
-		// }
-		// System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v
-		// + ")");
+		for (int i = 0; i < numberOfClasses; i++) {
+			System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			if (prob_estimates[i] > highest_prob)
+				highest_prob = prob_estimates[i];
+		}
+		//System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
 
-		return v;
+		if (highest_prob >= confidenceThreshold)
+			return v;
+		else 
+			return 0.0;
 	}
 
 	/**
@@ -77,10 +90,10 @@ class SVMTrainer {
 
 		svm_parameter param = new svm_parameter();
 		param.probability = 1;
-		param.gamma = 0.5;
+		param.gamma = 1;
 		param.nu = 0.5;
 		param.C = 1;
-		param.svm_type = svm_parameter.C_SVC;
+		param.svm_type = svm_parameter.POLY;
 		param.kernel_type = svm_parameter.LINEAR;
 		param.cache_size = 20000;
 		param.eps = 0.001;

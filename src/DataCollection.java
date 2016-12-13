@@ -122,35 +122,85 @@ public class DataCollection {
 			Controller controller = new Controller();
 			Frame frame = controller.frame();
 			
-			if (frame.hands().count() == 1) {
+			if (frame.hands().count() >= 1) {
+				Hand hand = frame.hands().get(0);
+				
 				// label
 				sb.append(labelText.getText() + ",");
+				// is which hand
+				if (hand.isRight())
+					sb.append("1.0,");
+				else
+					sb.append("-1.0,");
+				
+				// hand center
+				sb.append(df.format(hand.sphereCenter().normalized().getX()) + ",");
+				sb.append(df.format(hand.sphereCenter().normalized().getY()) + ",");
+				sb.append(df.format(hand.sphereCenter().normalized().getZ()) + ",");
 				// grab strength
-				sb.append(df.format(frame.hands().get(0).grabStrength()) + ",");
-				// Palm normal x
-				sb.append(df.format(frame.hands().get(0).palmNormal().getX()) + ",");
-				// Palm normal y
-				sb.append(df.format(frame.hands().get(0).palmNormal().getY()) + ",");
-				// Palm normal z
-				sb.append(df.format(frame.hands().get(0).palmNormal().getZ()) + ",");
+				sb.append(df.format(hand.grabStrength()) + ",");
+				// Palm normal 
+				sb.append(df.format(hand.palmNormal().getX()) + ",");
+				sb.append(df.format(hand.palmNormal().getY()) + ",");
+				sb.append(df.format(hand.palmNormal().getZ()) + ",");
 				// pinch strength
-				sb.append(df.format(frame.hands().get(0).pinchStrength()) + ",");
-				// Palm direction x
-				sb.append(df.format(frame.hands().get(0).direction().getX()) + ",");
-				// Palm direction y
-				sb.append(df.format(frame.hands().get(0).direction().getY()) + ",");
-				// Palm direction z
-				sb.append(df.format(frame.hands().get(0).direction().getZ()) + ",");
+				sb.append(df.format(hand.pinchStrength()) + ",");
+				// Palm direction 
+				sb.append(df.format(hand.direction().getX()) + ",");
+				sb.append(df.format(hand.direction().getY()) + ",");
+				sb.append(df.format(hand.direction().getZ()) + ",");
 				// hand pitch
-				sb.append(df.format(frame.hands().get(0).direction().pitch()) + ",");
+				sb.append(df.format(hand.direction().pitch()) + ",");
 				// hand roll
-				sb.append(df.format(frame.hands().get(0).direction().roll()) + ",");
+				sb.append(df.format(hand.direction().roll()) + ",");
 				// hand yaw
-				sb.append(df.format(frame.hands().get(0).direction().yaw()) + ",");
+				sb.append(df.format(hand.direction().yaw()) + ",");
+				// palm velocity 
+				sb.append(df.format(hand.palmVelocity().normalized().getX()) + ",");
+				sb.append(df.format(hand.palmVelocity().normalized().getY()) + ",");
+				sb.append(df.format(hand.palmVelocity().normalized().getZ()) + ",");
 				
+				// thumb direction 
+				sb.append(df.format(hand.fingers().get(0).direction().getX()) + ",");
+				sb.append(df.format(hand.fingers().get(0).direction().getY()) + ",");
+				sb.append(df.format(hand.fingers().get(0).direction().getZ()) + ",");
+				// thumb position 
+				//sb.append(df.format(hand.fingers().get(0).stabilizedTipPosition().normalized().getX()) + ",");
+				//sb.append(df.format(hand.fingers().get(0).stabilizedTipPosition().normalized().getY()) + ",");
+				//sb.append(df.format(hand.fingers().get(0).stabilizedTipPosition().normalized().getZ()) + ",");
+				// index direction 
+				sb.append(df.format(hand.fingers().get(1).direction().getX()) + ",");
+				sb.append(df.format(hand.fingers().get(1).direction().getY()) + ",");
+				sb.append(df.format(hand.fingers().get(1).direction().getZ()) + ",");
+				// index position 
+				//sb.append(df.format(hand.fingers().get(1).stabilizedTipPosition().normalized().getX()) + ",");
+				//sb.append(df.format(hand.fingers().get(1).stabilizedTipPosition().normalized().getY()) + ",");
+				//sb.append(df.format(hand.fingers().get(1).stabilizedTipPosition().normalized().getZ()) + ",");
+				// middle direction 
+				sb.append(df.format(hand.fingers().get(2).direction().getX()) + ",");
+				sb.append(df.format(hand.fingers().get(2).direction().getY()) + ",");
+				sb.append(df.format(hand.fingers().get(2).direction().getZ()) + ",");
+				// middle position 
+				//sb.append(df.format(hand.fingers().get(2).stabilizedTipPosition().normalized().getX()) + ",");
+				//sb.append(df.format(hand.fingers().get(2).stabilizedTipPosition().normalized().getY()) + ",");
+				//sb.append(df.format(hand.fingers().get(2).stabilizedTipPosition().normalized().getZ()) + ",");
+				// ring direction 
+				sb.append(df.format(hand.fingers().get(3).direction().getX()) + ",");
+				sb.append(df.format(hand.fingers().get(3).direction().getY()) + ",");
+				sb.append(df.format(hand.fingers().get(3).direction().getZ()) + ",");
+				// ring position 
+				//sb.append(df.format(hand.fingers().get(3).stabilizedTipPosition().normalized().getX()) + ",");
+				//sb.append(df.format(hand.fingers().get(3).stabilizedTipPosition().normalized().getY()) + ",");
+				//sb.append(df.format(hand.fingers().get(3).stabilizedTipPosition().normalized().getZ()) + ",");
+				// pinky direction 
+				sb.append(df.format(hand.fingers().get(4).direction().getX()) + ",");
+				sb.append(df.format(hand.fingers().get(4).direction().getY()) + ",");
+				sb.append(df.format(hand.fingers().get(4).direction().getZ()) + ",");
+				// pinky position 
+				//sb.append(df.format(hand.fingers().get(4).stabilizedTipPosition().normalized().getX()) + ",");
+				//sb.append(df.format(hand.fingers().get(4).stabilizedTipPosition().normalized().getY()) + ",");
+				//sb.append(df.format(hand.fingers().get(4).stabilizedTipPosition().normalized().getZ()));
 				
-				
-				// MERE DATA PLZ
 			} 
 			
 			// Busy wait imellem data captures, for at undgå helt ens værdier
