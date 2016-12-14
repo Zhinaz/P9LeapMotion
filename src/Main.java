@@ -38,13 +38,13 @@ public class Main {
 
 	Timer timer;
 
-	public static double[] getSample() {
+	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
 		double[] temp = { 1.0 };
 
-		if (frame.hands().count() == 1) {
-			Hand hand = frame.hands().get(0);
+		if (frame.hands().count() >= 1) {
+			Hand hand = frame.hands().get(handNumber);
 			double isRightValue = 1.0;
 			if (!hand.isRight())
 				isRightValue = -1.0;

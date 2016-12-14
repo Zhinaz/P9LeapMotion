@@ -38,14 +38,19 @@ class TimerActionListener implements ActionListener {
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
 		
-		if (frame.hands().count() == 1) {
+		if (frame.hands().count() >= 1) {
 			// Add time stamp
 			final SimpleDateFormat formatForLines = new SimpleDateFormat("HH:mm ss.SSS");
 			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			String lineTime = formatForLines.format(timestamp);
 			
-			final String output = lineTime + "\t" + doubleToAction(SVMTrainer.svmPredict(Main.getSample(), model));
+			final String output = lineTime + "\t" + doubleToAction(SVMTrainer.svmPredict(Main.getSample(0), model));
 			System.out.println(output);
+			final String additionalOutput;
+			if (frame.hands().count() > 1) {
+				additionalOutput = lineTime + "\thand 2\t" + doubleToAction(SVMTrainer.svmPredict(Main.getSample(1), model));
+				System.out.println(additionalOutput);
+			}
 			Display.getDefault().asyncExec(new Runnable() {
 			    public void run() {
 			    	lblData.setText(output);
