@@ -122,7 +122,7 @@ public class DataCollection {
 			Controller controller = new Controller();
 			Frame frame = controller.frame();
 			
-			if (frame.hands().count() >= 1) {
+			if (frame.hands().count() >= 1 && frame.hands().get(0).isLeft()) {
 				Hand hand = frame.hands().get(0);
 				
 				// label
@@ -201,7 +201,8 @@ public class DataCollection {
 				//sb.append(df.format(hand.fingers().get(4).stabilizedTipPosition().normalized().getY()) + ",");
 				//sb.append(df.format(hand.fingers().get(4).stabilizedTipPosition().normalized().getZ()));
 				
-			} 
+			}
+						
 			
 			// Busy wait imellem data captures, for at undgå helt ens værdier
 			try {
