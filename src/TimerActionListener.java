@@ -47,7 +47,7 @@ class TimerActionListener implements ActionListener {
 			// Add time stamp
 			
 			if (frame.hands().get(0).isRight()) {
-				final String output = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(0), model));
+				final String output = lineTime + "\tRight: " + trainer.svmPredict(Main.getSample(0), model);
 				System.out.println(output);
 				final String additionalOutput;
 				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {

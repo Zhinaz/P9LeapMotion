@@ -122,10 +122,10 @@ public class Main {
 		SVMTrainer trainer = new SVMTrainer();
 		svm_model model = trainer.svmTrain(data);
 		
-		DataReader readerLeft = new DataReader("src/testdataLeft.csv");
-		ArrayList<double[]> dataLeft = readerLeft.getParsedData();
-		SVMTrainer trainerLeft = new SVMTrainer();
-		svm_model modelLeft = trainerLeft.svmTrain(dataLeft);
+		//DataReader readerLeft = new DataReader("src/testdataLeft.csv");
+		//ArrayList<double[]> dataLeft = readerLeft.getParsedData();
+		//SVMTrainer trainerLeft = new SVMTrainer();
+		svm_model modelLeft = trainer.svmTrain(data);
 
 		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData);
 		timer = new Timer(250, timerAction);

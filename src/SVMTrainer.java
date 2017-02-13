@@ -55,7 +55,7 @@ class SVMTrainer {
 		
 		for (int i = 0; i < numberOfClasses; i++) {
 			// Debug purposes
-			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
@@ -100,7 +100,7 @@ class SVMTrainer {
 		param.nu = 0.5;
 		param.C = 10;
 		param.svm_type = svm_parameter.POLY;
-		param.kernel_type = svm_parameter.POLY;
+		param.kernel_type = svm_parameter.LINEAR;
 		param.cache_size = 20000;
 		param.eps = 0.001;
 
