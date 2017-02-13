@@ -11,8 +11,7 @@ import libsvm.svm_problem;
 
 class SVMTrainer {
 	// classification classes
-	private static int numberOfClassesLeft = 2;
-	private static int numberOfClasses = 4;
+	private static int numberOfClasses = 2;
 	private static double confidenceThreshold = 0.8;
 	// Model
 	//public static svm_model model;
@@ -29,7 +28,7 @@ class SVMTrainer {
 	 *            Classifier model
 	 * @return
 	 */
-	public double svmPredict(double[] testset, svm_model model, int numberOfClas) {
+	public double svmPredict(double[] testset, svm_model model) {
 		svm_node[] nodes = new svm_node[testset.length - 1];
 
 		for (int i = 1; i < testset.length; i++) {
@@ -41,26 +40,21 @@ class SVMTrainer {
 		}
 
 		int[] labels;
-		if (numberOfClas == 2) {
-			labels = new int[numberOfClassesLeft];
-		} else {
-			labels = new int[numberOfClasses];
-		}
+		labels = new int[numberOfClasses];
 		svm.svm_get_labels(model, labels);
 		
 		double[] prob_estimates;
-		if (numberOfClas == 2) {
-			prob_estimates = new double[numberOfClassesLeft];
-		} else {
-			prob_estimates = new double[numberOfClasses];
-		}
+		
+		prob_estimates = new double[numberOfClasses];
+		
 		
 		double v = svm.svm_predict_probability(model, nodes, prob_estimates);
 		double highest_prob = 0.0;
 		
 		
-		// Debug purposes
-		for (int i = 0; i < numberOfClas; i++) {
+		
+		for (int i = 0; i < numberOfClasses; i++) {
+			// Debug purposes
 			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
@@ -104,9 +98,9 @@ class SVMTrainer {
 		param.probability = 1;
 		param.gamma = 1;
 		param.nu = 0.5;
-		param.C = 1;
+		param.C = 10;
 		param.svm_type = svm_parameter.POLY;
-		param.kernel_type = svm_parameter.LINEAR;
+		param.kernel_type = svm_parameter.POLY;
 		param.cache_size = 20000;
 		param.eps = 0.001;
 

@@ -24,22 +24,7 @@ class TimerActionListener implements ActionListener {
 		String s = "None";
 		
 		if (d == 1.0)
-			s = "Talking";
-		else if (d == 2.0)
-			s = "Secondary tasks";
-		else if (d == 3.0)
-			s = "Texting";
-		else if (d == 4.0)
-			s = "Hand on wheel";
-		
-		return s;
-	}
-	
-	public String doubleToActionLeft(double d) {
-		String s = "None";
-		
-		if (d == 1.0)
-			s = "Hand on wheel";
+			s = "Holding the steering wheel";
 		else if (d == 2.0)
 			s = "Resting";
 		
@@ -62,32 +47,26 @@ class TimerActionListener implements ActionListener {
 			// Add time stamp
 			
 			if (frame.hands().get(0).isRight()) {
-				final String output = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(0), model, 4));
+				final String output = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(0), model));
 				System.out.println(output);
 				final String additionalOutput;
 				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
-					additionalOutput = lineTime + "\thand 2\t" + doubleToActionLeft(trainer.svmPredict(Main.getSample(1), modelLeft, 2));
-					System.out.println(additionalOutput);
-				}
-				else if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
-					additionalOutput = lineTime + "\thand 2\t" + doubleToActionLeft(trainer.svmPredict(Main.getSample(1), model, 4));
+					additionalOutput = lineTime + "\tLeft: " + doubleToAction(trainer.svmPredict(Main.getSample(1), modelLeft));
 					System.out.println(additionalOutput);
 				}
 			}
 			if (frame.hands().get(0).isLeft()) {
-				final String output = lineTime + "\tLeft: " + doubleToActionLeft(trainer.svmPredict(Main.getSample(0), modelLeft, 2));
+				final String output = lineTime + "\tLeft: " + doubleToAction(trainer.svmPredict(Main.getSample(0), modelLeft));
 				System.out.println(output);
 				final String additionalOutput;
 				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
-					additionalOutput = lineTime + "\thand 2\t" + doubleToAction(trainer.svmPredict(Main.getSample(1), model, 4));
-					System.out.println(additionalOutput);
-				}
-				else if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
-					additionalOutput = lineTime + "\thand 2\t" + doubleToAction(trainer.svmPredict(Main.getSample(1), modelLeft, 2));
+					additionalOutput = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(1), model));
 					System.out.println(additionalOutput);
 				}
 			}
-						Display.getDefault().asyncExec(new Runnable() {
+				
+			
+			Display.getDefault().asyncExec(new Runnable() {
 			    public void run() {
 			    	//lblData.setText(output);
 			    }
