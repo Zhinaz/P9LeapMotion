@@ -30,7 +30,7 @@ class SVMTrainer {
 	 */
 	public double svmPredict(double[] testset, svm_model model) {
 		svm_node[] nodes = new svm_node[testset.length - 1];
-
+		
 		for (int i = 1; i < testset.length; i++) {
 			svm_node node = new svm_node();
 			node.index = i;
@@ -59,7 +59,10 @@ class SVMTrainer {
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
-		//System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
+		if (highest_prob >= confidenceThreshold)
+			System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
+		else 
+			System.out.println("\t(Actual:" + testset[0] + " Prediction:0.0)");
 
 		if (highest_prob >= confidenceThreshold)
 			return v;

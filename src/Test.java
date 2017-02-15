@@ -57,9 +57,9 @@ class Test {
 				String lineTime = formatForLines.format(timestamp);
 				sb.append(lineTime + "\t");
 				// Prediction
-				sb.append(SVMTrainer.svmPredict(getSample(), model));
+				sb.append(trainer.svmPredict(getSample(), model));
 				
-				System.out.println(lineTime + "\t" + SVMTrainer.svmPredict(getSample(), model));
+				System.out.println(lineTime + "\t" + trainer.svmPredict(getSample(), model));
 			} 
 			
 			// Busy wait between data - avoids similar data sets

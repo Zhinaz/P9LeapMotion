@@ -96,12 +96,14 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		try {
+		testSampleSet();
+		
+		/*try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	public void open() {
@@ -130,6 +132,38 @@ public class Main {
 		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData);
 		timer = new Timer(250, timerAction);
 		timer.start();
+	}
+	
+	public static void testSampleSet() {
+		DataReader reader = new DataReader("src/builddata.csv");
+		ArrayList<double[]> buildData = reader.getParsedData();
+		SVMTrainer trainer = new SVMTrainer();
+		svm_model model = trainer.svmTrain(buildData);
+		
+		DataReader reader2 = new DataReader("src/testdata.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfRestingCorrect = 0;
+		int numberOfSteeringCorrect = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredict(d, model);
+			if (predicted == 0.0) {
+				numberOfNone++;
+			}
+			else if (predicted == 1.0 && predicted == d[0]) {
+				numberOfSteeringCorrect++;
+			}
+			else if (predicted == 2.0 && predicted == d[0]) {
+				numberOfRestingCorrect++;
+			}
+		}
+		
+		System.out.println("Final results");
+		System.out.println("number of none: " + numberOfNone);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 99);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 100);
 	}
 
 	protected void createContents() {
