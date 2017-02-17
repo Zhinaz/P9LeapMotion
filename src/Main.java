@@ -27,6 +27,15 @@ public class Main {
 	private Label samplesCollected;
 
 	Timer timer;
+	
+	static DataReader reader = new DataReader("src/builddata.csv");
+	static ArrayList<double[]> buildData = reader.getParsedData();
+	static SVMTrainer trainer = new SVMTrainer();
+	static svm_model model = trainer.svmTrain(buildData);
+	
+	static DataReader reader2 = new DataReader("src/builddataLeft.csv");
+	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
+	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
@@ -96,14 +105,21 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		testSampleSet();
 		
-		/*try {
+		
+		System.out.println("\n\n\n\n");
+		
+		testSampleSet();
+		testSampleSetLeft();
+		
+		/*
+		try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
+		*/
 	}
 
 	public void open() {
@@ -119,15 +135,15 @@ public class Main {
 	}
 
 	public void initiateTimer() {
-		DataReader reader = new DataReader("src/testdata.csv");
-		ArrayList<double[]> data = reader.getParsedData();
-		SVMTrainer trainer = new SVMTrainer();
-		svm_model model = trainer.svmTrain(data);
+		//DataReader reader = new DataReader("src/testdata.csv");
+		//ArrayList<double[]> data = reader.getParsedData();
+		//SVMTrainer trainer = new SVMTrainer();
+		//svm_model model = trainer.svmTrain(data);
 		
 		//DataReader readerLeft = new DataReader("src/testdataLeft.csv");
 		//ArrayList<double[]> dataLeft = readerLeft.getParsedData();
 		//SVMTrainer trainerLeft = new SVMTrainer();
-		svm_model modelLeft = trainer.svmTrain(data);
+		//svm_model modelLeft = trainer.svmTrain(data);
 
 		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData);
 		timer = new Timer(250, timerAction);
@@ -135,11 +151,7 @@ public class Main {
 	}
 	
 	public static void testSampleSet() {
-		DataReader reader = new DataReader("src/builddata.csv");
-		ArrayList<double[]> buildData = reader.getParsedData();
 		SVMTrainer trainer = new SVMTrainer();
-		svm_model model = trainer.svmTrain(buildData);
-		
 		DataReader reader2 = new DataReader("src/testdata.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
@@ -168,7 +180,37 @@ public class Main {
 		System.out.println("number of not confident enough: " + numberOfNone);
 		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 100);
 		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 100);
-		System.out.println("Number of resting correct: " + numberOfNoneCorrect + "/" + 152);
+		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + 152);
+		System.out.println();
+	}
+	
+	public static void testSampleSetLeft() {
+		SVMTrainer trainer = new SVMTrainer();
+		DataReader reader2 = new DataReader("src/testdataLeft.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfRestingCorrect = 0;
+		int numberOfSteeringCorrect = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredictLeft(d, modelLeft);
+			if (predicted == 0.0) {
+				numberOfNone++;
+			}
+			else if (predicted == 1.0 && predicted == d[0]) {
+				numberOfSteeringCorrect++;
+			}
+			else if (predicted == 2.0 && predicted == d[0]) {
+				numberOfRestingCorrect++;
+			}
+		}
+		
+		System.out.println("Final results left");
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 152);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 201);
+		System.out.println();
 	}
 
 	protected void createContents() {

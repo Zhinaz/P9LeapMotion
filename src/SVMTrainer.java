@@ -12,6 +12,7 @@ import libsvm.svm_problem;
 class SVMTrainer {
 	// classification classes
 	private static int numberOfClasses = 3;
+	private static int numberOfClassesLeft = 2;
 	private static double confidenceThreshold = 0.8;
 	// Model
 	//public static svm_model model;
@@ -55,14 +56,62 @@ class SVMTrainer {
 		
 		for (int i = 0; i < numberOfClasses; i++) {
 			// Debug purposes
-			System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
+		/*
 		if (highest_prob >= confidenceThreshold)
 			System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
 		else 
 			System.out.println("\t(Actual:" + testset[0] + " Prediction:0.0)");
+		*/
+
+		if (highest_prob >= confidenceThreshold)
+			return v;
+		else 
+			return 0.0;
+	}
+	
+	
+	
+	public double svmPredictLeft(double[] testset, svm_model model) {
+		svm_node[] nodes = new svm_node[testset.length - 1];
+		
+		for (int i = 1; i < testset.length; i++) {
+			svm_node node = new svm_node();
+			node.index = i;
+			node.value = testset[i];
+
+			nodes[i - 1] = node;
+		}
+
+		int[] labels;
+		labels = new int[numberOfClassesLeft];
+		svm.svm_get_labels(model, labels);
+		
+		double[] prob_estimates;
+		
+		prob_estimates = new double[numberOfClassesLeft];
+		
+		
+		double v = svm.svm_predict_probability(model, nodes, prob_estimates);
+		double highest_prob = 0.0;
+		
+		
+		
+		for (int i = 0; i < numberOfClassesLeft; i++) {
+			// Debug purposes
+			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			if (prob_estimates[i] > highest_prob)
+				highest_prob = prob_estimates[i];
+		}
+		/*
+		if (highest_prob >= confidenceThreshold)
+			System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
+		else 
+			System.out.println("\t(Actual:" + testset[0] + " Prediction:0.0)");
+		*/
 
 		if (highest_prob >= confidenceThreshold)
 			return v;
@@ -108,6 +157,14 @@ class SVMTrainer {
 		param.eps = 0.001;
 
 		svm_model model = svm.svm_train(prob, param);
+		
+		/* SE HVILKE TRÆNINGS DATA DER ER SUPPORT VECTORS
+		int nr_sv = svm.svm_get_nr_sv(model);
+		int[] sv_indices = new int[nr_sv];
+		svm.svm_get_sv_indices(model, sv_indices);
+		for (int i=0; i<nr_sv; i++)
+			//System.out.println("instance " + sv_indices[i] + " is a support vector\n");
+		 */
 
 		return model;
 	}
