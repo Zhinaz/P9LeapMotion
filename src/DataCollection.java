@@ -183,7 +183,7 @@ public class DataCollection {
 			
 			// Busy wait imellem data captures, for at undgå helt ens værdier
 			try {
-				Thread.sleep(100);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
