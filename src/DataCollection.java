@@ -25,7 +25,7 @@ public class DataCollection {
 	private Button collect;
 	private Label samplesCollected;
 	
-	private int numberOfSamples = 100; 
+	private int numberOfSamples = 200; 
 	private Boolean collectingBool = false;
 	
 	/**
