@@ -11,7 +11,7 @@ import libsvm.svm_problem;
 
 class SVMTrainer {
 	// classification classes
-	private static int numberOfClasses = 2;
+	private static int numberOfClasses = 3;
 	private static double confidenceThreshold = 0.8;
 	// Model
 	//public static svm_model model;

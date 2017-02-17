@@ -146,6 +146,7 @@ public class Main {
 		int numberOfNone = 0;
 		int numberOfRestingCorrect = 0;
 		int numberOfSteeringCorrect = 0;
+		int numberOfNoneCorrect = 0;
 		
 		for (double[] d : testData) {
 			double predicted = trainer.svmPredict(d, model);
@@ -158,12 +159,16 @@ public class Main {
 			else if (predicted == 2.0 && predicted == d[0]) {
 				numberOfRestingCorrect++;
 			}
+			else if (predicted == 3.0 && predicted == d[0]) {
+				numberOfNoneCorrect++;
+			}
 		}
 		
 		System.out.println("Final results");
-		System.out.println("number of none: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 99);
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 100);
 		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 100);
+		System.out.println("Number of resting correct: " + numberOfNoneCorrect + "/" + 152);
 	}
 
 	protected void createContents() {
