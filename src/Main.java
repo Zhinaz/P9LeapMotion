@@ -28,12 +28,12 @@ public class Main {
 
 	Timer timer;
 	
-	static DataReader reader = new DataReader("src/builddata.csv");
+	static DataReader reader = new DataReader("src/data/builddataCombined.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
 	
-	static DataReader reader2 = new DataReader("src/builddataLeft.csv");
+	static DataReader reader2 = new DataReader("src/data/builddataCombinedLeft.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
@@ -152,64 +152,99 @@ public class Main {
 	
 	public static void testSampleSet() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/testdata.csv");
+		DataReader reader2 = new DataReader("src/data/testdataCombined.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
 		int numberOfNone = 0;
+		int numberOfResting = 0;
+		int numberOfSteering = 0;
+		int numberOfNoneTotal = 0;
 		int numberOfRestingCorrect = 0;
 		int numberOfSteeringCorrect = 0;
 		int numberOfNoneCorrect = 0;
+		int numberOfFalse = 0;
 		
 		for (double[] d : testData) {
 			double predicted = trainer.svmPredict(d, model);
-			if (predicted == 0.0) {
-				numberOfNone++;
+
+			if (d[0] == 1.0) {
+				numberOfSteering++;
+				if (predicted == 1.0)
+					numberOfSteeringCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
 			}
-			else if (predicted == 1.0 && predicted == d[0]) {
-				numberOfSteeringCorrect++;
+			else if (d[0] == 2.0) {
+				numberOfResting++;
+				if (predicted == 2.0)
+					numberOfRestingCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
 			}
-			else if (predicted == 2.0 && predicted == d[0]) {
-				numberOfRestingCorrect++;
-			}
-			else if (predicted == 3.0 && predicted == d[0]) {
-				numberOfNoneCorrect++;
+			else if (d[0] == 3.0) {
+				numberOfNoneTotal++;
+				if (predicted == 3.0)
+					numberOfNoneCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
 			}
 		}
 		
 		System.out.println("Final results");
 		System.out.println("number of not confident enough: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 100);
-		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 100);
-		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + 152);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
+		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + numberOfNoneTotal);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering + numberOfNoneTotal));
 		System.out.println();
 	}
 	
 	public static void testSampleSetLeft() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/testdataLeft.csv");
+		DataReader reader2 = new DataReader("src/data/testdataCombinedLeft.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
 		int numberOfNone = 0;
+		int numberOfResting = 0;
+		int numberOfSteering = 0;
 		int numberOfRestingCorrect = 0;
 		int numberOfSteeringCorrect = 0;
+		int numberOfFalse = 0;
 		
 		for (double[] d : testData) {
 			double predicted = trainer.svmPredictLeft(d, modelLeft);
-			if (predicted == 0.0) {
-				numberOfNone++;
+			
+			if (d[0] == 1.0) {
+				numberOfSteering++;
+				if (predicted == 1.0)
+					numberOfSteeringCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
 			}
-			else if (predicted == 1.0 && predicted == d[0]) {
-				numberOfSteeringCorrect++;
-			}
-			else if (predicted == 2.0 && predicted == d[0]) {
-				numberOfRestingCorrect++;
+			else if (d[0] == 2.0) {
+				numberOfResting++;
+				if (predicted == 2.0)
+					numberOfRestingCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
 			}
 		}
 		
 		System.out.println("Final results left");
 		System.out.println("number of not confident enough: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + 152);
-		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + 201);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering));
 		System.out.println();
 	}
 

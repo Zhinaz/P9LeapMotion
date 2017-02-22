@@ -151,7 +151,7 @@ class SVMTrainer {
 		param.gamma = 1;
 		param.nu = 0.5;
 		param.C = 10;
-		param.svm_type = svm_parameter.POLY;
+		param.svm_type = svm_parameter.LINEAR;
 		param.kernel_type = svm_parameter.LINEAR;
 		param.cache_size = 20000;
 		param.eps = 0.001;
