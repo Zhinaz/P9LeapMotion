@@ -27,13 +27,13 @@ public class Main {
 	private Label samplesCollected;
 
 	Timer timer;
-	
-	static DataReader reader = new DataReader("src/data/builddataCombined.csv");
+
+	static DataReader reader = new DataReader("src/data/builddata.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
 	
-	static DataReader reader2 = new DataReader("src/data/builddataCombinedLeft.csv");
+	static DataReader reader2 = new DataReader("src/data/builddataLeft.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
@@ -152,7 +152,7 @@ public class Main {
 	
 	public static void testSampleSet() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/testdataCombined.csv");
+		DataReader reader2 = new DataReader("src/data/testdata.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
 		int numberOfNone = 0;
@@ -207,7 +207,7 @@ public class Main {
 	
 	public static void testSampleSetLeft() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/testdataCombinedLeft.csv");
+		DataReader reader2 = new DataReader("src/data/testdataLeft.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
 		int numberOfNone = 0;
