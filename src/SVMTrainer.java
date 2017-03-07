@@ -56,16 +56,17 @@ class SVMTrainer {
 		
 		for (int i = 0; i < numberOfClasses; i++) {
 			// Debug purposes
-			System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
 		
+		/*
 		if (highest_prob >= confidenceThreshold)
 			System.out.println("\t(Actual:" + testset[0] + " Prediction:" + v + ")");
 		else 
 			System.out.println("\t(Actual:" + testset[0] + " Prediction:0.0)");
-		
+		*/
 
 		if (highest_prob >= confidenceThreshold)
 			return v;
