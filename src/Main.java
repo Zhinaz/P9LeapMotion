@@ -112,13 +112,14 @@ public class Main {
 		testSampleSet();
 		testSampleSetLeft();
 		
-		
+		/*
 		try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		*/
 		
 	}
 
