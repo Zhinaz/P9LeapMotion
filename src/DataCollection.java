@@ -22,6 +22,8 @@ public class DataCollection {
 	public Shell shell;
 	private Label label;
 	private Text labelText;
+	private Label labelFile;
+	private Text labelFileText;
 	private Button collect;
 	private Label samplesCollected;
 	
@@ -80,6 +82,13 @@ public class DataCollection {
 		labelText = new Text(shell, SWT.BORDER);
 		labelText.setBounds(10, 50, 76, 21);
 		
+		labelFile = new Label(shell, SWT.NONE);
+		labelFile.setBounds(100, 25, 76, 21);
+		labelFile.setText("Set file name");
+		
+		labelFileText = new Text(shell, SWT.BORDER);
+		labelFileText.setBounds(100, 50, 76, 21);
+		
 		collect = new Button(shell, SWT.BUTTON1);
 		collect.setText("Start collecting");
 		collect.setBounds(10, 75, 200, 50);
@@ -106,10 +115,13 @@ public class DataCollection {
 		
 		PrintWriter pw = null;
 		try {
-			final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm.ss");
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			String filename = sdf.format(timestamp);
-			File testfile = new File("files/test" + filename + ".csv");
+			//final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm.ss");
+			//Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			//String filename = sdf.format(timestamp);
+			
+			String filename = labelFileText.getText();
+			
+			File testfile = new File("files/" + filename + ".csv");
 			pw = new PrintWriter(testfile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
