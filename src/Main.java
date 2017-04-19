@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.Timer;
 
@@ -28,6 +29,9 @@ public class Main {
 
 	Timer timer;
 
+	//
+	// Testing sets and model creation
+	// 
 	static DataReader reader = new DataReader("src/data/builddata.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
@@ -36,6 +40,14 @@ public class Main {
 	static DataReader reader2 = new DataReader("src/data/builddataLeft.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
+	
+	static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
+	static ArrayList<double[]> buildDataOC = readerOClock.getParsedData();
+	static svm_model modelOClock = trainer.svmTrain(buildDataOC);
+	
+	static DataReader reader2OClock = new DataReader("src/data/leftTest.csv");
+	static ArrayList<double[]> buildDataLeftOC = reader2OClock.getParsedData();
+	static svm_model modelLeftOClock = trainer.svmTrain(buildDataLeftOC);
 
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
@@ -105,12 +117,21 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		
-		
 		System.out.println("\n\n\n\n");
 		
-		testSampleSet();
-		testSampleSetLeft();
+		// Initialise bluetooth connection
+		BluetoothClient bluetoothClient = new BluetoothClient();
+		try {
+			bluetoothClient.initialise();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//testOClockSet();
+		//testOClockSetLeft();
+		//testSampleSet();
+		//testSampleSetLeft();
 		
 		/*
 		try {
@@ -120,7 +141,6 @@ public class Main {
 			e.printStackTrace();
 		}
 		*/
-		
 	}
 
 	public void open() {
@@ -134,21 +154,220 @@ public class Main {
 			}
 		}
 	}
+	
+	protected void createContents() {
+		shell = new Shell();
+		shell.setSize(400, 200);
+		shell.setText("Data collection");
+
+		btnStart = new Button(shell, SWT.BUTTON1);
+		btnStart.setText("Start collecting");
+		btnStart.setBounds(274, 79, 100, 34);
+		btnStart.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				if (!collectingBool) {
+					System.out.println("Start collecting");
+					collectingBool = true;
+					initiateTimer();
+				}
+			}
+		});
+
+		btnStop = new Button(shell, SWT.BUTTON1);
+		btnStop.setText("Stop collecting");
+		btnStop.setBounds(274, 117, 100, 34);
+		btnStop.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				System.out.println("Collection stopped");
+				collectingBool = false;
+				timer.stop();
+			}
+		});
+
+		lblsamplesCollected = new Label(shell, SWT.NONE);
+		lblsamplesCollected.setBounds(10, 101, 100, 21);
+		lblsamplesCollected.setText("Samples collected");
+
+		Label lblNewData = new Label(shell, SWT.NONE);
+		lblNewData.setText("Newest data");
+		lblNewData.setBounds(10, 10, 86, 15);
+
+		lblData = new Label(shell, SWT.CENTER);
+		lblData.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblData.setBounds(10, 31, 364, 21);
+
+		samplesCollected = new Label(shell, SWT.NONE);
+		samplesCollected.setAlignment(SWT.CENTER);
+		samplesCollected.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		samplesCollected.setBounds(10, 121, 121, 21);
+
+	}
 
 	public void initiateTimer() {
-		//DataReader reader = new DataReader("src/testdata.csv");
-		//ArrayList<double[]> data = reader.getParsedData();
-		//SVMTrainer trainer = new SVMTrainer();
-		//svm_model model = trainer.svmTrain(data);
-		
-		//DataReader readerLeft = new DataReader("src/testdataLeft.csv");
-		//ArrayList<double[]> dataLeft = readerLeft.getParsedData();
-		//SVMTrainer trainerLeft = new SVMTrainer();
-		//svm_model modelLeft = trainer.svmTrain(data);
-
 		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData);
 		timer = new Timer(250, timerAction);
 		timer.start();
+	}
+	
+	// 
+	// Testing 
+	//
+	public static void testOClockSet() {
+		SVMTrainer trainer = new SVMTrainer();
+		DataReader reader2 = new DataReader("src/data/rightTrain.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfTwo = 0;
+		int numberOfOne = 0;
+		int numberOfThree = 0;
+		int numberOfTwoCorrect = 0;
+		int numberOfOneCorrect = 0;
+		int numberOfThreeCorrect = 0;
+		int numberOfFalse = 0;
+		int numberOfFour = 0;
+		int numberOfFourCorrect = 0;
+		int numberOfTwelve = 0;
+		int numberOfTwelveCorrect = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredict(d, modelOClock);
+
+			if (d[0] == 1.0) {
+				numberOfOne++;
+				if (predicted == 1.0)
+					numberOfOneCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 2.0) {
+				numberOfTwo++;
+				if (predicted == 2.0)
+					numberOfTwoCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 3.0) {
+				numberOfThree++;
+				if (predicted == 3.0)
+					numberOfThreeCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 4.0) {
+				numberOfFour++;
+				if (predicted == 4.0)
+					numberOfFourCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 12.0) {
+				numberOfTwelve++;
+				if (predicted == 12.0)
+					numberOfTwelveCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+		}
+		
+		System.out.println("Final results");
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of 1: " + numberOfOneCorrect + "/" + numberOfOne);
+		System.out.println("Number of 2: " + numberOfTwoCorrect + "/" + numberOfTwo);
+		System.out.println("Number of 3: " + numberOfThreeCorrect + "/" + numberOfThree);
+		System.out.println("Number of 4: " + numberOfFourCorrect + "/" + numberOfFour);
+		System.out.println("Number of 12: " + numberOfTwelveCorrect + "/" + numberOfTwelve);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfTwo + numberOfOne + numberOfThree + numberOfFour + numberOfTwelve));
+		System.out.println();
+	}
+	
+	public static void testOClockSetLeft() {
+		SVMTrainer trainer = new SVMTrainer();
+		DataReader reader2 = new DataReader("src/data/leftTrain.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfTwo = 0;
+		int numberOfOne = 0;
+		int numberOfThree = 0;
+		int numberOfTwoCorrect = 0;
+		int numberOfOneCorrect = 0;
+		int numberOfThreeCorrect = 0;
+		int numberOfFalse = 0;
+		int numberOfFour = 0;
+		int numberOfFourCorrect = 0;
+		int numberOfTwelve = 0;
+		int numberOfTwelveCorrect = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredict(d, modelLeftOClock);
+
+			if (d[0] == 8.0) {
+				numberOfOne++;
+				if (predicted == 8.0)
+					numberOfOneCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 9.0) {
+				numberOfTwo++;
+				if (predicted == 9.0)
+					numberOfTwoCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 10.0) {
+				numberOfThree++;
+				if (predicted == 10.0)
+					numberOfThreeCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 11.0) {
+				numberOfFour++;
+				if (predicted == 11.0)
+					numberOfFourCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 12.0) {
+				numberOfTwelve++;
+				if (predicted == 12.0)
+					numberOfTwelveCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+		}
+		
+		System.out.println("Final results");
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of 8: " + numberOfOneCorrect + "/" + numberOfOne);
+		System.out.println("Number of 9: " + numberOfTwoCorrect + "/" + numberOfTwo);
+		System.out.println("Number of 10: " + numberOfThreeCorrect + "/" + numberOfThree);
+		System.out.println("Number of 11: " + numberOfFourCorrect + "/" + numberOfFour);
+		System.out.println("Number of 12: " + numberOfTwelveCorrect + "/" + numberOfTwelve);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfTwo + numberOfOne + numberOfThree + numberOfFour + numberOfTwelve));
+		System.out.println();
 	}
 	
 	public static void testSampleSet() {
@@ -247,53 +466,5 @@ public class Main {
 		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
 		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering));
 		System.out.println();
-	}
-
-	protected void createContents() {
-		shell = new Shell();
-		shell.setSize(400, 200);
-		shell.setText("Data collection");
-
-		btnStart = new Button(shell, SWT.BUTTON1);
-		btnStart.setText("Start collecting");
-		btnStart.setBounds(274, 79, 100, 34);
-		btnStart.addListener(SWT.Selection, new Listener() {
-			public void handleEvent(Event arg0) {
-				if (!collectingBool) {
-					System.out.println("Start collecting");
-					collectingBool = true;
-					initiateTimer();
-				}
-			}
-		});
-
-		btnStop = new Button(shell, SWT.BUTTON1);
-		btnStop.setText("Stop collecting");
-		btnStop.setBounds(274, 117, 100, 34);
-		btnStop.addListener(SWT.Selection, new Listener() {
-			public void handleEvent(Event arg0) {
-				System.out.println("Collection stopped");
-				collectingBool = false;
-				timer.stop();
-			}
-		});
-
-		lblsamplesCollected = new Label(shell, SWT.NONE);
-		lblsamplesCollected.setBounds(10, 101, 100, 21);
-		lblsamplesCollected.setText("Samples collected");
-
-		Label lblNewData = new Label(shell, SWT.NONE);
-		lblNewData.setText("Newest data");
-		lblNewData.setBounds(10, 10, 86, 15);
-
-		lblData = new Label(shell, SWT.CENTER);
-		lblData.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		lblData.setBounds(10, 31, 364, 21);
-
-		samplesCollected = new Label(shell, SWT.NONE);
-		samplesCollected.setAlignment(SWT.CENTER);
-		samplesCollected.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		samplesCollected.setBounds(10, 121, 121, 21);
-
 	}
 }

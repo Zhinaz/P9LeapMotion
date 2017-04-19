@@ -11,7 +11,7 @@ import libsvm.svm_problem;
 
 class SVMTrainer {
 	// classification classes
-	private static int numberOfClasses = 3;
+	private static int numberOfClasses = 5;
 	private static int numberOfClassesLeft = 2;
 	private static double confidenceThreshold = 0.75;
 	// Model
@@ -60,6 +60,7 @@ class SVMTrainer {
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
+		//System.out.println();
 		
 		/*
 		if (highest_prob >= confidenceThreshold)

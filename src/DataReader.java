@@ -20,15 +20,20 @@ public class DataReader {
 		String[] line = numLine.split(",");
 		double[] temp = new double[numberOfFeatures];
 		
+		int badLine = 0;
+		
 		// Now read until we run out of lines
 		while (scan.hasNext()) {
 			temp = new double[numberOfFeatures];
 			for (int i = 0; i < numberOfFeatures; i++) {
+				//System.out.println(badLine + "     " + line.length + "     " + line[i]);
 				double val = Double.parseDouble(line[i]);
 				temp[i] = val;
+
 			}
 			data.add(temp);
 			line = scan.nextLine().split(",");
+			badLine++;
 		}
 		scan.close();
 	}
