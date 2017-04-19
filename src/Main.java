@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import javax.swing.Timer;
 
@@ -141,6 +143,18 @@ public class Main {
 			e.printStackTrace();
 		}
 		*/
+		
+		while (true) {
+			BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+			String chosenIndex = null;
+			try {
+				chosenIndex = bReader.readLine();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			bluetoothClient.sendMessage2(chosenIndex);
+		}
 	}
 
 	public void open() {

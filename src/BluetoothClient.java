@@ -29,17 +29,24 @@ public class BluetoothClient implements DiscoveryListener {
 	private static Vector vecDevices = new Vector();
 
 	private static String connectionURL = null;
+
+	// The connection
+	StreamConnection streamConnection;
+
+	private boolean connected = false;
 	
+	private ConnectedThread mConnectedThread;
+
 	public BluetoothClient() {
 	}
-	
+
 	public void initialise() throws IOException {
-		
+
 		BluetoothClient client = new BluetoothClient();
 		// display local device address and name
 		LocalDevice localDevice = LocalDevice.getLocalDevice();
-		System.out.println("Address: " + localDevice.getBluetoothAddress());
-		System.out.println("Name: " + localDevice.getFriendlyName());
+		// System.out.println("Address: " + localDevice.getBluetoothAddress());
+		// System.out.println("Name: " + localDevice.getFriendlyName());
 
 		// find devices
 		DiscoveryAgent agent = localDevice.getDiscoveryAgent();
@@ -49,12 +56,12 @@ public class BluetoothClient implements DiscoveryListener {
 
 		try {
 			synchronized (lock) {
+				// Wait for inquiry to finish
 				lock.wait();
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
 		System.out.println("Device Inquiry Completed. ");
 
 		// print all devices in vecDevices
@@ -64,8 +71,8 @@ public class BluetoothClient implements DiscoveryListener {
 			System.out.println("No Devices Found .");
 			System.exit(0);
 		} else {
-			// print bluetooth device addresses and names in the format [ No.
-			// address (name) ]
+			// print bluetooth device addresses and names in the format [
+			// No.address (name) ]
 			System.out.println("Bluetooth Devices: ");
 			for (int i = 0; i < deviceCount; i++) {
 				RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(i);
@@ -77,11 +84,13 @@ public class BluetoothClient implements DiscoveryListener {
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		String chosenIndex = bReader.readLine();
 		int index = Integer.parseInt(chosenIndex.trim());
+
+		
 		// check for spp service
 		RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(index - 1);
 		UUID[] uuidSet = new UUID[1];
 		uuidSet[0] = new UUID("fa87c0d0afac11de8a390800200c9a66", false);
-		System.out.println("\nSearching for service...");
+		System.out.println("\nSearching for service (uuid match)...");
 		agent.searchServices(null, uuidSet, remoteDevice, client);
 		try {
 			synchronized (lock) {
@@ -94,140 +103,44 @@ public class BluetoothClient implements DiscoveryListener {
 			System.out.println("Device does not support Simple SPP Service.");
 			System.exit(0);
 		}
-		// connect to the server and send a line of text
-		StreamConnection streamConnection = (StreamConnection) Connector.open(connectionURL);
-		// send string
-		OutputStream outStream = streamConnection.openOutputStream();
-		PrintWriter pWriter = new PrintWriter(new OutputStreamWriter(outStream));
-		pWriter.write("Test String from SPP Client\r\n");
-		pWriter.flush();
 
-		System.out.println("Enter message: ");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// connect to the server
+		streamConnection = (StreamConnection) Connector.open(connectionURL);
+		connected = true;
 
-		while (true) {
-			String s = null;
+		mConnectedThread = new ConnectedThread(streamConnection);
+		
+		//sendMessage("Virker lortet?");
+		
+		// read response
+		//InputStream inStream = streamConnection.openInputStream();
+		//BufferedReader bReader2 = new BufferedReader(new InputStreamReader(inStream));
+		//String lineRead = bReader2.readLine();
+		//System.out.println(lineRead);
+	}
+
+	public void sendMessage(String message) {
+		if (connected) {
+			OutputStream outStream = null;
 			try {
-				s = br.readLine();
-				pWriter.write(s);
-				pWriter.flush();
+				outStream = streamConnection.openOutputStream();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			if (s.equals("stop")) {
-				break;
-			}
+			PrintWriter pWriter = new PrintWriter(new OutputStreamWriter(outStream));
+			pWriter.write(message);
+			pWriter.flush();
 		}
-
-		// read response
-		InputStream inStream = streamConnection.openInputStream();
-		BufferedReader bReader2 = new BufferedReader(new InputStreamReader(inStream));
-		String lineRead = bReader2.readLine();
-		System.out.println(lineRead);
 	}
 	
-	/*
-	public static void main(String[] args) throws IOException {
-
-		BluetoothClient client = new BluetoothClient();
-
-		// display local device address and name
-		LocalDevice localDevice = LocalDevice.getLocalDevice();
-		System.out.println("Address: " + localDevice.getBluetoothAddress());
-		System.out.println("Name: " + localDevice.getFriendlyName());
-
-		// find devices
-		DiscoveryAgent agent = localDevice.getDiscoveryAgent();
-
-		System.out.println("Starting device inquiry...");
-		agent.startInquiry(DiscoveryAgent.GIAC, client);
-
-		try {
-			synchronized (lock) {
-				lock.wait();
-			}
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("Device Inquiry Completed. ");
-
-		// print all devices in vecDevices
-		int deviceCount = vecDevices.size();
-
-		if (deviceCount <= 0) {
-			System.out.println("No Devices Found .");
-			System.exit(0);
-		} else {
-			// print bluetooth device addresses and names in the format [ No.
-			// address (name) ]
-			System.out.println("Bluetooth Devices: ");
-			for (int i = 0; i < deviceCount; i++) {
-				RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(i);
-				System.out.println((i + 1) + ". " + remoteDevice.getBluetoothAddress() + " ("
-						+ remoteDevice.getFriendlyName(true) + ")");
-			}
-		}
-		System.out.print("Choose Device index: ");
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-		String chosenIndex = bReader.readLine();
-		int index = Integer.parseInt(chosenIndex.trim());
-		// check for spp service
-		RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(index - 1);
-		UUID[] uuidSet = new UUID[1];
-		uuidSet[0] = new UUID("fa87c0d0afac11de8a390800200c9a66", false);
-		System.out.println("\nSearching for service...");
-		agent.searchServices(null, uuidSet, remoteDevice, client);
-		try {
-			synchronized (lock) {
-				lock.wait();
-			}
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		if (connectionURL == null) {
-			System.out.println("Device does not support Simple SPP Service.");
-			System.exit(0);
-		}
-		// connect to the server and send a line of text
-		StreamConnection streamConnection = (StreamConnection) Connector.open(connectionURL);
-		// send string
-		OutputStream outStream = streamConnection.openOutputStream();
-		PrintWriter pWriter = new PrintWriter(new OutputStreamWriter(outStream));
-		pWriter.write("Test String from SPP Client\r\n");
-		pWriter.flush();
-
-		System.out.println("Enter message: ");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		while (true) {
-			String s = null;
-			try {
-				s = br.readLine();
-				pWriter.write(s);
-				pWriter.flush();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			if (s.equals("stop")) {
-				break;
-			}
-		}
-
-		// read response
-		InputStream inStream = streamConnection.openInputStream();
-		BufferedReader bReader2 = new BufferedReader(new InputStreamReader(inStream));
-		String lineRead = bReader2.readLine();
-		System.out.println(lineRead);
+	
+	public void sendMessage2(String message) {
+		mConnectedThread.write(message);
 	}
-	*/
+	
+	
 
-	// main
-	// methods of DiscoveryListener
+	// Required methods, what happens when a new device is discovered
 	public void deviceDiscovered(RemoteDevice btDevice, DeviceClass cod) {
 		// add the device to the vector
 		if (!vecDevices.contains(btDevice)) {
@@ -235,7 +148,7 @@ public class BluetoothClient implements DiscoveryListener {
 		}
 	}
 
-	// implement this method since services are not being discovered
+	// Discovering services
 	public void servicesDiscovered(int transID, ServiceRecord[] servRecord) {
 		if (servRecord != null && servRecord.length > 0) {
 			connectionURL = servRecord[0].getConnectionURL(0, false);
@@ -245,17 +158,70 @@ public class BluetoothClient implements DiscoveryListener {
 		}
 	}
 
-	// implement this method since services are not being discovered
+	// Implement this method since services are not being discovered
 	public void serviceSearchCompleted(int transID, int respCode) {
 		synchronized (lock) {
 			lock.notify();
 		}
 	}
 
+	// Done with the inquiry, release lock
 	public void inquiryCompleted(int discType) {
 		synchronized (lock) {
 			lock.notify();
 		}
+	}
+	
+	private class ConnectedThread extends Thread {
+		private final StreamConnection mStreamConnection;
+		private final InputStream inStream;
+		private final OutputStream outStream;
+		
+		public ConnectedThread(StreamConnection streamConnection) {
+			mStreamConnection = streamConnection;
+			InputStream tmpIn = null;
+            OutputStream tmpOut = null;
 
-	}// end method
+            // Get the BluetoothSocket input and output streams
+            try {
+                tmpIn = streamConnection.openInputStream();
+                tmpOut = streamConnection.openOutputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            inStream = tmpIn;
+            outStream = tmpOut;
+		}
+		
+		public void run() {
+			BufferedReader bReader = new BufferedReader(new InputStreamReader(inStream));
+			while (true) {
+				try {
+					String lineRead = bReader.readLine();
+					System.out.println(lineRead);
+				} catch (IOException e) {
+					e.printStackTrace();
+					System.out.println("Disconnected?");
+					break;
+				}
+			}
+		}
+		
+		public void write(String message) {
+			if (connected) {
+				PrintWriter pWriter = new PrintWriter(new OutputStreamWriter(outStream));
+				pWriter.write(message);
+				pWriter.flush();
+			}
+		}
+		
+		public void cancel() {
+			try {
+				mStreamConnection.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
