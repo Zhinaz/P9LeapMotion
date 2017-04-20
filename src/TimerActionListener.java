@@ -20,6 +20,48 @@ class TimerActionListener implements ActionListener {
 		this.lblData = lblData;
 	}
 	
+	
+	public void actionPerformed(ActionEvent arg0) {
+		// Append all data for each set
+		Controller controller = new Controller();
+		Frame frame = controller.frame();
+		SVMTrainer trainer = new SVMTrainer();
+
+		if (frame.hands().count() >= 1) {
+			// Add time stamp
+			
+			if (frame.hands().get(0).isRight()) {
+				final String output = "\tRight: " + trainer.svmPredict(Main.getSample(0), model);
+				System.out.println(output);
+				final String additionalOutput;
+				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
+					additionalOutput = "\tLeft: " + trainer.svmPredict(Main.getSample(1), modelLeft);
+					System.out.println(additionalOutput);
+				}
+			}
+			if (frame.hands().get(0).isLeft()) {
+				final String output = "\tLeft: " + trainer.svmPredict(Main.getSample(0), modelLeft);
+				System.out.println(output);
+				final String additionalOutput;
+				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
+					additionalOutput = "\tRight: " + trainer.svmPredict(Main.getSample(1), model);
+					System.out.println(additionalOutput);
+				}
+			}
+				
+			
+			Display.getDefault().asyncExec(new Runnable() {
+			    public void run() {
+			    	//lblData.setText(output);
+			    }
+			});
+		}
+	}
+	
+	
+	
+	
+	
 	public String doubleToAction(double d) {
 		String s = "None";
 		
@@ -34,7 +76,7 @@ class TimerActionListener implements ActionListener {
 	}
 	
 	
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed2(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();

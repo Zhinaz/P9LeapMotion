@@ -122,27 +122,27 @@ public class Main {
 		System.out.println("\n\n\n\n");
 		
 		// Initialise bluetooth connection
-		BluetoothClient bluetoothClient = new BluetoothClient();
+		/*BluetoothClient bluetoothClient = new BluetoothClient();
 		try {
 			bluetoothClient.initialise();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		//testOClockSet();
 		//testOClockSetLeft();
 		//testSampleSet();
 		//testSampleSetLeft();
 		
-		/*
+		
 		try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		*/
+		
 		
 		while (true) {
 			BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
@@ -153,7 +153,7 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			bluetoothClient.sendMessage2(chosenIndex);
+			//bluetoothClient.sendMessage2(chosenIndex);
 		}
 	}
 
@@ -218,7 +218,7 @@ public class Main {
 	}
 
 	public void initiateTimer() {
-		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData);
+		TimerActionListener timerAction = new TimerActionListener(modelOClock, modelLeftOClock, lblData);
 		timer = new Timer(250, timerAction);
 		timer.start();
 	}
