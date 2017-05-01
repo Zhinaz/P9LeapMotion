@@ -13,7 +13,7 @@ class SVMTrainer {
 	// classification classes
 	private static int numberOfClasses = 5;
 	private static int numberOfClassesLeft = 2;
-	private static double confidenceThreshold = 0.75;
+	private static double confidenceThreshold = 0.70;
 	// Model
 	//public static svm_model model;
 

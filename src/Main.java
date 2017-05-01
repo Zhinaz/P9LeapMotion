@@ -20,36 +20,38 @@ import libsvm.svm_model;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 public class Main {
-	protected Shell shell;
-	private Button btnStart;
-	private Button btnStop;
-	private Label lblsamplesCollected;
+	protected static Shell shell;
+	private static Button btnStart;
+	private static Button btnStop;
+	private static Label lblsamplesCollected;
 
-	public Boolean collectingBool = false;
-	private Label lblData;
-	private Label samplesCollected;
+	public static Boolean collectingBool = false;
+	private static Label lblData;
+	private static Label samplesCollected;
 
-	Timer timer;
+	static Timer timer;
 
 	//
 	// Testing sets and model creation
 	// 
-	static DataReader reader = new DataReader("src/data/builddata.csv");
+	static DataReader reader = new DataReader("src/data/MereTest/builddata.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
 	
-	static DataReader reader2 = new DataReader("src/data/builddataLeft.csv");
+	static DataReader reader2 = new DataReader("src/data/MereTest/builddataLeft.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 	
-	static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
-	static ArrayList<double[]> buildDataOC = readerOClock.getParsedData();
-	static svm_model modelOClock = trainer.svmTrain(buildDataOC);
+	static //static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
+	//static ArrayList<double[]> buildDataOC = readerOClock.getParsedData();
+	//static svm_model modelOClock = trainer.svmTrain(buildData);
 	
-	static DataReader reader2OClock = new DataReader("src/data/leftTest.csv");
-	static ArrayList<double[]> buildDataLeftOC = reader2OClock.getParsedData();
-	static svm_model modelLeftOClock = trainer.svmTrain(buildDataLeftOC);
+	//static DataReader reader2OClock = new DataReader("src/data/leftTest.csv");
+	//static ArrayList<double[]> buildDataLeftOC = reader2OClock.getParsedData();
+	//static svm_model modelLeftOClock = trainer.svmTrain(buildDataLeftOC);
+	
+	BluetoothClient bluetoothClient;
 
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
@@ -122,42 +124,34 @@ public class Main {
 		System.out.println("\n\n\n\n");
 		
 		// Initialise bluetooth connection
-		/*BluetoothClient bluetoothClient = new BluetoothClient();
+		bluetoothClient = new BluetoothClient();
 		try {
 			bluetoothClient.initialise();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 		//testOClockSet();
 		//testOClockSetLeft();
 		//testSampleSet();
 		//testSampleSetLeft();
 		
+		open();
 		
-		try {
+		//TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData, bluetoothClient);
+		//timer = new Timer(500, timerAction);
+		//timer.start();
+		
+		/*try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		
-		while (true) {
-			BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-			String chosenIndex = null;
-			try {
-				chosenIndex = bReader.readLine();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			//bluetoothClient.sendMessage2(chosenIndex);
-		}
+		}*/
 	}
 
-	public void open() {
+	public static void open() {
 		Display display = Display.getDefault();
 		createContents();
 		shell.open();
@@ -169,7 +163,7 @@ public class Main {
 		}
 	}
 	
-	protected void createContents() {
+	protected static void createContents() {
 		shell = new Shell();
 		shell.setSize(400, 200);
 		shell.setText("Data collection");
@@ -217,15 +211,114 @@ public class Main {
 
 	}
 
-	public void initiateTimer() {
-		TimerActionListener timerAction = new TimerActionListener(modelOClock, modelLeftOClock, lblData);
-		timer = new Timer(250, timerAction);
+	public static void initiateTimer() {
+		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData, bluetoothClient);
+		timer = new Timer(500, timerAction);
 		timer.start();
 	}
 	
 	// 
 	// Testing 
 	//
+	public static void testSampleSet() {
+		SVMTrainer trainer = new SVMTrainer();
+		DataReader reader2 = new DataReader("src/data/MereTest/testdata.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfResting = 0;
+		int numberOfSteering = 0;
+		int numberOfNoneTotal = 0;
+		int numberOfRestingCorrect = 0;
+		int numberOfSteeringCorrect = 0;
+		int numberOfNoneCorrect = 0;
+		int numberOfFalse = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredict(d, model);
+
+			if (d[0] == 1.0) {
+				numberOfSteering++;
+				if (predicted == 1.0)
+					numberOfSteeringCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 2.0) {
+				numberOfResting++;
+				if (predicted == 2.0)
+					numberOfRestingCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 3.0) {
+				numberOfNoneTotal++;
+				if (predicted == 3.0)
+					numberOfNoneCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+		}
+		
+		System.out.println("Final results");
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
+		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + numberOfNoneTotal);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering + numberOfNoneTotal));
+		System.out.println();
+	}
+	
+	public static void testSampleSetLeft() {
+		SVMTrainer trainer = new SVMTrainer();
+		DataReader reader2 = new DataReader("src/data/MereTest/testdataLeft.csv");
+		ArrayList<double[]> testData = reader2.getParsedData();
+		
+		int numberOfNone = 0;
+		int numberOfResting = 0;
+		int numberOfSteering = 0;
+		int numberOfRestingCorrect = 0;
+		int numberOfSteeringCorrect = 0;
+		int numberOfFalse = 0;
+		
+		for (double[] d : testData) {
+			double predicted = trainer.svmPredictLeft(d, modelLeft);
+			
+			if (d[0] == 1.0) {
+				numberOfSteering++;
+				if (predicted == 1.0)
+					numberOfSteeringCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 2.0) {
+				numberOfResting++;
+				if (predicted == 2.0)
+					numberOfRestingCorrect++;
+				else if (predicted == 0.0)
+					numberOfNone++;
+				else
+					numberOfFalse++;
+			}
+		}
+		
+		System.out.println("Final results left");
+		System.out.println("number of not confident enough: " + numberOfNone);
+		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
+		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
+		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering));
+		System.out.println();
+	}
+	
+	/*
 	public static void testOClockSet() {
 		SVMTrainer trainer = new SVMTrainer();
 		DataReader reader2 = new DataReader("src/data/rightTrain.csv");
@@ -383,102 +476,5 @@ public class Main {
 		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfTwo + numberOfOne + numberOfThree + numberOfFour + numberOfTwelve));
 		System.out.println();
 	}
-	
-	public static void testSampleSet() {
-		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/testdata.csv");
-		ArrayList<double[]> testData = reader2.getParsedData();
-		
-		int numberOfNone = 0;
-		int numberOfResting = 0;
-		int numberOfSteering = 0;
-		int numberOfNoneTotal = 0;
-		int numberOfRestingCorrect = 0;
-		int numberOfSteeringCorrect = 0;
-		int numberOfNoneCorrect = 0;
-		int numberOfFalse = 0;
-		
-		for (double[] d : testData) {
-			double predicted = trainer.svmPredict(d, model);
-
-			if (d[0] == 1.0) {
-				numberOfSteering++;
-				if (predicted == 1.0)
-					numberOfSteeringCorrect++;
-				else if (predicted == 0.0)
-					numberOfNone++;
-				else
-					numberOfFalse++;
-			}
-			else if (d[0] == 2.0) {
-				numberOfResting++;
-				if (predicted == 2.0)
-					numberOfRestingCorrect++;
-				else if (predicted == 0.0)
-					numberOfNone++;
-				else
-					numberOfFalse++;
-			}
-			else if (d[0] == 3.0) {
-				numberOfNoneTotal++;
-				if (predicted == 3.0)
-					numberOfNoneCorrect++;
-				else if (predicted == 0.0)
-					numberOfNone++;
-				else
-					numberOfFalse++;
-			}
-		}
-		
-		System.out.println("Final results");
-		System.out.println("number of not confident enough: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
-		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
-		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + numberOfNoneTotal);
-		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering + numberOfNoneTotal));
-		System.out.println();
-	}
-	
-	public static void testSampleSetLeft() {
-		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/testdataLeft.csv");
-		ArrayList<double[]> testData = reader2.getParsedData();
-		
-		int numberOfNone = 0;
-		int numberOfResting = 0;
-		int numberOfSteering = 0;
-		int numberOfRestingCorrect = 0;
-		int numberOfSteeringCorrect = 0;
-		int numberOfFalse = 0;
-		
-		for (double[] d : testData) {
-			double predicted = trainer.svmPredictLeft(d, modelLeft);
-			
-			if (d[0] == 1.0) {
-				numberOfSteering++;
-				if (predicted == 1.0)
-					numberOfSteeringCorrect++;
-				else if (predicted == 0.0)
-					numberOfNone++;
-				else
-					numberOfFalse++;
-			}
-			else if (d[0] == 2.0) {
-				numberOfResting++;
-				if (predicted == 2.0)
-					numberOfRestingCorrect++;
-				else if (predicted == 0.0)
-					numberOfNone++;
-				else
-					numberOfFalse++;
-			}
-		}
-		
-		System.out.println("Final results left");
-		System.out.println("number of not confident enough: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
-		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
-		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering));
-		System.out.println();
-	}
+	*/
 }

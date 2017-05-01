@@ -13,11 +13,19 @@ class TimerActionListener implements ActionListener {
 	private final svm_model model;
 	private final svm_model modelLeft;
 	private Label lblData;
+	
+	private final static String ATTENTIVE = "ATTENTIVE";
+	private final static String INATTENTIVE = "INATTENTIVE";
+	
+	private int rightSecondaryCounter = 0;
+	
+	BluetoothClient mBluetoothClient;
 
-	TimerActionListener(svm_model model, svm_model modelLeft, Label lblData) {
+	TimerActionListener(svm_model model, svm_model modelLeft, Label lblData, BluetoothClient bluetoothClient) {
 		this.model = model;
 		this.modelLeft = modelLeft;
 		this.lblData = lblData;
+		this.mBluetoothClient = bluetoothClient;
 	}
 	
 	
@@ -27,28 +35,69 @@ class TimerActionListener implements ActionListener {
 		Frame frame = controller.frame();
 		SVMTrainer trainer = new SVMTrainer();
 
+		double predictedRight = -1.0;
+		double predictedLeft = -1.0;
+		
 		if (frame.hands().count() >= 1) {
 			// Add time stamp
 			
 			if (frame.hands().get(0).isRight()) {
-				final String output = "\tRight: " + trainer.svmPredict(Main.getSample(0), model);
+				predictedRight = trainer.svmPredict(Main.getSample(0), model);
+				final String output = "\tRight: " + doubleToAction(predictedRight);
 				System.out.println(output);
-				final String additionalOutput;
+				String additionalOutput = "";
 				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
-					additionalOutput = "\tLeft: " + trainer.svmPredict(Main.getSample(1), modelLeft);
+					predictedLeft = trainer.svmPredict(Main.getSample(1), modelLeft);
+					additionalOutput = "\tLeft: " + doubleToAction(predictedLeft);
 					System.out.println(additionalOutput);
 				}
 			}
 			if (frame.hands().get(0).isLeft()) {
-				final String output = "\tLeft: " + trainer.svmPredict(Main.getSample(0), modelLeft);
+				predictedLeft = trainer.svmPredict(Main.getSample(0), modelLeft);
+				final String output = "\tLeft: " + doubleToAction(predictedLeft);
 				System.out.println(output);
-				final String additionalOutput;
+				String additionalOutput = "";
 				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
-					additionalOutput = "\tRight: " + trainer.svmPredict(Main.getSample(1), model);
+					predictedRight = trainer.svmPredict(Main.getSample(1), model);
+					additionalOutput = "\tRight: " + doubleToAction(predictedRight);
 					System.out.println(additionalOutput);
 				}
 			}
+			
+			
+			if (predictedLeft != -1.0 || predictedRight != -1.0) {
 				
+				// Check right hand
+				if (predictedRight == 3.0) {
+					rightSecondaryCounter++;
+				} else if (predictedRight == 1.0 || predictedRight == 2.0){
+					rightSecondaryCounter = 0;
+				}
+				
+				// Both hands resting / other tasks
+				if (predictedLeft == 2.0 && (predictedRight == 2.0 || predictedRight == 3.0)) {
+					mBluetoothClient.sendMessage(INATTENTIVE);
+					mBluetoothClient.sendMessage(INATTENTIVE);
+				}
+				// Right hand inattentive for too long
+				else if (rightSecondaryCounter >= 6) {
+					mBluetoothClient.sendMessage(INATTENTIVE);
+				}
+				// Right hand secondary tasks
+				else if (predictedRight == 3.0) {
+					mBluetoothClient.sendMessage(INATTENTIVE);
+				}
+				// Left hand on wheel + Right hand back onto wheel or resting
+				else if (predictedLeft == 1.0 && (predictedRight == 2.0 || predictedRight == -1.0)) {
+					mBluetoothClient.sendMessage(ATTENTIVE);
+				}
+				// Right on wheel
+				else if (predictedRight == 1.0) {
+					mBluetoothClient.sendMessage(ATTENTIVE);
+				}
+				
+			}
+			
 			
 			Display.getDefault().asyncExec(new Runnable() {
 			    public void run() {
@@ -57,10 +106,6 @@ class TimerActionListener implements ActionListener {
 			});
 		}
 	}
-	
-	
-	
-	
 	
 	public String doubleToAction(double d) {
 		String s = "None";
@@ -76,7 +121,7 @@ class TimerActionListener implements ActionListener {
 	}
 	
 	
-	public void actionPerformed2(ActionEvent arg0) {
+	/*public void actionPerformed2(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
@@ -116,5 +161,5 @@ class TimerActionListener implements ActionListener {
 			    }
 			});
 		}
-	}
+	}*/
 }

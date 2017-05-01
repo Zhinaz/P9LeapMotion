@@ -39,6 +39,10 @@ public class BluetoothClient implements DiscoveryListener {
 
 	public BluetoothClient() {
 	}
+	
+	public boolean isConnected() {
+		return connected;
+	}
 
 	public void initialise() throws IOException {
 
@@ -89,7 +93,7 @@ public class BluetoothClient implements DiscoveryListener {
 		// check for spp service
 		RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(index - 1);
 		UUID[] uuidSet = new UUID[1];
-		uuidSet[0] = new UUID("fa87c0d0afac11de8a390800200c9a66", false);
+		uuidSet[0] = new UUID("fa87c0d0afac11de8a390800200c9a67", false);
 		System.out.println("\nSearching for service (uuid match)...");
 		agent.searchServices(null, uuidSet, remoteDevice, client);
 		try {
@@ -109,33 +113,13 @@ public class BluetoothClient implements DiscoveryListener {
 		connected = true;
 
 		mConnectedThread = new ConnectedThread(streamConnection);
-		
-		//sendMessage("Virker lortet?");
-		
-		// read response
-		//InputStream inStream = streamConnection.openInputStream();
-		//BufferedReader bReader2 = new BufferedReader(new InputStreamReader(inStream));
-		//String lineRead = bReader2.readLine();
-		//System.out.println(lineRead);
 	}
-
+	
 	public void sendMessage(String message) {
+		System.out.println("Trying to send message: " + message);
 		if (connected) {
-			OutputStream outStream = null;
-			try {
-				outStream = streamConnection.openOutputStream();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			PrintWriter pWriter = new PrintWriter(new OutputStreamWriter(outStream));
-			pWriter.write(message);
-			pWriter.flush();
+			mConnectedThread.write(message); 
 		}
-	}
-	
-	
-	public void sendMessage2(String message) {
-		mConnectedThread.write(message);
 	}
 	
 	
@@ -178,6 +162,9 @@ public class BluetoothClient implements DiscoveryListener {
 		private final OutputStream outStream;
 		
 		public ConnectedThread(StreamConnection streamConnection) {
+			
+			System.out.println("----- ConnectedThread Startet! -----");
+			
 			mStreamConnection = streamConnection;
 			InputStream tmpIn = null;
             OutputStream tmpOut = null;
