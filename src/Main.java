@@ -132,23 +132,20 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		// 
 		//testOClockSet();
 		//testOClockSetLeft();
 		//testSampleSet();
 		//testSampleSetLeft();
 		
-		//open();
+		open();
 		
-		//TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData, bluetoothClient);
-		//timer = new Timer(500, timerAction);
-		//timer.start();
-		
-		try {
+		/*try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	public static void open() {
@@ -225,13 +222,15 @@ public class Main {
 		DataReader reader2 = new DataReader("src/data/MereTest/testdata.csv");
 		ArrayList<double[]> testData = reader2.getParsedData();
 		
-		int numberOfNone = 0;
+		int notConfidentEnough = 0;
 		int numberOfResting = 0;
 		int numberOfSteering = 0;
-		int numberOfNoneTotal = 0;
+		int numberOfSecondary = 0;
+		int numberOfGearstick = 0;
 		int numberOfRestingCorrect = 0;
 		int numberOfSteeringCorrect = 0;
-		int numberOfNoneCorrect = 0;
+		int numberOfSecondaryCorrect = 0;
+		int numberOfGearstickCorrect = 0;
 		int numberOfFalse = 0;
 		
 		for (double[] d : testData) {
@@ -242,7 +241,7 @@ public class Main {
 				if (predicted == 1.0)
 					numberOfSteeringCorrect++;
 				else if (predicted == 0.0)
-					numberOfNone++;
+					notConfidentEnough++;
 				else
 					numberOfFalse++;
 			}
@@ -251,27 +250,37 @@ public class Main {
 				if (predicted == 2.0)
 					numberOfRestingCorrect++;
 				else if (predicted == 0.0)
-					numberOfNone++;
+					notConfidentEnough++;
 				else
 					numberOfFalse++;
 			}
 			else if (d[0] == 3.0) {
-				numberOfNoneTotal++;
+				numberOfSecondary++;
 				if (predicted == 3.0)
-					numberOfNoneCorrect++;
+					numberOfSecondaryCorrect++;
 				else if (predicted == 0.0)
-					numberOfNone++;
+					notConfidentEnough++;
+				else
+					numberOfFalse++;
+			}
+			else if (d[0] == 4.0) {
+				numberOfGearstick++;
+				if (predicted == 4.0)
+					numberOfGearstickCorrect++;
+				else if (predicted == 0.0)
+					notConfidentEnough++;
 				else
 					numberOfFalse++;
 			}
 		}
 		
 		System.out.println("Final results");
-		System.out.println("number of not confident enough: " + numberOfNone);
-		System.out.println("Number of steering correct: " + numberOfSteeringCorrect + "/" + numberOfSteering);
-		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
-		System.out.println("Number of none(gear, secondary, communication) correct: " + numberOfNoneCorrect + "/" + numberOfNoneTotal);
-		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering + numberOfNoneTotal));
+		System.out.println("Number of not confident enough: " + notConfidentEnough);
+		System.out.println("Number of steering: " + numberOfSteeringCorrect + "/" + numberOfSteering);
+		System.out.println("Number of resting: " + numberOfRestingCorrect + "/" + numberOfResting);
+		System.out.println("Number of secondary/communication: " + numberOfSecondaryCorrect + "/" + numberOfSecondary);
+		System.out.println("Number of gearstick: " + numberOfGearstickCorrect + "/" + numberOfGearstick);
+		System.out.println("Number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering + numberOfSecondary + numberOfGearstick));
 		System.out.println();
 	}
 	
