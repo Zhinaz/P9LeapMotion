@@ -43,7 +43,7 @@ public class Main {
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 	
-	static //static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
+	//static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
 	//static ArrayList<double[]> buildDataOC = readerOClock.getParsedData();
 	//static svm_model modelOClock = trainer.svmTrain(buildData);
 	
@@ -51,7 +51,7 @@ public class Main {
 	//static ArrayList<double[]> buildDataLeftOC = reader2OClock.getParsedData();
 	//static svm_model modelLeftOClock = trainer.svmTrain(buildDataLeftOC);
 	
-	BluetoothClient bluetoothClient;
+	static BluetoothClient bluetoothClient;
 
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
@@ -137,18 +137,18 @@ public class Main {
 		//testSampleSet();
 		//testSampleSetLeft();
 		
-		open();
+		//open();
 		
 		//TimerActionListener timerAction = new TimerActionListener(model, modelLeft, lblData, bluetoothClient);
 		//timer = new Timer(500, timerAction);
 		//timer.start();
 		
-		/*try {
+		try {
 			Main window = new Main();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
 
 	public static void open() {
