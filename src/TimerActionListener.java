@@ -12,19 +12,19 @@ class TimerActionListener implements ActionListener {
 		
 	private final svm_model model;
 	private final svm_model modelLeft;
-	private Label lblData;
 	
 	private final static String ATTENTIVE = "ATTENTIVE";
 	private final static String INATTENTIVE = "INATTENTIVE";
+	private final static String RIGHT = "RIGHT";
+	private final static String LEFT = "LEFT";
 	
 	private int rightSecondaryCounter = 0;
 	
 	BluetoothClient mBluetoothClient;
 
-	TimerActionListener(svm_model model, svm_model modelLeft, Label lblData, BluetoothClient bluetoothClient) {
+	TimerActionListener(svm_model model, svm_model modelLeft, BluetoothClient bluetoothClient) {
 		this.model = model;
 		this.modelLeft = modelLeft;
-		this.lblData = lblData;
 		this.mBluetoothClient = bluetoothClient;
 	}
 	
@@ -38,32 +38,41 @@ class TimerActionListener implements ActionListener {
 		double predictedRight = -1.0;
 		double predictedLeft = -1.0;
 		
+		boolean rightSeen = false;
+		boolean leftSeen = false;
+		boolean increasedIntensity = false;
+		
 		if (frame.hands().count() >= 1) {
 			// Add time stamp
 			
 			if (frame.hands().get(0).isRight()) {
 				predictedRight = trainer.svmPredict(Main.getSample(0), model);
+				rightSeen = true;
 				final String output = "\tRight: " + doubleToAction(predictedRight);
 				System.out.println(output);
 				String additionalOutput = "";
 				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
 					predictedLeft = trainer.svmPredict(Main.getSample(1), modelLeft);
+					leftSeen = true;
 					additionalOutput = "\tLeft: " + doubleToAction(predictedLeft);
 					System.out.println(additionalOutput);
 				}
 			}
 			if (frame.hands().get(0).isLeft()) {
 				predictedLeft = trainer.svmPredict(Main.getSample(0), modelLeft);
+				leftSeen = true;
 				final String output = "\tLeft: " + doubleToAction(predictedLeft);
 				System.out.println(output);
 				String additionalOutput = "";
 				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
 					predictedRight = trainer.svmPredict(Main.getSample(1), model);
+					rightSeen = true;
 					additionalOutput = "\tRight: " + doubleToAction(predictedRight);
 					System.out.println(additionalOutput);
 				}
 			}
 			
+			String message = ATTENTIVE;
 			
 			if (predictedLeft != -1.0 || predictedRight != -1.0) {
 				
@@ -76,32 +85,37 @@ class TimerActionListener implements ActionListener {
 				
 				// Both hands resting / other tasks
 				if (predictedLeft == 2.0 && (predictedRight == 2.0 || predictedRight == 3.0)) {
-					mBluetoothClient.sendMessage(INATTENTIVE);
-					mBluetoothClient.sendMessage(INATTENTIVE);
+					message = INATTENTIVE;
+					increasedIntensity = true;
 				}
 				// Right hand inattentive for too long
 				else if (rightSecondaryCounter >= 6) {
-					mBluetoothClient.sendMessage(INATTENTIVE);
+					message = INATTENTIVE;
 				}
 				// Right hand secondary tasks
 				else if (predictedRight == 3.0) {
-					mBluetoothClient.sendMessage(INATTENTIVE);
+					message = INATTENTIVE;
 				}
 				// Left hand on wheel + Right hand back onto wheel or resting
-				else if (predictedLeft == 1.0 && (predictedRight == 2.0 || predictedRight == -1.0)) {
-					mBluetoothClient.sendMessage(ATTENTIVE);
-				}
+				//else if (predictedLeft == 1.0 && (predictedRight == 2.0 || predictedRight == -1.0)) {
+				//	mBluetoothClient.sendMessage(ATTENTIVE);
+				//}
 				// Right on wheel
-				else if (predictedRight == 1.0) {
-					mBluetoothClient.sendMessage(ATTENTIVE);
-				}
+				//else if (predictedRight == 1.0) {
+				//	mBluetoothClient.sendMessage(ATTENTIVE);
+				//}
 				
+				if (increasedIntensity) {
+					mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
+				}
+				mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
 			}
+			
+			
 			
 			
 			Display.getDefault().asyncExec(new Runnable() {
 			    public void run() {
-			    	//lblData.setText(output);
 			    }
 			});
 		}
@@ -119,47 +133,4 @@ class TimerActionListener implements ActionListener {
 		
 		return s;
 	}
-	
-	
-	/*public void actionPerformed2(ActionEvent arg0) {
-		// Append all data for each set
-		Controller controller = new Controller();
-		Frame frame = controller.frame();
-		SVMTrainer trainer = new SVMTrainer();
-		
-		final SimpleDateFormat formatForLines = new SimpleDateFormat("HH:mm ss.SSS");
-		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-		String lineTime = formatForLines.format(timestamp);
-		
-		
-		if (frame.hands().count() >= 1) {
-			// Add time stamp
-			
-			if (frame.hands().get(0).isRight()) {
-				final String output = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(0), model));
-				System.out.println(output);
-				final String additionalOutput;
-				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
-					additionalOutput = lineTime + "\tLeft: " + doubleToAction(trainer.svmPredict(Main.getSample(1), modelLeft));
-					System.out.println(additionalOutput);
-				}
-			}
-			if (frame.hands().get(0).isLeft()) {
-				final String output = lineTime + "\tLeft: " + doubleToAction(trainer.svmPredict(Main.getSample(0), modelLeft));
-				System.out.println(output);
-				final String additionalOutput;
-				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
-					additionalOutput = lineTime + "\tRight: " + doubleToAction(trainer.svmPredict(Main.getSample(1), model));
-					System.out.println(additionalOutput);
-				}
-			}
-				
-			
-			Display.getDefault().asyncExec(new Runnable() {
-			    public void run() {
-			    	//lblData.setText(output);
-			    }
-			});
-		}
-	}*/
 }

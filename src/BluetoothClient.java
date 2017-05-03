@@ -120,8 +120,7 @@ public class BluetoothClient implements DiscoveryListener {
 		if (connected) {
 			mConnectedThread.write(message); 
 		}
-	}
-	
+	}	
 	
 
 	// Required methods, what happens when a new device is discovered
