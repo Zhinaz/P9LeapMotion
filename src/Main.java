@@ -45,19 +45,7 @@ public class Main {
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 	
-	//static DataReader readerOClock = new DataReader("src/data/rightTest.csv");
-	//static ArrayList<double[]> buildDataOC = readerOClock.getParsedData();
-	//static svm_model modelOClock = trainer.svmTrain(buildData);
-	
-	//static DataReader reader2OClock = new DataReader("src/data/leftTest.csv");
-	//static ArrayList<double[]> buildDataLeftOC = reader2OClock.getParsedData();
-	//static svm_model modelLeftOClock = trainer.svmTrain(buildDataLeftOC);
-	
 	static BluetoothClient bluetoothClient;
-	
-	public static ArrayList<String> attentiveContainer = new ArrayList<String>();
-	public static ArrayList<String> leftContainer = new ArrayList<String>();
-	public static ArrayList<String> rightContainer = new ArrayList<String>();
 	
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
@@ -130,21 +118,17 @@ public class Main {
 		System.out.println("\n\n\n\n");
 		
 		// Initialise bluetooth connection
-		/*bluetoothClient = new BluetoothClient();
+		bluetoothClient = new BluetoothClient();
 		try {
 			bluetoothClient.initialise();
+			open();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
-		// 
-		//testOClockSet();
-		//testOClockSetLeft();
 		//testSampleSet();
 		//testSampleSetLeft();
-		
-		//open();
 	}
 
 	public static void open() {
@@ -155,25 +139,6 @@ public class Main {
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch()) {
 				// display.sleep();
-			}
-		}
-	}
-	
-	private static void splitInputString(String inputStr) {
-		// Example message is: "INATTENTIVE 3.0 1.0" First value is predictedRight, second is predictedLeft
-		String[] temp = inputStr.split(" ");
-
-		if (temp.length >= 1) {
-			attentiveContainer.add(temp[0]);
-		}
-		
-		if (temp.length == 3) {
-			
-			if (!temp[1].equals("-1.0")) {
-				rightContainer.add(temp[1]);
-			}
-			if (!temp[2].equals("-1.0")) {
-				leftContainer.add(temp[2]);
 			}
 		}
 	}

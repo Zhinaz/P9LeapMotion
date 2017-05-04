@@ -49,32 +49,28 @@ class TimerActionListener implements ActionListener {
 				predictedRight = trainer.svmPredict(Main.getSample(0), model);
 				rightSeen = true;
 				final String output = "\tRight: " + doubleToAction(predictedRight);
-				System.out.println(output);
-				String additionalOutput = "";
+				//System.out.println(output);
 				if (frame.hands().count() > 1 && frame.hands().get(1).isLeft()) {
 					predictedLeft = trainer.svmPredict(Main.getSample(1), modelLeft);
 					leftSeen = true;
-					additionalOutput = "\tLeft: " + doubleToAction(predictedLeft);
-					System.out.println(additionalOutput);
+					//System.out.println("\tRight: " + doubleToAction(predictedLeft));
 				}
 			}
 			if (frame.hands().get(0).isLeft()) {
 				predictedLeft = trainer.svmPredict(Main.getSample(0), modelLeft);
 				leftSeen = true;
 				final String output = "\tLeft: " + doubleToAction(predictedLeft);
-				System.out.println(output);
-				String additionalOutput = "";
+				//System.out.println(output);
 				if (frame.hands().count() > 1 && frame.hands().get(1).isRight()) {
 					predictedRight = trainer.svmPredict(Main.getSample(1), model);
 					rightSeen = true;
-					additionalOutput = "\tRight: " + doubleToAction(predictedRight);
-					System.out.println(additionalOutput);
+					//System.out.println("\tRight: " + doubleToAction(predictedRight));
 				}
 			}
 			
 			String message = ATTENTIVE;
 			
-			if (predictedLeft != -1.0 || predictedRight != -1.0) {
+			if (rightSeen || leftSeen) {//predictedLeft != -1.0 || predictedRight != -1.0) {
 				
 				// Check right hand
 				if (predictedRight == 3.0) {
@@ -96,18 +92,11 @@ class TimerActionListener implements ActionListener {
 				else if (predictedRight == 3.0) {
 					message = INATTENTIVE;
 				}
-				// Left hand on wheel + Right hand back onto wheel or resting
-				//else if (predictedLeft == 1.0 && (predictedRight == 2.0 || predictedRight == -1.0)) {
-				//	mBluetoothClient.sendMessage(ATTENTIVE);
-				//}
-				// Right on wheel
-				//else if (predictedRight == 1.0) {
-				//	mBluetoothClient.sendMessage(ATTENTIVE);
-				//}
 				
 				if (increasedIntensity) {
-					mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
+					//mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
 				}
+				System.out.println("Trying to send message: " + message + " " + predictedRight + " " + predictedLeft);
 				mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
 			}
 			
@@ -125,11 +114,15 @@ class TimerActionListener implements ActionListener {
 		String s = "None";
 		
 		if (d == 1.0)
-			s = "Holding the steering wheel";
+			s = "Steering wheel";
 		else if (d == 2.0)
 			s = "Resting";
 		else if (d == 3.0)
-			s = "Gear, secondary, communication";
+			s = "Secondary";
+		else if (d == 4.0)
+			s = "Gear stick";
+		else if (d == -1.0)
+			s = "None";
 		
 		return s;
 	}

@@ -116,7 +116,6 @@ public class BluetoothClient implements DiscoveryListener {
 	}
 	
 	public void sendMessage(String message) {
-		System.out.println("Trying to send message: " + message);
 		if (connected) {
 			mConnectedThread.write(message); 
 		}
