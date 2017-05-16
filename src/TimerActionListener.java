@@ -40,7 +40,7 @@ class TimerActionListener implements ActionListener {
 		
 		boolean rightSeen = false;
 		boolean leftSeen = false;
-		boolean increasedIntensity = false;
+		boolean noHandsOnWheel = false;
 		
 		if (frame.hands().count() >= 1) {
 			// Add time stamp
@@ -75,14 +75,14 @@ class TimerActionListener implements ActionListener {
 				// Check right hand
 				if (predictedRight == 3.0) {
 					rightSecondaryCounter++;
-				} else if (predictedRight == 1.0 || predictedRight == 2.0){
+				} else if (predictedRight == 1.0 || predictedRight == 2.0 || predictedRight == 4.0){
 					rightSecondaryCounter = 0;
 				}
 				
 				// Both hands resting / other tasks
 				if (predictedLeft == 2.0 && (predictedRight == 2.0 || predictedRight == 3.0)) {
 					message = INATTENTIVE;
-					increasedIntensity = true;
+					noHandsOnWheel = true;
 				}
 				// Right hand inattentive for too long
 				else if (rightSecondaryCounter >= 6) {
@@ -93,9 +93,6 @@ class TimerActionListener implements ActionListener {
 					message = INATTENTIVE;
 				}
 				
-				if (increasedIntensity) {
-					//mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
-				}
 				System.out.println("Trying to send message: " + message + " " + predictedRight + " " + predictedLeft);
 				mBluetoothClient.sendMessage(message + " " + predictedRight + " " + predictedLeft);
 			}
