@@ -196,7 +196,7 @@ public class Main {
 
 	public static void initiateTimer() {
 		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, bluetoothClient);
-		timer = new Timer(500, timerAction);
+		timer = new Timer(250, timerAction);
 		timer.start();
 	}
 	
