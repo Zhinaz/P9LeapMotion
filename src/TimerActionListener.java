@@ -85,9 +85,9 @@ class TimerActionListener implements ActionListener {
 					noHandsOnWheel = true;
 				}
 				// Right hand inattentive for too long
-				else if (rightSecondaryCounter >= 6) {
-					message = INATTENTIVE;
-				}
+				//else if (rightSecondaryCounter >= 12) {
+					//message = INATTENTIVE;
+				//}
 				// Right hand secondary tasks
 				else if (predictedRight == 3.0) {
 					message = INATTENTIVE;

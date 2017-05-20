@@ -36,7 +36,7 @@ public class Main {
 	static Timer timer;
 
 	// Testing sets and model creation
-	static DataReader reader = new DataReader("src/data/MereTest/builddata.csv");
+	static DataReader reader = new DataReader("src/data/hest.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);

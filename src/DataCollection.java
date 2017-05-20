@@ -4,8 +4,11 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
+
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
@@ -29,6 +32,8 @@ public class DataCollection {
 	
 	private int numberOfSamples = 200; 
 	private Boolean collectingBool = false;
+	
+	private File testfile = null;
 	
 	/**
 	 * Launch the application.
@@ -114,16 +119,26 @@ public class DataCollection {
 		DecimalFormat df = new DecimalFormat("#.#####", otherSymbols);
 		
 		PrintWriter pw = null;
+		
 		try {
 			//final SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.HH.mm.ss");
 			//Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			//String filename = sdf.format(timestamp);
 			
-			String filename = labelFileText.getText();
 			
-			File testfile = new File("files/" + filename + ".csv");
-			pw = new PrintWriter(testfile);
+			
+			String filename = labelFileText.getText();
+			if (testfile == null) {
+				testfile = new File("files/" + filename + ".csv");
+			}
+			
+			FileWriter fw = new FileWriter(testfile, true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			
+			pw = new PrintWriter(bw);
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		StringBuilder sb = new StringBuilder();
