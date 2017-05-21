@@ -131,7 +131,11 @@ class SVMTrainer {
 	public svm_model svmTrain(ArrayList<double[]> trainingSet) {
 		svm_problem prob = new svm_problem();
 		int dataCount = trainingSet.size();
+		
+		//if (trainingSet.get(0).length == 0)
+		
 		int featureCount = trainingSet.get(0).length;
+		
 		prob.y = new double[dataCount];
 		prob.l = dataCount;
 		prob.x = new svm_node[dataCount][featureCount];

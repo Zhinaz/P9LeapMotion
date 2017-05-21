@@ -1,7 +1,13 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 import javax.swing.Timer;
 
 import org.eclipse.swt.SWT;
@@ -47,79 +53,16 @@ public class Main {
 	
 	static BluetoothClient bluetoothClient;
 	
-	public static double[] getSample(int handNumber) {
-		Controller controller = new Controller();
-		Frame frame = controller.frame();
-		double[] temp = { 1.0 };
-
-		if (frame.hands().count() >= 1) {
-			Hand hand = frame.hands().get(handNumber);
-
-			temp = new double[] { 
-					0.0, 
-					// Hand
-					hand.sphereCenter().normalized().getX(),
-					hand.sphereCenter().normalized().getY(),
-					hand.sphereCenter().normalized().getZ(),
-					hand.grabStrength(), 
-					hand.pinchStrength(), 
-					// Palm
-					hand.palmNormal().getX(),
-					hand.palmNormal().getY(), 
-					hand.palmNormal().getZ(), 
-					hand.stabilizedPalmPosition().normalized().getX(),
-					hand.stabilizedPalmPosition().normalized().getY(),
-					hand.stabilizedPalmPosition().normalized().getZ(),
-					// Direction
-					hand.direction().getX(),
-					hand.direction().getY(), 
-					hand.direction().getZ(), 
-					hand.direction().pitch(), 
-					hand.direction().roll(),
-					hand.direction().yaw(), 
-					// Fingers
-					hand.fingers().get(0).direction().getX(),
-					hand.fingers().get(0).direction().getY(), 
-					hand.fingers().get(0).direction().getZ(),
-					hand.fingers().get(0).stabilizedTipPosition().normalized().getX(),
-					hand.fingers().get(0).stabilizedTipPosition().normalized().getY(),
-					hand.fingers().get(0).stabilizedTipPosition().normalized().getZ(),
-					hand.fingers().get(1).direction().getX(), 
-					hand.fingers().get(1).direction().getY(),
-					hand.fingers().get(1).direction().getZ(),
-					hand.fingers().get(1).stabilizedTipPosition().normalized().getX(),
-					hand.fingers().get(1).stabilizedTipPosition().normalized().getY(),
-					hand.fingers().get(1).stabilizedTipPosition().normalized().getZ(),
-					hand.fingers().get(2).direction().getX(), 
-					hand.fingers().get(2).direction().getY(),
-					hand.fingers().get(2).direction().getZ(),
-					hand.fingers().get(2).stabilizedTipPosition().normalized().getX(),
-					hand.fingers().get(2).stabilizedTipPosition().normalized().getY(),
-					hand.fingers().get(2).stabilizedTipPosition().normalized().getZ(),
-					hand.fingers().get(3).direction().getX(), 
-					hand.fingers().get(3).direction().getY(),
-					hand.fingers().get(3).direction().getZ(),
-					hand.fingers().get(3).stabilizedTipPosition().normalized().getX(),
-					hand.fingers().get(3).stabilizedTipPosition().normalized().getY(),
-					hand.fingers().get(3).stabilizedTipPosition().normalized().getZ(),
-					hand.fingers().get(4).direction().getX(), 
-					hand.fingers().get(4).direction().getY(),
-					hand.fingers().get(4).direction().getZ(),
-					hand.fingers().get(4).stabilizedTipPosition().normalized().getX(),
-					hand.fingers().get(4).stabilizedTipPosition().normalized().getY(),
-					hand.fingers().get(4).stabilizedTipPosition().normalized().getZ(), 
-					};
-
-		}
-		return temp;
-	}
+	static JFileChooser fc;
+	
+	
 
 	public static void main(String[] args) {
 		System.out.println("\n\n\n\n");
 		System.out.println(false);
 		
 		// Initialise bluetooth connection
-		bluetoothClient = new BluetoothClient();
+		/*bluetoothClient = new BluetoothClient();
 		try {
 			bluetoothClient.initialise();
 			open();
@@ -127,8 +70,9 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
 		
-
+		open();
 		
 		//testSampleSet();
 		//testSampleSetLeft();
@@ -148,7 +92,7 @@ public class Main {
 	
 	protected static void createContents() {
 		shell = new Shell();
-		shell.setSize(400, 200);
+		shell.setSize(400, 314);
 		shell.setText("Data collection");
 
 		btnStart = new Button(shell, SWT.BUTTON1);
@@ -172,6 +116,59 @@ public class Main {
 				System.out.println("Collection stopped");
 				collectingBool = false;
 				timer.stop();
+			}
+		});
+		
+		Button btnCalibrate = new Button(shell, SWT.BUTTON1);
+		btnCalibrate.setText("Calibrate");
+		btnCalibrate.setBounds(274, 155, 100, 34);
+		btnCalibrate.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				DataCollection dataCollection = new DataCollection();
+				dataCollection.open();
+			}
+		});
+		
+		Button btnLoadRight = new Button(shell, SWT.BUTTON1);
+		btnLoadRight.setText("Right dataset");
+		btnLoadRight.setBounds(274, 193, 100, 34);
+		btnLoadRight.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				// Load data from a file, and use it for the right model
+				FileChooser fc = new FileChooser();
+				File file = fc.openFile();
+				
+				System.out.println(file.getPath());
+				
+				DataReader readertest = new DataReader(file.getPath());
+				ArrayList<double[]> buildDatatest = readertest.getParsedData();
+				
+				/*for (double[] d : buildDatatest) {
+					for (double db : d) {
+						System.out.print(db + ",");
+					}
+					System.out.println();
+				}*/
+				
+				model = trainer.svmTrain(buildDatatest);
+			}
+		});
+		
+		Button btnLoadLeft = new Button(shell, SWT.BUTTON1);
+		btnLoadLeft.setText("Left dataset");
+		btnLoadLeft.setBounds(274, 231, 100, 34);
+		btnLoadLeft.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				// Load data from a file, and use it for the right model
+				FileChooser fc = new FileChooser();
+				File file = fc.openFile();
+				
+				System.out.println(file.getPath());
+				
+				DataReader readertest = new DataReader(file.getPath());
+				ArrayList<double[]> buildDatatest = readertest.getParsedData();
+				
+				modelLeft = trainer.svmTrain(buildDatatest);
 			}
 		});
 
@@ -309,5 +306,72 @@ public class Main {
 		System.out.println("Number of resting correct: " + numberOfRestingCorrect + "/" + numberOfResting);
 		System.out.println("number of false predictions: " + numberOfFalse + "/" + (numberOfResting + numberOfSteering));
 		System.out.println();
+	}
+	
+	public static double[] getSample(int handNumber) {
+		Controller controller = new Controller();
+		Frame frame = controller.frame();
+		double[] temp = { 1.0 };
+
+		if (frame.hands().count() >= 1) {
+			Hand hand = frame.hands().get(handNumber);
+
+			temp = new double[] { 
+					0.0, 
+					// Hand
+					hand.sphereCenter().normalized().getX(),
+					hand.sphereCenter().normalized().getY(),
+					hand.sphereCenter().normalized().getZ(),
+					hand.grabStrength(), 
+					hand.pinchStrength(), 
+					// Palm
+					hand.palmNormal().getX(),
+					hand.palmNormal().getY(), 
+					hand.palmNormal().getZ(), 
+					hand.stabilizedPalmPosition().normalized().getX(),
+					hand.stabilizedPalmPosition().normalized().getY(),
+					hand.stabilizedPalmPosition().normalized().getZ(),
+					// Direction
+					hand.direction().getX(),
+					hand.direction().getY(), 
+					hand.direction().getZ(), 
+					hand.direction().pitch(), 
+					hand.direction().roll(),
+					hand.direction().yaw(), 
+					// Fingers
+					hand.fingers().get(0).direction().getX(),
+					hand.fingers().get(0).direction().getY(), 
+					hand.fingers().get(0).direction().getZ(),
+					hand.fingers().get(0).stabilizedTipPosition().normalized().getX(),
+					hand.fingers().get(0).stabilizedTipPosition().normalized().getY(),
+					hand.fingers().get(0).stabilizedTipPosition().normalized().getZ(),
+					hand.fingers().get(1).direction().getX(), 
+					hand.fingers().get(1).direction().getY(),
+					hand.fingers().get(1).direction().getZ(),
+					hand.fingers().get(1).stabilizedTipPosition().normalized().getX(),
+					hand.fingers().get(1).stabilizedTipPosition().normalized().getY(),
+					hand.fingers().get(1).stabilizedTipPosition().normalized().getZ(),
+					hand.fingers().get(2).direction().getX(), 
+					hand.fingers().get(2).direction().getY(),
+					hand.fingers().get(2).direction().getZ(),
+					hand.fingers().get(2).stabilizedTipPosition().normalized().getX(),
+					hand.fingers().get(2).stabilizedTipPosition().normalized().getY(),
+					hand.fingers().get(2).stabilizedTipPosition().normalized().getZ(),
+					hand.fingers().get(3).direction().getX(), 
+					hand.fingers().get(3).direction().getY(),
+					hand.fingers().get(3).direction().getZ(),
+					hand.fingers().get(3).stabilizedTipPosition().normalized().getX(),
+					hand.fingers().get(3).stabilizedTipPosition().normalized().getY(),
+					hand.fingers().get(3).stabilizedTipPosition().normalized().getZ(),
+					hand.fingers().get(4).direction().getX(), 
+					hand.fingers().get(4).direction().getY(),
+					hand.fingers().get(4).direction().getZ(),
+					hand.fingers().get(4).stabilizedTipPosition().normalized().getX(),
+					hand.fingers().get(4).stabilizedTipPosition().normalized().getY(),
+					hand.fingers().get(4).stabilizedTipPosition().normalized().getZ(), 
+					};
+
+		}
+		return temp;
 	}
 }

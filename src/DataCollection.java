@@ -27,6 +27,8 @@ public class DataCollection {
 	private Text labelText;
 	private Label labelFile;
 	private Text labelFileText;
+	private Label labelSamples;
+	private Text labelSamplesText;
 	private Button collect;
 	private Label samplesCollected;
 	
@@ -94,6 +96,14 @@ public class DataCollection {
 		labelFileText = new Text(shell, SWT.BORDER);
 		labelFileText.setBounds(100, 50, 76, 21);
 		
+		labelSamples = new Label(shell, SWT.NONE);
+		labelSamples.setBounds(190, 25, 76, 21);
+		labelSamples.setText("Samples #");
+		
+		labelSamplesText = new Text(shell, SWT.BORDER);
+		labelSamplesText.setBounds(190, 50, 76, 21);
+		labelSamplesText.setText("200");
+		
 		collect = new Button(shell, SWT.BUTTON1);
 		collect.setText("Start collecting");
 		collect.setBounds(10, 75, 200, 50);
@@ -117,6 +127,8 @@ public class DataCollection {
 		otherSymbols.setDecimalSeparator('.');
 		otherSymbols.setGroupingSeparator(',');
 		DecimalFormat df = new DecimalFormat("#.#####", otherSymbols);
+		
+		numberOfSamples = Integer.parseInt(labelSamplesText.getText());
 		
 		PrintWriter pw = null;
 		
