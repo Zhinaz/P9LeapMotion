@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JFileChooser;
@@ -37,7 +38,7 @@ public class Main {
 	static Timer timer;
 
 	// Testing sets and model creation
-	static DataReader reader = new DataReader("src/data/hest.csv");
+	static DataReader reader = new DataReader("src/data/MereTest/builddata.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
@@ -55,11 +56,15 @@ public class Main {
 		System.out.println(false);
 
 		// Initialise bluetooth connection
-		/*
-		 * bluetoothClient = new BluetoothClient(); try {
-		 * bluetoothClient.initialise(); open(); } catch (IOException e) {
-		 * e.printStackTrace(); }
-		 */
+		
+		bluetoothClient = new BluetoothClient(); 
+		/*try {
+			bluetoothClient.initialise(); 
+			open(); 
+		} catch (IOException e) {
+			e.printStackTrace(); 
+		}*/
+		
 
 		open();
 
