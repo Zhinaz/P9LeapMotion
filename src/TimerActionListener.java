@@ -38,7 +38,7 @@ class TimerActionListener implements ActionListener {
 		this.mBluetoothClient = bluetoothClient;
 	}
 
-	public void actionPerformed2(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
@@ -116,7 +116,7 @@ class TimerActionListener implements ActionListener {
 		}
 	}
 
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed2(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
@@ -147,7 +147,7 @@ class TimerActionListener implements ActionListener {
 		PrintWriter pw = null;
 
 		try {
-			if (outputFile == null) {
+ 			if (outputFile == null) {
 				String filename = sdf.format(timestamp);
 				outputFile = new File("files/" + filename + ".csv");
 			}

@@ -58,12 +58,12 @@ public class Main {
 		// Initialise bluetooth connection
 		
 		bluetoothClient = new BluetoothClient(); 
-		/*try {
+		try {
 			bluetoothClient.initialise(); 
 			open(); 
 		} catch (IOException e) {
 			e.printStackTrace(); 
-		}*/
+		}
 		
 
 		open();
