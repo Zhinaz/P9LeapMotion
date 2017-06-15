@@ -38,7 +38,7 @@ class TimerActionListener implements ActionListener {
 		this.mBluetoothClient = bluetoothClient;
 	}
 
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed2(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
@@ -92,7 +92,7 @@ class TimerActionListener implements ActionListener {
 				}
 
 				// Both hands resting / other tasks
-				if (predictedLeft == 2.0 && (predictedRight == 2.0 || predictedRight == 3.0)) {
+				if (predictedLeft == 2.0 && (predictedRight == 2.0 || predictedRight == 3.0 || predictedRight == 4.0)) {
 					message = INATTENTIVE;
 					noHandsOnWheel = true;
 				}
@@ -116,7 +116,7 @@ class TimerActionListener implements ActionListener {
 		}
 	}
 
-	public void actionPerformed2(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent arg0) {
 		// Append all data for each set
 		Controller controller = new Controller();
 		Frame frame = controller.frame();

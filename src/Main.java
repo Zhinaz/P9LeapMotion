@@ -38,12 +38,12 @@ public class Main {
 	static Timer timer;
 
 	// Testing sets and model creation
-	static DataReader reader = new DataReader("src/data/MereTest/builddata.csv");
+	static DataReader reader = new DataReader("src/data/MereTest/hyundaiTestRight.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
 
-	static DataReader reader2 = new DataReader("src/data/MereTest/builddataLeft.csv");
+	static DataReader reader2 = new DataReader("src/data/MereTest/hyundaiTest.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
@@ -57,18 +57,18 @@ public class Main {
 
 		// Initialise bluetooth connection
 		
-		bluetoothClient = new BluetoothClient(); 
+		/*bluetoothClient = new BluetoothClient(); 
 		try {
 			bluetoothClient.initialise(); 
 			open(); 
 		} catch (IOException e) {
 			e.printStackTrace(); 
-		}
+		}*/
 		
 
 		open();
 
-		// testSampleSet();
+	 //testSampleSet();
 		// testSampleSetLeft();
 	}
 
@@ -263,7 +263,7 @@ public class Main {
 		System.out.println("Number of not confident enough: " + notConfidentEnough);
 		System.out.println("Number of steering: " + numberOfSteeringCorrect + "/" + numberOfSteering);
 		System.out.println("Number of resting: " + numberOfRestingCorrect + "/" + numberOfResting);
-		System.out.println("Number of secondary/communication: " + numberOfSecondaryCorrect + "/" + numberOfSecondary);
+		System.out.println("Number of secondary: " + numberOfSecondaryCorrect + "/" + numberOfSecondary);
 		System.out.println("Number of gearstick: " + numberOfGearstickCorrect + "/" + numberOfGearstick);
 		System.out.println("Number of false predictions: " + numberOfFalse + "/"
 				+ (numberOfResting + numberOfSteering + numberOfSecondary + numberOfGearstick));
