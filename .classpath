@@ -20,6 +20,10 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.ui.forms_3.7.0.v20160518-1929.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.ui.workbench_3.108.1.v20160819-2118.jar"/>
 	<classpathentry kind="lib" path="lib/libsvm.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Jogge/Documents/P9LeapMotion/lib/bluecove-2.1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jogge/Documents/P9LeapMotion/lib/bluecove-2.1.1-SNAPSHOT.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="P9LeapMotion/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

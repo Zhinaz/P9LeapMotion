@@ -38,12 +38,12 @@ public class Main {
 	static Timer timer;
 
 	// Testing sets and model creation
-	static DataReader reader = new DataReader("src/data/MereTest/hyundaiTestRight.csv");
+	static DataReader reader = new DataReader("src/data/MereTest/passatR.csv");
 	static ArrayList<double[]> buildData = reader.getParsedData();
 	static SVMTrainer trainer = new SVMTrainer();
 	static svm_model model = trainer.svmTrain(buildData);
 
-	static DataReader reader2 = new DataReader("src/data/MereTest/hyundaiTest.csv");
+	static DataReader reader2 = new DataReader("src/data/MereTest/passatL.csv");
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
