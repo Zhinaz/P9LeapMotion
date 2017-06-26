@@ -14,8 +14,6 @@ class SVMTrainer {
 	private static int numberOfClasses = 4;
 	private static int numberOfClassesLeft = 2;
 	private static double confidenceThreshold = 0.70;
-	// Model
-	//public static svm_model model;
 
 	static DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
 	static DecimalFormat df = new DecimalFormat("0.00000", otherSymbols);
@@ -56,11 +54,12 @@ class SVMTrainer {
 		
 		for (int i = 0; i < numberOfClasses; i++) {
 			// Debug purposes
+			// Shows probability for each class
 			//System.out.print("(" + labels[i] + ":" + df.format(prob_estimates[i]) +") ");
+			
 			if (prob_estimates[i] > highest_prob)
 				highest_prob = prob_estimates[i];
 		}
-		//System.out.println();
 		
 		/*
 		if (highest_prob >= confidenceThreshold)
@@ -76,7 +75,7 @@ class SVMTrainer {
 	}
 	
 	
-	
+	// Predict for the left hand. 
 	public double svmPredictLeft(double[] testset, svm_model model) {
 		svm_node[] nodes = new svm_node[testset.length - 1];
 		
@@ -152,6 +151,10 @@ class SVMTrainer {
 			prob.y[i] = features[0];
 		}
 
+		// 
+		// SVM parameters 
+		// Can be tweaked, check the library for values:  https://www.csie.ntu.edu.tw/~cjlin/libsvm/
+		//
 		svm_parameter param = new svm_parameter();
 		param.probability = 1;
 		param.gamma = 1;

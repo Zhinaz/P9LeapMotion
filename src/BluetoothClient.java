@@ -77,6 +77,8 @@ public class BluetoothClient implements DiscoveryListener {
 		} else {
 			// print bluetooth device addresses and names in the format [
 			// No.address (name) ]
+			
+			//  WE ONLY SHOW 2 DEVICES
 			System.out.println("Bluetooth Devices: ");
 			for (int i = 0; i < 2; i++) {
 				RemoteDevice remoteDevice = (RemoteDevice) vecDevices.elementAt(i);

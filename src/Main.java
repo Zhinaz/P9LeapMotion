@@ -25,51 +25,43 @@ public class Main {
 	private final static String ATTENTIVE = "ATTENTIVE";
 	private final static String INATTENTIVE = "INATTENTIVE";
 
+	// UI components
 	protected static Shell shell;
 	private static Button btnStart;
 	private static Button btnStop;
-	private static Label lblsamplesCollected;
-	private static Label lblNewData;
-
+	private static Label lblstate;
+	private static Label state;
+	
 	public static Boolean collectingBool = false;
-	private static Label lblData;
-	private static Label samplesCollected;
+	public static Boolean testBool = false;
 
 	static Timer timer;
+	static BluetoothClient bluetoothClient;
+	static JFileChooser fc;
+	
+	// Training sets
+	static String rightTrainingSet = "src/data/Final/passatR.csv";
+	static String leftTrainingSet = "src/data/Final/passatL.csv";
 
-	// Testing sets and model creation
-	static DataReader reader = new DataReader("src/data/MereTest/passatR.csv");
-	static ArrayList<double[]> buildData = reader.getParsedData();
+	// Model trainer
 	static SVMTrainer trainer = new SVMTrainer();
+	
+	// right and left model creation
+	static DataReader reader = new DataReader(rightTrainingSet);
+	static ArrayList<double[]> buildData = reader.getParsedData();
 	static svm_model model = trainer.svmTrain(buildData);
-
-	static DataReader reader2 = new DataReader("src/data/MereTest/passatL.csv");
+	static DataReader reader2 = new DataReader(leftTrainingSet);
 	static ArrayList<double[]> buildDataLeft = reader2.getParsedData();
 	static svm_model modelLeft = trainer.svmTrain(buildDataLeft);
 
-	static BluetoothClient bluetoothClient;
-
-	static JFileChooser fc;
-
+	
 	public static void main(String[] args) {
 		System.out.println("\n\n\n\n");
-		System.out.println(false);
-
-		// Initialise bluetooth connection
 		
-		/*bluetoothClient = new BluetoothClient(); 
-		try {
-			bluetoothClient.initialise(); 
-			open(); 
-		} catch (IOException e) {
-			e.printStackTrace(); 
-		}*/
-		
-
 		open();
 
-	 //testSampleSet();
-		// testSampleSetLeft();
+		//testSampleSet();
+		//testSampleSetLeft();
 	}
 
 	public static void open() {
@@ -89,6 +81,35 @@ public class Main {
 		shell.setSize(400, 314);
 		shell.setText("Data collection");
 
+		Button btnTest = new Button(shell, SWT.BUTTON1);
+		btnTest.setText("Start test");
+		btnTest.setBounds(274, 3, 100, 34);
+		btnTest.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				if (!testBool) {
+					System.out.println("Test collecting");
+					state.setText("Test collecting");
+					testBool = true;
+					
+					TimerActionTest timerAction = new TimerActionTest(model, modelLeft);
+					timer = new Timer(250, timerAction);
+					timer.start();
+				}
+			}
+		});
+
+		Button btnStopTest = new Button(shell, SWT.BUTTON1);
+		btnStopTest.setText("Stop test");
+		btnStopTest.setBounds(274, 41, 100, 34);
+		btnStopTest.addListener(SWT.Selection, new Listener() {
+			public void handleEvent(Event arg0) {
+				System.out.println("Test stopped");
+				state.setText("Test stopped");
+				testBool = false;
+				timer.stop();
+			}
+		});
+		
 		btnStart = new Button(shell, SWT.BUTTON1);
 		btnStart.setText("Start collecting");
 		btnStart.setBounds(274, 79, 100, 34);
@@ -96,6 +117,7 @@ public class Main {
 			public void handleEvent(Event arg0) {
 				if (!collectingBool) {
 					System.out.println("Start collecting");
+					state.setText("Start collecting");
 					collectingBool = true;
 					initiateTimer();
 				}
@@ -108,6 +130,7 @@ public class Main {
 		btnStop.addListener(SWT.Selection, new Listener() {
 			public void handleEvent(Event arg0) {
 				System.out.println("Collection stopped");
+				state.setText("Collection stopped");
 				collectingBool = false;
 				timer.stop();
 			}
@@ -120,6 +143,7 @@ public class Main {
 			public void handleEvent(Event arg0) {
 				DataCollection dataCollection = new DataCollection();
 				dataCollection.open();
+				state.setText("Calibration program opened");
 			}
 		});
 
@@ -143,10 +167,10 @@ public class Main {
 					 * System.out.print(db + ","); } System.out.println(); }
 					 */
 
-					samplesCollected.setText("");
 					model = trainer.svmTrain(buildDatatest);
+					state.setText("Right dataset changed and trained");
 				} else {
-					samplesCollected.setText("file is null");
+					state.setText("file is null");
 				}
 			}
 		});
@@ -171,43 +195,45 @@ public class Main {
 					 * System.out.print(db + ","); } System.out.println(); }
 					 */
 
-					samplesCollected.setText("");
 					modelLeft = trainer.svmTrain(buildDatatest);
+					state.setText("Left dataset changed and trained");
 				} else {
-					samplesCollected.setText("file is null");
+					state.setText("file is null");
 				}
 			}
 		});
 
-		lblsamplesCollected = new Label(shell, SWT.NONE);
-		lblsamplesCollected.setBounds(10, 101, 100, 21);
-		lblsamplesCollected.setText("Samples collected");
+		lblstate = new Label(shell, SWT.NONE);
+		lblstate.setBounds(10, 101, 100, 21);
+		lblstate.setText("State");
 
-		lblNewData = new Label(shell, SWT.NONE);
-		lblNewData.setText("Newest data");
-		lblNewData.setBounds(10, 10, 86, 15);
-
-		lblData = new Label(shell, SWT.CENTER);
-		lblData.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		lblData.setBounds(10, 31, 364, 21);
-
-		samplesCollected = new Label(shell, SWT.NONE);
-		samplesCollected.setAlignment(SWT.CENTER);
-		samplesCollected.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		samplesCollected.setBounds(10, 121, 121, 21);
+		state = new Label(shell, SWT.NONE);
+		state.setAlignment(SWT.CENTER);
+		state.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		state.setBounds(10, 121, 121, 21);
 
 	}
 
+	// Start the bluetooth action
 	public static void initiateTimer() {
-		TimerActionListener timerAction = new TimerActionListener(model, modelLeft, bluetoothClient);
-		timer = new Timer(250, timerAction);
-		timer.start();
+		
+		bluetoothClient = new BluetoothClient(); 
+		try {
+			bluetoothClient.initialise(); 
+			TimerActionListener timerAction = new TimerActionListener(model, modelLeft, bluetoothClient);
+			timer = new Timer(250, timerAction);
+			timer.start(); 
+		} catch (IOException e) {
+			e.printStackTrace(); 
+		}
+		
 	}
 
-	// Testing
+	// Testing the right hand model, the test set should be gathered along with the training data set, to ensure similar conditions (placement, car, etc.)
 	public static void testSampleSet() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/MereTest/testdata.csv");
+		String rightTestSet = "src/data/Final/testdata.csv";
+		DataReader reader2 = new DataReader(rightTestSet);
 		ArrayList<double[]> testData = reader2.getParsedData();
 
 		int notConfidentEnough = 0;
@@ -270,9 +296,11 @@ public class Main {
 		System.out.println();
 	}
 
+	// Test the left model, the samples should be gathered in the same car/setting, such that the leap motion has the correct position. 
 	public static void testSampleSetLeft() {
 		SVMTrainer trainer = new SVMTrainer();
-		DataReader reader2 = new DataReader("src/data/MereTest/testdataLeft.csv");
+		String leftTestSet = "src/data/Final/testdataLeft.csv";
+		DataReader reader2 = new DataReader(leftTestSet);
 		ArrayList<double[]> testData = reader2.getParsedData();
 
 		int numberOfNone = 0;
@@ -313,6 +341,7 @@ public class Main {
 		System.out.println();
 	}
 
+	// Get a sample from the leap motion controller
 	public static double[] getSample(int handNumber) {
 		Controller controller = new Controller();
 		Frame frame = controller.frame();
@@ -321,6 +350,8 @@ public class Main {
 		if (frame.hands().count() >= 1) {
 			Hand hand = frame.hands().get(handNumber);
 
+			// Important that the data matches the number and order, with the training data collection 
+			// the first 0.0 is supposed to be the prediction, however, in this case we want to predict, so it is set at 0.0
 			temp = new double[] { 0.0,
 					// Hand
 					hand.sphereCenter().normalized().getX(), 
